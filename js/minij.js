@@ -1,3 +1,7 @@
+/**
+ * This is claim to be a library would try to work like JQuery. It has
+ * implemented only the methods I needed for the CV
+ */
 Element.prototype.isArray = function(){ return false;};
 NodeList.prototype.isArray = Array.prototype.isArray = HTMLCollection.prototype.isArray = function(){return true;};
 var je = function(){ this.el = document; };
