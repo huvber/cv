@@ -28,40 +28,76 @@
         </div>
       </div>
     </header>
-    <main class="gr">
-      <div class="gc-8 gcent">
-        <section class="gr" title="General Information">
-          <div class="gc-4 tcent">
-            <img src="" alt="born" />
-            <p>CHIERI <br /> 1987-03-27 <br /> M</p>
-          </div>
-          <div class="gc-4 tcent">
-            <img src="" alt="contact" />
-            <p>+393489263742<br />andrea.mannara87@gmail.com<br />this</p>
-          </div>
-          <div class="gc-4 tcent">
-            <img src="" alt="car" />
-            <p>B Licence<br /> car owner</p>
+    <main>
+      <div class="gr">
+        <div class="gc-8 gcent">
+          <section class="gr" title="General Information">
+            <div class="gc-4 tcent">
+              <img src="" alt="born" />
+              <p>CHIERI <br /> 1987-03-27 <br /> M</p>
+            </div>
+            <div class="gc-4 tcent">
+              <img src="" alt="contact" />
+              <p>+393489263742<br />andrea.mannara87@gmail.com<br />this</p>
+            </div>
+            <div class="gc-4 tcent">
+              <img src="" alt="car" />
+              <p>B Licence<br /> car owner</p>
+            </div>
+          </section>
+          <section class="gr" title="Education">
+            <div class="gc-4 tcent">
+              <img src="" alt="born" />
+              <p>CHIERI <br /> 1987-03-27 <br /> M</p>
+            </div>
+            <div class="gc-4 tcent">
+              <img src="" alt="contact" />
+              <p>+393489263742<br />andrea.mannara87@gmail.com<br />this</p>
+            </div>
+            <div class="gc-4 tcent">
+              <img src="" alt="car" />
+              <p>B Licence<br /> car owner</p>
+            </div>
+          </section>
+        </div>
+      </div>
+      <button onclick="j('.event').hide(300);" >Nascondi</button>
+      <div class="gr">
+        <section class="gc-8 history">
+          <div class="gr event">
+            <div class="gc-3 date">
+              <p>{{date}}</p>
+            </div>
+            <div class="gc-2 cicon">
+              <span class="icon {{icon}}">{{icon}}</span>
+            </div>
+            <div class="gc-7 desc">
+              <h4>{{title}}</h4>
+              <p>{{description}}</p>
+            </div>
           </div>
         </section>
-        <section class="gr" title="Education">
-          <div class="gc-4 tcent">
-            <img src="" alt="born" />
-            <p>CHIERI <br /> 1987-03-27 <br /> M</p>
-          </div>
-          <div class="gc-4 tcent">
-            <img src="" alt="contact" />
-            <p>+393489263742<br />andrea.mannara87@gmail.com<br />this</p>
-          </div>
-          <div class="gc-4 tcent">
-            <img src="" alt="car" />
-            <p>B Licence<br /> car owner</p>
-          </div>
+        <section class="gc-4 skills">
         </section>
       </div>
     </main>
     <footer></footer>
     <script type="text/javascript" src="js/minij.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript">
+      var htmle = j('.event');
+      var p = htmle.e().parentNode;
+      var i = 0;
+      events.forEach(function(elem){
+        var temp = htmle.e().cloneNode(true);
+        htmle.parse(elem);
+        if(i>0) p.appendChild(htmle.e());
+        i++;
+        htmle = j(temp);
+
+      });
+    </script>
+
     <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

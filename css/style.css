@@ -4,3 +4,8 @@ html,body{
 header{
   background-color:#eee;
 }
+.date{
+  text-align:right;
+}
+.cicon{
+}

@@ -11,9 +11,21 @@ var doit = function(that,handler){
       handler(that.el[i],i);
     }
   } else {
-    hanlder(that.el,0);
+    handler(that.el,0);
   }
   return that;
+};
+var animation = function(element,time,handler){
+  var start = null;
+  function step(timestamp) {
+    if (!start) start = timestamp;
+    var progress = timestamp - start;
+    handler(element,progress);
+    if (progress < time) {
+      window.requestAnimationFrame(step);
+    }
+  }
+  window.requestAnimationFrame(step);
 };
 je.prototype.e = function(){ return this.el; };
 je.prototype.get = function(selector){
@@ -61,6 +73,14 @@ je.prototype.text = function(str){
     el.innerHTML = str;
   });
 };
+je.prototype.parse = function(object){
+  return doit(this, function(el){
+    for (key in object) {
+      regexp = new RegExp('{{' + key + '}}', 'g');
+      el.innerHTML = el.innerHTML.replace(regexp, object[key]);
+    }
+  });
+}
 je.prototype.append = function(str){
   return doit(this, function(el){
     el.appendChild(document.createTextNode(str));
@@ -80,6 +100,14 @@ je.prototype.each = function(handler){
     handler(el,i);
   });
 };
+je.prototype.hide = function(time){
+  return doit(this,function(el){
+    var initHeight = parseInt(el.style.height,10);
+    animation(el,time,function(elem,progress){
+      elem.style.height = initHeight - initHeight*(progress/time);
+    });
+  });
+}
 var j = function(){
   var g = new je();
   switch (arguments.length) {

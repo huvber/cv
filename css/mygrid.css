@@ -22,18 +22,18 @@ html,body{ margin:0; }
   min-width: 8.33%;
   padding:0.5em;
 }
-.gc-1 { width: 8.33%;  }
-.gc-2 { width: 16.66;  }
-.gc-3 { width: 25%;    }
-.gc-4 { width: 33.33%; }
-.gc-5 { width: 41.66%; }
-.gc-6 { width: 50%;    }
-.gc-7 { width: 58.34%; }
-.gc-8 { width: 66.67%; }
-.gc-9 { width: 75%;    }
-.gc-10{ width: 83.34%  }
-.gc-11{ width: 91.67;  }
-.gc-12{ width: 100%    }
+.gc-1 { width: 8.33%;   min-width:8.33%;  }
+.gc-2 { width: 16.66;   min-width:16.66;  }
+.gc-3 { width: 25%;     min-width:25%;    }
+.gc-4 { width: 33.33%;  min-width:33.33%; }
+.gc-5 { width: 41.66%;  min-width:41.66%; }
+.gc-6 { width: 50%;     min-width:50%;    }
+.gc-7 { width: 58.34%;  min-width:58.34%; }
+.gc-8 { width: 66.67%;  min-width:66.67%; }
+.gc-9 { width: 75%;     min-width:75%;    }
+.gc-10{ width: 83.34%;  min-width:83.34%; }
+.gc-11{ width: 91.67%;  min-width:91.67%; }
+.gc-12{ width: 100%;    min-width:100%;   }
 @media all and (max-width:800px){
   [class*='gc-'] {
     float: left;
