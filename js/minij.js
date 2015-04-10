@@ -101,10 +101,15 @@ je.prototype.each = function(handler){
   });
 };
 je.prototype.hide = function(time){
+  if(time===undefined) time=1;
   return doit(this,function(el){
-    var initHeight = parseInt(el.style.height,10);
+    var initHeight = parseInt(el.offsetHeight,10);
     animation(el,time,function(elem,progress){
-      elem.style.height = initHeight - initHeight*(progress/time);
+      if(elem  instanceof HTMLElement){
+        console.log('ok '+ initHeight + ' - ' + initHeight*(progress/time));
+        elem.style.height = initHeight - initHeight*(progress/time) + 'px';
+        console.log(elem.style.height);
+      }
     });
   });
 }

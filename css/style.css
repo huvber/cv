@@ -9,3 +9,7 @@ header{
 }
 .cicon{
 }
+.event{
+  height:auto;
+  overflow:hidden;
+}
