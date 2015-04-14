@@ -9,11 +9,14 @@
     <link type="text/css" rel="stylesheet" href="css/mygrid.css" />
   </head>
   <body class="gcont">
-    <header class="gr">
+    <header id="mainInfo"class="gr">
       <div class="gc-8 gcent">
         <div class="gr">
           <div class="gc-6 idinfo">
-            <h1>Andrea Mannarà</h1>
+            <h1>{{name}} {{surname}}</h1>
+            <h4>{{phone}}</h4>
+            <h4><a href='mailto:{{mail}}'>{{mail}}</a></h4>
+            <h5>{{website}}</h5>
           </div>
           <div class="gc-6 tcenter idfoto" style="">
             <div class="gr">
@@ -30,38 +33,6 @@
     </header>
     <main>
       <div class="gr">
-        <div class="gc-8 gcent">
-          <section class="gr" title="General Information">
-            <div class="gc-4 tcent">
-              <img src="" alt="born" />
-              <p>CHIERI <br /> 1987-03-27 <br /> M</p>
-            </div>
-            <div class="gc-4 tcent">
-              <img src="" alt="contact" />
-              <p>+393489263742<br />andrea.mannara87@gmail.com<br />this</p>
-            </div>
-            <div class="gc-4 tcent">
-              <img src="" alt="car" />
-              <p>B Licence<br /> car owner</p>
-            </div>
-          </section>
-          <section class="gr" title="Education">
-            <div class="gc-4 tcent">
-              <img src="" alt="born" />
-              <p>CHIERI <br /> 1987-03-27 <br /> M</p>
-            </div>
-            <div class="gc-4 tcent">
-              <img src="" alt="contact" />
-              <p>+393489263742<br />andrea.mannara87@gmail.com<br />this</p>
-            </div>
-            <div class="gc-4 tcent">
-              <img src="" alt="car" />
-              <p>B Licence<br /> car owner</p>
-            </div>
-          </section>
-        </div>
-      </div>
-      <div class="gr">
         <section class="gc-8 history">
           <div class="gr event">
             <div class="gc-3 date">
@@ -70,7 +41,7 @@
             <div class="gc-2 cicon">
               <img src="img/icons/{{icon}}.png" />
             </div>
-            <div class="gc-7 desc">
+            <div class="gc-5 desc">
               <h4>{{title}}</h4>
               <p>{{description}}</p>
             </div>
@@ -84,18 +55,45 @@
     <script type="text/javascript" src="js/minij.js"></script>
     <script type="text/javascript" src="js/data.js"></script>
     <script type="text/javascript">
+      var getDate = function(str){
+          if(str == 'TODAY')
+            return new Date();
+          var sp = str.split('-');
+          return new Date(sp[2],(sp[1]-1),sp[0]);
+      };
+      var months = function(d1,d2){
+        return (d2.getFullYear()-d1.getFullYear())*12 - d1.getMonth() + d2.getMonth();
+      }
+
       var htmle = j('.event');
       var p = htmle.e().parentNode;
       var i = 0;
-      events.forEach(function(elem){
+
+      j('#mainInfo').parse(main);
+      var today = new Date();
+      var born = getDate(events[0].date[0]);
+      var myMonths = (today.getFullYear()-born.getFullYear())*12 - 2 + today.getMonth();
+      console.log(myMonths);
+      var nevents = events.length -1;
+      for(var i = nevents; i>0; i--){
+        var elem = events[i];
+        var bDate, eDate;
+        if(elem.date.length === 2){
+          bDate = getDate(elem.date[0]);
+          eDate = getDate(elem.date[1]);
+        } else
+          bDate = eDate = getDate(elem.date[0]);
+        var height = months(bDate,eDate);
+        var mTop = months(born,bDate);
+        console.log(bDate + ' ' + eDate + ' ' + height + ' ' + mTop);
         var temp = htmle.e().cloneNode(true);
         htmle.parse(elem);
+        htmle.e().style.marginTop = mTop +'em';
+        htmle.e().style.height = height + 'em';
         if(i>0) p.appendChild(htmle.e());
-        i++;
         htmle = j(temp);
         //htmle.hide();
-      });
-
+      }
     </script>
 
     <script type="text/javascript" src="js/script.js"></script>

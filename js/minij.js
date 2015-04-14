@@ -112,7 +112,7 @@ je.prototype.hide = function(time){
       }
     });
   });
-}
+};
 var j = function(){
   var g = new je();
   switch (arguments.length) {

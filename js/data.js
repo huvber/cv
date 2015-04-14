@@ -1,6 +1,13 @@
+var main = {
+  name: 'Andrea',
+  surname: 'Mannarà',
+  phone: '3489263742',
+  mail:'andrea.mannara87@gmail.com',
+  website:'this'
+};
 var events = [
   {
-    date: '27-03-1987',
+    date: ['27-03-1987'],
     title: 'BORN',
     description:'Chieri',
     icon:'born',
@@ -19,21 +26,21 @@ var events = [
     icon:'car',
     type:'life'},
   {
-    date: ['01/03/2006','01/07/2006'],
+    date: ['01-03-2006','01-07-2006'],
     title: 'INTERACTIVE TOUR',
     description:'Intercative 3D tour of the School\n ITIS A.Avogadro',
     icon:'3dtour',
     type:['job','project'],
     skills:{ html:1,css:1,vrml:4,maya:4, actionscript:1 } },
   {
-    date: '15-02-2006',
+    date: ['15-02-2006'],
     title: '3RD L. TRINITY',
     description:'Eglish Certificate',
     icon:'certificate',
     type:'language',
     skills:{english:5 } },
   {
-    date: '2006',
+    date: ['14-06-2006'],
     title: 'DIPLOMA',
     description:'Perito Informatico\n ITIS A. Avogadro\n 77/100',
     icon:'diploma',
@@ -47,19 +54,19 @@ var events = [
     skills:{cpp:5, electronics:5, statistics:2,linux:10,java:10,sql:10,
             networks:5,html:3,php:3, english:10} },
   {
-    date: '05-04-2008',
-    title: 'IELTS CERT.',
-    description:'Eglish Certificate\n Politecnico of Torino\n 5.5/7',
-    icon:'certificate',
-    type:'language',
-    skills:{english:10 } },
-  {
-    date: ['02-02-2006','02-09-2008'],
+    date: ['02-02-2007','02-09-2008'],
     title:'TEACHING LIS PLATFORM',
     description:'Italian Sign Language\n ALBA ONLUS Torino',
     icon:'lis',
     type:['job','project'],
     skills:{ visualbasic:10, cpp:3, vrml:2} },
+  {
+    date: ['05-04-2008'],
+    title: 'IELTS CERT.',
+    description:'Eglish Certificate\n Politecnico of Torino\n 5.5/7',
+    icon:'certificate',
+    type:'language',
+    skills:{english:10 } },
   {
     date: ['15-10-2008','31-01-2013'],
     title:'CORRIERE di CHIERI\'s WEBSITE',

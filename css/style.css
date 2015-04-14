@@ -13,3 +13,10 @@ header{
   height:auto;
   overflow:hidden;
 }
+.event{
+  min-height:3em;
+}
+.desc{
+  border: 1px solid #ccc;
+  min-height:10em;
+}
