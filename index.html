@@ -75,7 +75,8 @@
       var myMonths = (today.getFullYear()-born.getFullYear())*12 - 2 + today.getMonth();
       console.log(myMonths);
       var nevents = events.length -1;
-      for(var i = nevents; i>0; i--){
+      var pDate  = born;
+      for(var i in events){
         var elem = events[i];
         var bDate, eDate;
         if(elem.date.length === 2){
@@ -84,12 +85,18 @@
         } else
           bDate = eDate = getDate(elem.date[0]);
         var height = months(bDate,eDate);
-        var mTop = months(born,bDate);
+        var mTop = months(pDate,bDate);
+        pDate = eDate;
         console.log(bDate + ' ' + eDate + ' ' + height + ' ' + mTop);
         var temp = htmle.e().cloneNode(true);
         htmle.parse(elem);
-        htmle.e().style.marginTop = mTop +'em';
-        htmle.e().style.height = height + 'em';
+        if(mTop < 0){
+          htmle.e().style.marginLeft = '2em';
+          htmle.e().style.marginTop = 8 + mTop +'em';
+        } else {
+
+        }
+        htmle.e().style.height = (6+ height)*1.5 + 'em';
         if(i>0) p.appendChild(htmle.e());
         htmle = j(temp);
         //htmle.hide();
