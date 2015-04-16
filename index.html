@@ -33,20 +33,28 @@
     </header>
     <main>
       <div class="gr">
-        <section class="gc-8 history">
-          <div class="gr event">
-            <div class="gc-3 date">
-              <p>{{date}}</p>
+        <section class="gc-6 history">
+          <div class="gr year no-print">
+            <div class="gr">
+              <div class="gc-3"></div>
+              <div class="gc-2 tcenter">{{date}}</div>
             </div>
-            <div class="gc-2 cicon">
-              <img src="img/icons/{{icon}}.png" />
-            </div>
-            <div class="gc-5 desc">
-              <h4>{{title}}</h4>
-              <p>{{description}}</p>
+            <div class="events">
             </div>
           </div>
         </section>
+        <div class="gr event ">
+          <div class="gc-3 date">
+            <p>{{date}}</p>
+          </div>
+          <div class="gc-2 cicon {{cl}}">
+            <img src="img/icons/{{icon}}.png" />
+          </div>
+          <div class="gc-5 desc">
+            <h4>{{title}}</h4>
+            <p>{{description}}</p>
+          </div>
+        </div>
         <section class="gc-4 skills">
         </section>
       </div>
@@ -55,6 +63,8 @@
     <script type="text/javascript" src="js/minij.js"></script>
     <script type="text/javascript" src="js/data.js"></script>
     <script type="text/javascript">
+    j('#mainInfo').parse(main);
+
       var getDate = function(str){
           if(str == 'TODAY')
             return new Date();
@@ -66,12 +76,82 @@
       }
 
       var htmle = j('.event');
-      var p = htmle.e().parentNode;
+      var yeare = j('.year');
+
+      var p = yeare.e().parentNode;
       var i = 0;
 
-      j('#mainInfo').parse(main);
+
+
       var today = new Date();
       var born = getDate(events[0].date[0]);
+      var years = {};
+      for(var y= parseInt(born.getFullYear()); y <= parseInt(today.getFullYear()); y++){
+        years[y] = [];
+      }
+      for(var i in events){
+        var e = events[i];
+        if(e.date === undefined)
+          continue;
+        d = getDate(e.date[0]);
+        years[parseInt(d.getFullYear())].push(e);
+        if(e.date.length === 2){
+          var d2 = getDate(e.date[1]);
+          if(d2.getFullYear()!==d.getFullYear()){
+            e.mtoy = true; // More than one year
+            years[parseInt(d2.getFullYear())].push(e);
+          }
+        }
+      }
+      for(i in years){
+        var temp = yeare.e().cloneNode(true);
+        yeare.parse({ date: i});
+        if(years[i].length > 0){
+          yeare.addClass('withevent');
+          yeare.removeClass('no-print');
+          var pe = j(yeare.e());
+          pe = pe.get('.events').e();
+          e = 0;
+          for(var e in years[i]){
+            var ev = years[i][e];
+            if(typeof years[i][e] !== 'object')
+              continue;
+            var te = j(htmle.e().cloneNode(true));
+            var element = {};
+            if(ev.mtoy){
+              var d = getDate(ev.date[0]);
+              if(d.getFullYear()+'' === i){
+                element.title = 'BEGIN of ' + ev.title;
+                element.date = ev.date[0];
+                element.description = ev.description;
+                element.icon = ev.icon;
+                element.cl = 'begin';
+              } else {
+                element.title = 'END of ' + ev.title;
+                element.date = ev.date[1];
+                element.description = '';
+                element.icon = ev.icon;
+                element.cl='end';
+              }
+
+            } else {
+              element = ev;
+              element.cl='unique';
+            }
+            te.parse(element);
+            pe.appendChild(te.e());
+          }
+        }
+        yeare.e().id='y'+i;
+        if(i > born.getFullYear())
+          p.appendChild(yeare.e());
+        yeare = j(temp);
+      }
+      htmle.remove();
+      /*
+
+
+
       var myMonths = (today.getFullYear()-born.getFullYear())*12 - 2 + today.getMonth();
       console.log(myMonths);
       var nevents = events.length -1;
@@ -93,7 +173,7 @@
         if(i>0) p.appendChild(htmle.e());
         htmle = j(temp);
         //htmle.hide();
-      }
+      }*/
     </script>
 
     <script type="text/javascript" src="js/script.js"></script>

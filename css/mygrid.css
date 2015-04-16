@@ -8,7 +8,10 @@ html,body{ margin:0; }
   display: table;
   margin: 0 auto;
 }
-.gr{ display:flex; }
+.gr{ display:flex; width:100%;}
+.gr * {
+  display:block;
+}
 .gr:before,
 .gr:after {
   content:"";

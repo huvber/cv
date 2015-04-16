@@ -75,12 +75,14 @@ je.prototype.text = function(str){
 };
 je.prototype.parse = function(object){
   return doit(this, function(el){
-    for (key in object) {
+    for (var key in object) {
       regexp = new RegExp('{{' + key + '}}', 'g');
+      console.log(typeof object[key]);
+      el.className = el.className.replace(regexp, object[key]);
       el.innerHTML = el.innerHTML.replace(regexp, object[key]);
     }
   });
-}
+};
 je.prototype.append = function(str){
   return doit(this, function(el){
     el.appendChild(document.createTextNode(str));
@@ -99,6 +101,12 @@ je.prototype.each = function(handler){
   return doit(this, function(el,i){
     handler(el,i);
   });
+};
+je.prototype.remove = function(){
+  this.el.parentElement.removeChild(this.el);
+  this.el = null;
+  delete this;
+  return null;
 };
 je.prototype.hide = function(time){
   if(time===undefined) time=1;
