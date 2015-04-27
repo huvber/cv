@@ -77,7 +77,6 @@ je.prototype.parse = function(object){
   return doit(this, function(el){
     for (var key in object) {
       regexp = new RegExp('{{' + key + '}}', 'g');
-      console.log(typeof object[key]);
       el.className = el.className.replace(regexp, object[key]);
       el.innerHTML = el.innerHTML.replace(regexp, object[key]);
     }

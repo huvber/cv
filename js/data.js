@@ -1,6 +1,6 @@
 var main = {
-  name: 'Andrea',
-  surname: 'Mannarà',
+  name: 'Pippo',
+  surname: 'Pluto',
   phone: '3489263742',
   mail:'andrea.mannara87@gmail.com',
   website:'this'

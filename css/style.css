@@ -18,6 +18,11 @@ html,body{
 header{
   background-color:#eee;
 }
+.history{
+  background-image:url('../img/history_back.svg');
+  background-repeat: repeat-y;
+  background-size:100%;
+}
 .date{
   text-align:right;
 }

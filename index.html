@@ -36,21 +36,20 @@
         <section class="gc-6 history">
           <div class="gr year no-print">
             <div class="gr">
-              <div class="gc-3"></div>
-              <div class="gc-2 tcenter">{{date}}</div>
+              <div class="gc-6 tright"><span>{{date}}</span></div>
             </div>
             <div class="events">
             </div>
           </div>
         </section>
         <div class="gr event ">
-          <div class="gc-3 date">
+          <div class="gc-4 date tright">
             <p>{{date}}</p>
           </div>
           <div class="gc-2 cicon {{cl}}">
             <img src="img/icons/{{icon}}.png" />
           </div>
-          <div class="gc-5 desc">
+          <div class="gc-4 desc">
             <h4>{{title}}</h4>
             <p>{{description}}</p>
           </div>
@@ -80,7 +79,7 @@
 
       var p = yeare.e().parentNode;
       var i = 0;
-
+      var skills = {};
 
 
       var today = new Date();
@@ -94,6 +93,11 @@
         if(e.date === undefined)
           continue;
         d = getDate(e.date[0]);
+        for(sk in e.skills){
+          if(skills[sk]===undefined)
+            skills[sk] = 0;
+          skills[sk] += e.skills[sk];
+        }
         years[parseInt(d.getFullYear())].push(e);
         if(e.date.length === 2){
           var d2 = getDate(e.date[1]);
@@ -149,6 +153,7 @@
         yeare = j(temp);
       }
       htmle.remove();
+      console.log(skills);
       /*
 
 
