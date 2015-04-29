@@ -41,7 +41,9 @@ header{
 }
 .cicon{
   border: 1px solid #ccc;
+  background-color:#ffffff;
 }
+
 .begin,
 .end{
   border-radius:50%;

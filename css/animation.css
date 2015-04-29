@@ -1,0 +1,12 @@
+.hide{
+  transform: scaleY(0);
+  transition-timing-function:ease;
+  overflow:hidden;
+
+}
+.show{
+  transform: scaleY(1);
+  transition-timing-function:ease;
+  overflow:hidden;
+
+}

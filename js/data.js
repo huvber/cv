@@ -13,6 +13,18 @@ var events = [
     icon:'born',
     type:'life' },
   {
+      date: ['20-11-1987'],
+      title: 'WALKING',
+      description:'Begin to walk with my own legs',
+      icon:'walk',
+      type:'fun' },
+  {
+        date: ['25-01-1988'],
+        title: 'SPEAKING FLUENTLY',
+        description:'Start bothering with a lot of questions the entire world',
+        icon:'speak',
+        type:'fun' },
+  {
     date: ['08-07-2004','23-07-2004'],
     title:'ENGLISH COURSE ABROAD',
     description:'15days of English course by UCD Dublin',

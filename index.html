@@ -7,18 +7,19 @@
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
     <link type="text/css" rel="stylesheet" href="css/style.css" />
     <link type="text/css" rel="stylesheet" href="css/mygrid.css" />
+    <link type="text/css" rel="stylesheet" href="css/animation.css" />
   </head>
   <body class="gcont">
     <header id="mainInfo"class="gr">
       <div class="gc-8 gcent">
         <div class="gr">
-          <div class="gc-6 idinfo">
+          <div class="gmc-6 idinfo">
             <h1>{{name}} {{surname}}</h1>
             <h4>{{phone}}</h4>
             <h4><a href='mailto:{{mail}}'>{{mail}}</a></h4>
             <h5>{{website}}</h5>
           </div>
-          <div class="gc-6 tcenter idfoto" style="">
+          <div class="gmc-6 tcenter idfoto" style="">
             <div class="gr">
               <div class="gc-6 gcent">
                 <img
@@ -42,14 +43,14 @@
             </div>
           </div>
         </section>
-        <div class="gr event ">
-          <div class="gc-4 date tright">
+        <div class="gr event {{type}}">
+          <div class="gc-5 date tright">
             <p>{{date}}</p>
           </div>
           <div class="gc-2 cicon {{cl}}">
             <img src="img/icons/{{icon}}.png" />
           </div>
-          <div class="gc-4 desc">
+          <div class="gc-5 desc">
             <h4>{{title}}</h4>
             <p>{{description}}</p>
           </div>
@@ -61,134 +62,6 @@
     <footer></footer>
     <script type="text/javascript" src="js/minij.js"></script>
     <script type="text/javascript" src="js/data.js"></script>
-    <script type="text/javascript">
-    j('#mainInfo').parse(main);
-
-      var getDate = function(str){
-          if(str == 'TODAY')
-            return new Date();
-          var sp = str.split('-');
-          return new Date(sp[2],(sp[1]-1),sp[0]);
-      };
-      var months = function(d1,d2){
-        return (d2.getFullYear()-d1.getFullYear())*12 - d1.getMonth() + d2.getMonth();
-      }
-
-      var htmle = j('.event');
-      var yeare = j('.year');
-
-      var p = yeare.e().parentNode;
-      var i = 0;
-      var skills = {};
-
-
-      var today = new Date();
-      var born = getDate(events[0].date[0]);
-      var years = {};
-      for(var y= parseInt(born.getFullYear()); y <= parseInt(today.getFullYear()); y++){
-        years[y] = [];
-      }
-      for(var i in events){
-        var e = events[i];
-        if(e.date === undefined)
-          continue;
-        d = getDate(e.date[0]);
-        for(sk in e.skills){
-          if(skills[sk]===undefined)
-            skills[sk] = 0;
-          skills[sk] += e.skills[sk];
-        }
-        years[parseInt(d.getFullYear())].push(e);
-        if(e.date.length === 2){
-          var d2 = getDate(e.date[1]);
-          if(d2.getFullYear()!==d.getFullYear() &&
-             d2.getFullYear()!==today.getFullYear()){
-            e.mtoy = true; // More than one year
-            years[parseInt(d2.getFullYear())].push(e);
-          }
-        }
-      }
-      for(i in years){
-        var temp = yeare.e().cloneNode(true);
-        yeare.parse({ date: i});
-        if(years[i].length > 0){
-          yeare.addClass('withevent');
-          yeare.removeClass('no-print');
-          var pe = j(yeare.e());
-          pe = pe.get('.events').e();
-          e = 0;
-          for(var e in years[i]){
-            var ev = years[i][e];
-            if(typeof years[i][e] !== 'object')
-              continue;
-            var te = j(htmle.e().cloneNode(true));
-            var element = {};
-            if(ev.mtoy){
-              var d = getDate(ev.date[0]);
-              if(d.getFullYear()+'' === i){
-                element.title = 'BEGIN of ' + ev.title;
-                element.date = ev.date[0];
-                element.description = ev.description;
-                element.icon = ev.icon;
-                element.cl = 'begin';
-              } else {
-                element.title = 'END of ' + ev.title;
-                element.date = ev.date[1];
-                element.description = '';
-                element.icon = ev.icon;
-                element.cl='end';
-              }
-
-            } else {
-              element = ev;
-              element.cl='unique';
-            }
-            te.parse(element);
-            pe.appendChild(te.e());
-          }
-        }
-        yeare.e().id='y'+i;
-        if(i > born.getFullYear())
-          p.appendChild(yeare.e());
-        yeare = j(temp);
-      }
-      htmle.remove();
-      console.log(skills);
-      /*
-
-
-
-      var myMonths = (today.getFullYear()-born.getFullYear())*12 - 2 + today.getMonth();
-      console.log(myMonths);
-      var nevents = events.length -1;
-      var pDate  = born;
-      for(var i in events){
-        var elem = events[i];
-        var bDate, eDate;
-        if(elem.date.length === 2){
-          bDate = getDate(elem.date[0]);
-          eDate = getDate(elem.date[1]);
-        } else
-          bDate = eDate = getDate(elem.date[0]);
-        var height = months(bDate,eDate);
-        var mTop = months(pDate,bDate);
-        pDate = eDate;
-        console.log(bDate + ' ' + eDate + ' ' + height + ' ' + mTop);
-        var temp = htmle.e().cloneNode(true);
-        htmle.parse(elem);
-        if(mTop < 0){
-          htmle.e().style.marginLeft = '2em';
-          htmle.e().style.marginTop = 8 + mTop +'em';
-        } else {
-
-        }
-        htmle.e().style.height = (6+ height)*1.5 + 'em';
-        if(i>0) p.appendChild(htmle.e());
-        htmle = j(temp);
-        //htmle.hide();
-      }*/
-    </script>
-
     <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>

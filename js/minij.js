@@ -8,10 +8,12 @@ var je = function(){ this.el = document; };
 var doit = function(that,handler){
   if(that.el.isArray()){
     for(var i in that.el){
-      handler(that.el[i],i);
+      if(that.el[i] !== undefined || typeof that.el[i] !== 'function')
+        handler(that.el[i],i);
     }
   } else {
-    handler(that.el,0);
+    if(that.el !== undefined || typeof that.el[i] !== 'function')
+      handler(that.el,0);
   }
   return that;
 };
@@ -30,6 +32,7 @@ var animation = function(element,time,handler){
 je.prototype.e = function(){ return this.el; };
 je.prototype.get = function(selector){
   if(selector instanceof HTMLElement){ this.el = selector; return this; }
+  if(typeof selector === 'function'){ this.el = undefined; return this; }
   switch(selector.charAt(0)){
     case '.':
       this.el =  [].slice.call(this.el.getElementsByClassName(selector.replace('.','')));
@@ -110,14 +113,24 @@ je.prototype.remove = function(){
 je.prototype.hide = function(time){
   if(time===undefined) time=1;
   return doit(this,function(el){
-    var initHeight = parseInt(el.offsetHeight,10);
-    animation(el,time,function(elem,progress){
-      if(elem  instanceof HTMLElement){
-        console.log('ok '+ initHeight + ' - ' + initHeight*(progress/time));
-        elem.style.height = initHeight - initHeight*(progress/time) + 'px';
-        console.log(elem.style.height);
-      }
-    });
+    if(typeof el !== 'function'){
+      el.style.transitionDuration = time + 'ms';
+      j(el).removeClass('show');
+      j(el).addClass('hide');
+    }
+  });
+};
+je.prototype.show = function(time){
+  if(time===undefined) time=1;
+  return doit(this,function(el){
+    if(typeof el !== 'function'){
+      el.style.transitionDuration = time + 'ms';
+      j(el).removeClass('hide');
+      j(el).addClass('show');
+      setTimeout(function(){
+        j(el).removeClass('show');
+      },time);
+    }
   });
 };
 var j = function(){
