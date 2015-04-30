@@ -3,7 +3,17 @@ var main = {
   surname: 'Pluto',
   phone: '3489263742',
   mail:'andrea.mannara87@gmail.com',
-  website:'this'
+  website:'this',
+  intro:'When I was a child I wanted to become a magician in the first place,'+
+        ' then an inventor. This because I thought that creating something new'+
+        ' was the most exciting thing. At the age of 9 I received by my uncle '+
+        'an old compaq 486 PC and I started to write programs in BASIC because'+
+        ' it was one of the few things that computer was capable of. I discovered'+
+        ' that developing was the nearest thing to be a magician since you can'+
+        ' create everything from nothing. Basically that\'s why I became a '+
+        'developer. Later on I focused in web developing and frontend developing'+
+        ' because everybody knows that the most outstanding magic is the one with'+
+        ' the best visual and perceptive effects.'
 };
 var events = [
   {

@@ -10,25 +10,32 @@
     <link type="text/css" rel="stylesheet" href="css/animation.css" />
   </head>
   <body class="gcont">
-    <header id="mainInfo"class="gr">
-      <div class="gc-8 gcent">
-        <div class="gr">
-          <div class="gmc-6 idinfo">
-            <h1>{{name}} {{surname}}</h1>
-            <h4>{{phone}}</h4>
-            <h4><a href='mailto:{{mail}}'>{{mail}}</a></h4>
-            <h5>{{website}}</h5>
-          </div>
-          <div class="gmc-6 tcenter idfoto" style="">
-            <div class="gr">
-              <div class="gc-6 gcent">
-                <img
-                  class="circle ro"
-                  src="http://churchm.ag/wp-content/uploads/2012/01/LEGO-head.png" />
-              </div>
+    <header id="mainInfo">
+      <div class="gr first">
+        <div class="gc-8 gcent">
+          <div class="gr">
+            <div class="gmc-6 idinfo">
+              <h1>{{name}} {{surname}}</h1>
+              <h4>{{phone}}</h4>
+              <h4><a href='mailto:{{mail}}'>{{mail}}</a></h4>
+              <h5>{{website}}</h5>
             </div>
+            <div class="gmc-6 tcenter idfoto" style="">
+              <div class="gr">
+                <div class="gc-6 gcent">
+                  <img
+                    class="circle ro"
+                    src="http://churchm.ag/wp-content/uploads/2012/01/LEGO-head.png" />
+                </div>
+              </div>
 
+            </div>
           </div>
+        </div>
+      </div>
+      <div class="intro gr">
+        <div class="gc-8 gcent">
+          {{intro}}
         </div>
       </div>
     </header>
@@ -48,7 +55,7 @@
             <p>{{date}}</p>
           </div>
           <div class="gc-2 cicon {{cl}}">
-            <img src="img/icons/{{icon}}.png" />
+            <img class="ro" src="img/icons/{{icon}}.png" />
           </div>
           <div class="gc-5 desc">
             <h4>{{title}}</h4>
