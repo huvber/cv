@@ -1,9 +1,19 @@
 var main = {
-  name: 'Andrea',
-  surname: 'Mannarà',
+  name: 'Pippo',
+  surname: 'Pluto',
   phone: '3489263742',
   mail:'andrea.mannara87@gmail.com',
-  website:'this'
+  website:'this',
+  intro:'When I was a child I wanted to become a magician in the first place,'+
+        ' then an inventor. This because I thought that creating something new'+
+        ' was the most exciting thing. At the age of 9 I received by my uncle '+
+        'an old compaq 486 PC and I started to write programs in BASIC because'+
+        ' it was one of the few things that computer was capable of. I discovered'+
+        ' that developing was the nearest thing to be a magician since you can'+
+        ' create everything from nothing. Basically that\'s why I became a '+
+        'developer. Later on I focused in web developing and frontend developing'+
+        ' because everybody knows that the most outstanding magic is the one with'+
+        ' the best visual and perceptive effects.'
 };
 var events = [
   {
@@ -13,10 +23,22 @@ var events = [
     icon:'born',
     type:'life' },
   {
+      date: ['20-11-1987'],
+      title: 'WALKING',
+      description:'Begin to walk with my own legs',
+      icon:'walk',
+      type:'fun' },
+  {
+        date: ['25-01-1988'],
+        title: 'SPEAKING FLUENTLY',
+        description:'Start bothering with a lot of questions the entire world',
+        icon:'speak',
+        type:'fun' },
+  {
     date: ['08-07-2004','23-07-2004'],
     title:'ENGLISH COURSE ABROAD',
     description:'15days of English course by UCD Dublin',
-    icon:'dublin',
+    icon:'course',
     type:'language',
     skills:{ english:10} },
   {
@@ -29,7 +51,7 @@ var events = [
     date: ['01-03-2006','01-07-2006'],
     title: 'INTERACTIVE TOUR',
     description:'Intercative 3D tour of the School<br /> ITIS A.Avogadro',
-    icon:'3dtour',
+    icon:'project',
     type:['job','project'],
     skills:{ html:1,css:1,vrml:4,maya:4, actionscript:1 } },
   {
@@ -57,7 +79,7 @@ var events = [
     date: ['02-02-2007','02-09-2008'],
     title:'\'TEACHING-LIS\' PLATFORM',
     description:'Creation of a DVD teaching platform for the Italian Sign Language<br /> ALBA ONLUS Torino',
-    icon:'lis',
+    icon:'project',
     type:['job','project'],
     skills:{ visualbasic:10, cpp:3, vrml:2} },
   {
@@ -78,7 +100,7 @@ var events = [
     date: ['10-03-2009','31-07-2009'],
     title:'INTERNSHIP',
     description:'VRML parser for realtime 3d software<br />SEAC02 srl, Torino',
-    icon:'seac',
+    icon:'job',
     type:['internship','job','project'],
     skills:{ cpp:10, opensg:5, opengl:10, vrml:10} },
   {

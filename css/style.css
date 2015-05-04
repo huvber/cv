@@ -15,8 +15,20 @@
 html,body{
   font-family: 'Oswald', sans-serif;
 }
-header{
+header .first{
   background-color:#eee;
+}
+header .intro{
+  margin-top:2em;
+  font-style:italic;
+  text-align:justify;
+  color:#688;
+  margin-bottom:2em;
+}
+.history{
+  background-image:url('../img/history_back.svg');
+  background-repeat: repeat-y;
+  background-size:100%;
 }
 .date{
   text-align:right;
@@ -35,8 +47,10 @@ header{
   margin-top:3em;
 }
 .cicon{
-  border: 1px solid #ccc;
+  
+  background-color:#ffffff;
 }
+
 .begin,
 .end{
   border-radius:50%;
