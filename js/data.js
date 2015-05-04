@@ -38,7 +38,7 @@ var events = [
     date: ['08-07-2004','23-07-2004'],
     title:'ENGLISH COURSE ABROAD',
     description:'15days of English course by UCD Dublin',
-    icon:'dublin',
+    icon:'course',
     type:'language',
     skills:{ english:10} },
   {
@@ -51,7 +51,7 @@ var events = [
     date: ['01-03-2006','01-07-2006'],
     title: 'INTERACTIVE TOUR',
     description:'Intercative 3D tour of the School<br /> ITIS A.Avogadro',
-    icon:'3dtour',
+    icon:'project',
     type:['job','project'],
     skills:{ html:1,css:1,vrml:4,maya:4, actionscript:1 } },
   {
@@ -79,7 +79,7 @@ var events = [
     date: ['02-02-2007','02-09-2008'],
     title:'\'TEACHING-LIS\' PLATFORM',
     description:'Creation of a DVD teaching platform for the Italian Sign Language<br /> ALBA ONLUS Torino',
-    icon:'lis',
+    icon:'project',
     type:['job','project'],
     skills:{ visualbasic:10, cpp:3, vrml:2} },
   {
@@ -100,7 +100,7 @@ var events = [
     date: ['10-03-2009','31-07-2009'],
     title:'INTERNSHIP',
     description:'VRML parser for realtime 3d software<br />SEAC02 srl, Torino',
-    icon:'seac',
+    icon:'job',
     type:['internship','job','project'],
     skills:{ cpp:10, opensg:5, opengl:10, vrml:10} },
   {
