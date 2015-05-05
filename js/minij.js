@@ -12,7 +12,7 @@ var doit = function(that,handler){
         handler(that.el[i],i);
     }
   } else {
-    if(that.el !== undefined || typeof that.el[i] !== 'function')
+    if(that.el !== undefined || typeof that.el !== 'function')
       handler(that.el,0);
   }
   return that;
@@ -50,7 +50,11 @@ je.prototype.get = function(selector){
 };
 je.prototype.addClass = function(classes){
   return doit(this, function(el){
+    if(classes === 'tg')
+      console.log(el.classList);
     el.classList.add(classes);
+    if(classes === 'tg')
+      console.log(el.classList);
   });
 };
 je.prototype.removeClass = function(classes){
@@ -61,7 +65,6 @@ je.prototype.removeClass = function(classes){
 je.prototype.hasClass = function(classes){
   var res = true;
   doit(this, function(el){
-    el.classList.remove(classes);
     res = res && el.classList.contains(classes);
   });
   return res;
@@ -76,11 +79,25 @@ je.prototype.text = function(str){
     el.innerHTML = str;
   });
 };
+je.prototype.setCss = function(obje){
+  return doit(this, function(el){
+    for(var prop in el.style){
+      if(obje[prop]!==undefined){
+        el.style[prop] = obje[prop];
+      }
+    }
+  });
+};
+je.prototype.getCss = function(prop){
+  if(this.el.isArray()) return undefined;
+  return this.el.style[prop];
+};
 je.prototype.parse = function(object){
   return doit(this, function(el){
     for (var key in object) {
       regexp = new RegExp('{{' + key + '}}', 'g');
       el.className = el.className.replace(regexp, object[key]);
+      el.id = el.id.replace(regexp,object[key]);
       el.innerHTML = el.innerHTML.replace(regexp, object[key]);
     }
   });

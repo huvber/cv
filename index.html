@@ -22,7 +22,7 @@
             </div>
             <div class="gmc-6 tcenter idfoto" style="">
               <div class="gr">
-                <div class="gc-6 gcent">
+                <div class="gc-6 tcenter">
                   <img
                     class="circle ro"
                     src="http://churchm.ag/wp-content/uploads/2012/01/LEGO-head.png" />
@@ -50,7 +50,7 @@
             </div>
           </div>
         </section>
-        <div class="gr event {{type}}">
+        <div class="gr event {{type}}" id="ev_{{indice}}">
           <div class="gc-5 date tright">
             <p>{{date}}</p>
           </div>
@@ -63,6 +63,11 @@
           </div>
         </div>
         <section class="gc-4 skills">
+          <div id="sk_{{name}}" class="skill {{name}}">
+            <h4>{{name}}</h4>
+            <em>{{value}} - <span class='percent'></span></em>
+
+          </div>
         </section>
       </div>
     </main>
