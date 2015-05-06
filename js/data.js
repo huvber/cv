@@ -60,7 +60,7 @@ var events = [
     description:'Intercative 3D tour of the School<br /> ITIS A.Avogadro',
     icon:'project',
     type:['job','project'],
-    skills:{ html:1,css:1,vrml:4,maya:4, actionscript:1 } },
+    skills:{ html:1,css:1,vrml:4,maya:4 } },
   {
     date: ['15-02-2006'],
     title: '3RD L. TRINITY',
@@ -81,8 +81,8 @@ var events = [
     description:'Computer Engineering<br /> Politecnico of Torino<br /> 90/110',
     icon:'bachelor',
     type:['instruction'],
-    skills:{cpp:5, electronics:5, statistics:2,linux:10,java:10,sql:10,
-            networks:5,html:3,php:3, english:10} },
+    skills:{cpp:5, electronics:5, linux:10, java:10,sql:10,
+            networks:10,html:3,php:3, english:10} },
   {
     date: ['02-02-2007','02-09-2008'],
     title:'\'TEACHING-LIS\' PLATFORM',
@@ -103,14 +103,14 @@ var events = [
     description:'Frontend & Backend<br /> Custom CMS<br /> PubliChieri srl',
     icon:'website',
     type:['job','project','web'],
-    skills:{ php:5, sql:5, javascript:5, html:4, jquery:10, css:5} },
+    skills:{ php:10, sql:5, javascript:10, html:4, jquery:10, css:5} },
   {
     date: ['10-03-2009','31-07-2009'],
     title:'INTERNSHIP',
     description:'VRML parser for realtime 3d software<br />SEAC02 srl, Torino',
     icon:'job',
     type:['internship','job','project'],
-    skills:{ cpp:10, opensg:5, opengl:10, vrml:10} },
+    skills:{ cpp:10, opengl:10, vrml:10} },
   {
     date: ['29-09-2010','26-03-2013'],
     title: 'MASTER D.',
@@ -164,6 +164,6 @@ var events = [
     description:'Platform for managing and controlling Kiosks',
     icon:'project',
     type:['project','web'],
-    skills:{html:5, javascript:10, nodejs:10, css:5,
-            meteor:10, foundation:5, mongodb:10} }
+    skills:{html:5, javascript:10, nodejs:20, css:5,
+            meteor:20, foundation:5, mongodb:10} }
 ];

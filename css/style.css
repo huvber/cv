@@ -42,20 +42,21 @@ header .intro{
 .year.withevent{
   color: #000;
 }
-.skills.stick {
+.skillabs.stick {
     position: fixed;
     top: 0;
     z-index: 10000;
 }
 .skill{
-  border:1px solid #ccc;
-  text-align:center;
-  padding:0.5em;
-  width:15%;
   float:left;
   margin:0.2em;
+}
+.skill p{
+  margin:0;
+}
+.skill .scorebar{
+  height:2em;
   transition: 0.5s ease-in-out;
-  heigth:15%;
 }
 .event{
   min-height:3em;

@@ -12,7 +12,7 @@
   <body class="gcont">
     <header id="mainInfo">
       <div class="gr first">
-        <div class="gc-8 gcent">
+        <div class="gc-10 gcent">
           <div class="gr">
             <div class="gmc-6 idinfo">
               <h1>{{name}} {{surname}}</h1>
@@ -46,11 +46,11 @@
             <div class="gr">
               <div class="gc-6 tright"><span>{{date}}</span></div>
             </div>
-            <div class="events">
+            <div class="events gr">
             </div>
           </div>
         </section>
-        <div class="gr event {{type}}" id="ev_{{indice}}">
+        <div class="event gr" id="ev_{{indice}}">
           <div class="gc-5 date tright">
             <p>{{date}}</p>
           </div>
@@ -62,11 +62,13 @@
             <p>{{description}}</p>
           </div>
         </div>
-        <section class="gc-4 skills">
-          <div id="sk_{{name}}" class="skill {{name}}">
-            <h4>{{name}}</h4>
-            <em>{{value}} - <span class='percent'></span></em>
-
+        <section class="gc-4 skillabs">
+          <div class="skills gr">
+            <div id="sk_{{name}}" class="skill gc-5 {{name}}">
+              <div class="scorebar " style="border:1px solid #fcc">
+                <img src="img/icons/{{name}}.svg" class="rv left" /> {{name}}
+              </div>
+            </div>
           </div>
         </section>
       </div>

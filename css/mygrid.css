@@ -80,7 +80,9 @@ img.ro{
   width:90%;
   height:auto;
 }
-
+.left{
+  float:left;
+}
 .tleft { text-align:left; }
 .tcent { text-align:center; }
 .tright{ text-align:right; }

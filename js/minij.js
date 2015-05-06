@@ -50,11 +50,7 @@ je.prototype.get = function(selector){
 };
 je.prototype.addClass = function(classes){
   return doit(this, function(el){
-    if(classes === 'tg')
-      console.log(el.classList);
     el.classList.add(classes);
-    if(classes === 'tg')
-      console.log(el.classList);
   });
 };
 je.prototype.removeClass = function(classes){
