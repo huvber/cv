@@ -143,14 +143,14 @@ window.onscroll = function(e){
       var element = events[index];
       var toogle = false;
       if(el.offsetTop <= window.innerHeight + window.scrollY - 100){
-        console.log(element.title + ' toogle? ' + j(el).hasClass('toogle') + el.classList);
+        //console.log(element.title + ' toogle? ' + j(el).hasClass('toogle') + el.classList);
         if(! j(el).hasClass('toogle')) toogle = true;
         j(el).show(500);
         j(el).addClass('toggle');
       } else {
         j(el).hide(500);
       }
-      if(toogle){
+    /*  if(toogle){
         if(element !== undefined) for(var sk in element.skills){
           var tmp = j('#sk_'+sk).e();
           if(!tmp.style.height) tmp.style.height = '10%';
@@ -162,7 +162,7 @@ window.onscroll = function(e){
           console.log(tmp.style.height);
           skills[sk] += element.skills[sk];
         }
-      }
+      }*/
     }
   });
 };
