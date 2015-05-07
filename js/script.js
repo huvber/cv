@@ -72,6 +72,7 @@ for(var i in ks){
 j('.skills').e().appendChild(skille.e());
 skille.remove();
 j('.skill').hide(100);
+j('.skname').hide(100);
 //traversing the years to generate the html elements
 for(i in years){
   var temp = yeare.e().cloneNode(true);
@@ -145,7 +146,7 @@ window.onscroll = function(e){
       var index =  parseInt(el.id.replace('ev_',''));
       var element = events[index];
       var toggle = false;
-      if(el.offsetTop <= window.innerHeight + window.scrollY - 150){
+      if(el.offsetTop <= window.innerHeight + window.scrollY - 100){
         if(! el.classList.contains('toggle')) toggle = true;
         j(el).show(500);
         j(el).addClass('toggle');
@@ -157,10 +158,12 @@ window.onscroll = function(e){
         var bar = j(tmp).get('.scorebar').e();
         if(toggle){
           if(j(tmp).hasClass('hide')) j(tmp).show(300);
-          if(!bar.style.width) bar.style.width = '25%';
-          console.log((0.0 + parseFloat(bar.style.width) + (element.skills[sk]))+'%');
-          console.log('(0.0 + ' + parseFloat(bar.style.width) +' + (' + element.skills[sk]+ ')/5)+%)');
-          bar.style.width = (0.0 + parseFloat(bar.style.width) + (element.skills[sk]))+'%';
+          if(!bar.style.width) bar.style.width = '10%';
+          bar.style.width = (0.0 + parseFloat(bar.style.width) + (element.skills[sk])*1.3)+'%';
+          console.log(sk + ' dim= '+ parseFloat(bar.style.width));
+          if(parseFloat(bar.style.width) >= 40){
+            j(bar).get('.skname').show(200);
+          }
           skills[sk] += element.skills[sk];
         } else {
           if(skills[sk] === 0) j(tmp).hide(100);

@@ -60,7 +60,7 @@ var events = [
     description:'Intercative 3D tour of the School<br /> ITIS A.Avogadro',
     icon:'project',
     type:['job','project'],
-    skills:{ html:1,css:1,vrml:4,maya:4 } },
+    skills:{ html:1,css:1, '3D':5 } },
   {
     date: ['15-02-2006'],
     title: '3RD L. TRINITY',
@@ -74,22 +74,22 @@ var events = [
     description:'Perito Informatico<br /> ITIS A. Avogadro<br /> 77/100',
     icon:'diploma',
     type:['instruction'],
-    skills:{html:3,css:3, php:8, cpp:10, javascript:3,sql:3 } },
+    skills:{html:3,css:3, php:10, cpp:10, javascript:3,sql:3 } },
   {
     date: ['06-09-2006','20-09-2010'],
     title: 'BACHELOR D.',
     description:'Computer Engineering<br /> Politecnico of Torino<br /> 90/110',
     icon:'bachelor',
     type:['instruction'],
-    skills:{cpp:5, electronics:5, linux:10, java:10,sql:10,
-            networks:10,html:3,php:3, english:10} },
+    skills:{cpp:5, elec:5, linux:10, java:10,sql:10,
+            networks:10,html:3,php:5, english:10} },
   {
     date: ['02-02-2007','02-09-2008'],
     title:'\'TEACHING-LIS\' PLATFORM',
     description:'Creation of a DVD teaching platform for the Italian Sign Language<br /> ALBA ONLUS Torino',
     icon:'project',
     type:['job','project'],
-    skills:{ visualbasic:10, cpp:3, vrml:2} },
+    skills:{ visualbasic:10, cpp:3, '3D':2} },
   {
     date: ['05-04-2008'],
     title: 'IELTS CERT.',
@@ -105,12 +105,20 @@ var events = [
     type:['job','project','web'],
     skills:{ php:10, sql:5, javascript:10, html:4, jquery:10, css:5} },
   {
+      date: ['15-10-2008','31-01-2013'],
+      title:'CORRIERE di CHIERI\'s LAYOUT CREATOR',
+      description:'Frontend & Backend<br /> of a webapplication to create '+
+                  'newspaper page\'s layout',
+      icon:'project',
+      type:['job','project','web'],
+      skills:{ php:15, sql:10, javascript:10, html:4, jquery:10, css:5} },
+  {
     date: ['10-03-2009','31-07-2009'],
     title:'INTERNSHIP',
     description:'VRML parser for realtime 3d software<br />SEAC02 srl, Torino',
     icon:'job',
     type:['internship','job','project'],
-    skills:{ cpp:10, opengl:10, vrml:10} },
+    skills:{ cpp:10, xml:5, '3D':10} },
   {
     date: ['29-09-2010','26-03-2013'],
     title: 'MASTER D.',
@@ -118,7 +126,7 @@ var events = [
     icon:'master',
     type:['instruction'],
     skills:{sql:10, network:10, linux:10, opengl:3,
-            blender:5, python:5, bash:10, java:10, xml:10, html:10, english:5} },
+            blender:5, python:5, bash:10, java:10, xml:10, html:5, english:5} },
   {
     date: ['01-01-2012','10-06-2012'],
     title:'MASTER THESIS',
@@ -136,14 +144,14 @@ var events = [
     description:'Frontend & Backend<br /> Custom CMS<br /> Associazione Musiqueros' ,
     icon:'website',
     type:['job','project','web'],
-    skills:{ php:5, json:5, javascript:5, html:5, jquery:10, bootstrap:10, css:10} },
+    skills:{ php:10, json:5, javascript:10, html:5, jquery:10, bootstrap:20, css:10} },
   {
     date: ['01-06-2013','TODAY'],
     title: 'IT MANAGER, WEB DEVELOPER',
     description: 'Artedas Italia srl',
     icon:'job',
     type:['job'],
-    skills: { html:5, css:5, javascript:5, jquery:5, php:5, mysql:5, linux:10 } },
+    skills: { html:5, css:5, javascript:10, jquery:5, php:5, mysql:5, linux:10 } },
   {
       date:['07-09-2013','TODAY'],
       title:'ICT POSTGRAD. COURSE',
@@ -157,7 +165,7 @@ var events = [
     description:'Frontend Dev., Backend Dev., System Admin',
     icon:'website',
     type:['project','web'],
-    skills:{ html:10, javascript:10, jquery:10, foundation:10, linux:10} },
+    skills:{ html:5, javascript:10, jquery:10, foundation:20, linux:10, css:10} },
   {
     date:['01-10-2014','TODAY'],
     title:'MOSCATO PLATFORM',
@@ -165,5 +173,5 @@ var events = [
     icon:'project',
     type:['project','web'],
     skills:{html:5, javascript:10, nodejs:20, css:5,
-            meteor:20, foundation:5, mongodb:10} }
+            meteor:20, foundation:10, mongodb:10} }
 ];
