@@ -94,6 +94,7 @@ for(i in years){
         if(d.getFullYear()+'' === i){
           element.title = 'BEGIN of ' + ev.title;
           element.date = ev.date[0];
+          element.subtitle = ev.subtitle;
           element.description = ev.description;
           element.icon = ev.icon;
           element.cl = 'begin';
@@ -101,6 +102,7 @@ for(i in years){
           element.indice = -1;
         } else {
           element.title = 'END of ' + ev.title;
+          element.subtitle = ev.subtitle;
           element.date = ev.date[1];
           element.description = '';
           element.icon = ev.icon;
@@ -115,7 +117,14 @@ for(i in years){
         console.log(ev.type);
         element.type = element.type !== undefined ? ev.type.join(' ') : '';
       }
+      if(element.description === undefined) element.description = '';
       te.parse(element);
+      /*if(element.description === undefined || element.description ===''){
+        var ld = te.get('.longdesc').e();
+        console.log(ld);
+        delete ld;
+      }*/
+
       pe.appendChild(te.e());
     }
   }
@@ -133,6 +142,15 @@ for(var sk in skills){
 }
 var eskills  = j('.skillabs').e();
 var stop      = eskills.offsetTop;
+
+j('.cicon').bind('onclick',function(e){
+  var index =  parseInt(this.id.replace('ico_',''));
+  j('.longdesc').each(function(el,i){
+    j(el).removeClass('open');
+  });
+  j('#de_' + index).addClass('open');
+})
+
 window.onscroll = function(e){
   e.preventDefault();
 

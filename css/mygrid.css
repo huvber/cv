@@ -12,6 +12,9 @@ html,body{ margin:0; }
 .gr * {
   display:block;
 }
+.gr a, .gr span{
+  display:inline;
+}
 .gr:before,
 .gr:after {
   content:"";

@@ -8,7 +8,7 @@ var je = function(){ this.el = document; };
 var doit = function(that,handler){
   if(that.el.isArray()){
     for(var i in that.el){
-      if(that.el[i] !== undefined || typeof that.el[i] !== 'function')
+      if(that.el[i] !== undefined && typeof that.el[i] !== 'function')
         handler(that.el[i],i);
     }
   } else {
