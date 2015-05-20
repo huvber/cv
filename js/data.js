@@ -13,7 +13,8 @@ var main = {
         ' create everything from nothing. Basically that\'s why I became a '+
         'developer. Later on I focused in web developing and frontend developing'+
         ' because everybody knows that the most outstanding magic is the one with'+
-        ' the best visual and perceptive effects.'
+        ' the best visual and perceptive effects.',
+  ending:'Thank you for visiting my Resume and I hope you liked it.'
 };
 var events = [
   {
@@ -70,7 +71,7 @@ var events = [
     subtitle:'Intercative 3D tour of the School<br /> ITIS A.Avogadro',
     icon:'project',
     type:['job','project'],
-    skills:{ html:1,css:1, '3D':5 } },
+    skills:{ html:1,css:1, 'blender':5 } },
   {
     date: ['15-02-2006'],
     title: '3RD L. TRINITY',
@@ -91,15 +92,15 @@ var events = [
     subtitle:'Computer Engineering<br /> Politecnico of Torino<br /> 90/110',
     icon:'bachelor',
     type:['instruction'],
-    skills:{cpp:5, elec:5, linux:10, java:10,sql:10,
-            networks:10,html:3,php:5, english:10} },
+    skills:{cpp:5,  linux:12, java:10,sql:10,
+            networks:12,html:3,php:5, english:10} },
   {
     date: ['02-02-2007','02-09-2008'],
     title:'\'TEACHING-LIS\' PLATFORM',
     subtitle:'Creation of a DVD teaching platform for the Italian Sign Language<br /> ALBA ONLUS Torino',
     icon:'project',
     type:['job','project'],
-    skills:{ visualbasic:10, cpp:3, '3D':2} },
+    skills:{ visualbasic:10, cpp:3 } },
   {
     date: ['05-04-2008'],
     title: 'IELTS CERT.',
@@ -128,15 +129,15 @@ var events = [
     subtitle:'VRML parser for realtime 3d software<br />SEAC02 srl, Torino',
     icon:'job',
     type:['internship','job','project'],
-    skills:{ cpp:10, xml:5, '3D':10} },
+    skills:{ cpp:10, xml:5, opengl:10} },
   {
     date: ['29-09-2010','26-03-2013'],
     title: 'MASTER D.',
     subtitle:'Computer Engineering<br /> Politecnico of Torino<br /> 94/110',
     icon:'master',
     type:['instruction'],
-    skills:{sql:10, network:10, linux:10, opengl:3,
-            blender:5, python:5, bash:10, java:10, xml:10, html:5, english:5} },
+    skills:{sql:10, networks:10, linux:15, opengl:3,
+            blender:5, python:5, java:10, xml:10, html:5, english:5} },
   {
     date: ['01-01-2012','10-06-2012'],
     title:'MASTER THESIS',
@@ -147,7 +148,7 @@ var events = [
                 'Hallvard Trætteberg</a>',
     icon:'thesis',
     type:['thesis','project'],
-    skills:{ java:10, eclipse:10, xml:10, emf:10, uml:10, english:5} },
+    skills:{ java:10, eclipse:10, xml:10, uml:10, english:5} },
   {
     date: ['15-10-2008','31-01-2013'],
     title:'MUSIQUEROS\' WEBSITE',
@@ -161,7 +162,7 @@ var events = [
     subtitle: 'Artedas Italia srl',
     icon:'job',
     type:['job'],
-    skills: { html:5, css:5, javascript:10, jquery:5, php:5, mysql:5, linux:10 } },
+    skills: { html:5, css:5, javascript:10, jquery:5, php:5, sql:5, linux:10 } },
   {
       date:['07-09-2013','TODAY'],
       title:'ICT POSTGRAD. COURSE',

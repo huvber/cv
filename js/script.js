@@ -1,5 +1,5 @@
 j('#mainInfo').parse(main);
-
+j('footer').parse(main);
 //function to create a date object from text date
 var getDate = function(str){
   if(str == 'TODAY')
@@ -71,8 +71,7 @@ for(var i in ks){
 }
 j('.skills').e().appendChild(skille.e());
 skille.remove();
-j('.skill').hide(100);
-j('.skname').hide(100);
+
 //traversing the years to generate the html elements
 for(i in years){
   var temp = yeare.e().cloneNode(true);
@@ -142,6 +141,10 @@ for(var sk in skills){
 }
 var eskills  = j('.skillabs').e();
 var stop      = eskills.offsetTop;
+var footer     = j('.footer').e();
+
+
+
 
 j('.cicon').bind('onclick',function(e){
   var index =  parseInt(this.id.replace('ico_',''));
@@ -149,21 +152,25 @@ j('.cicon').bind('onclick',function(e){
     j(el).removeClass('open');
   });
   j('#de_' + index).addClass('open');
-})
+});
 
 window.onscroll = function(e){
   e.preventDefault();
-
-  if( window.pageYOffset >= stop)
-    j('.skillabs').addClass('stick');
-  else
-    j('.skillabs').removeClass('stick');
+  var release = footer.offsetTop - eskills.offsetHeight - 4;
+  if( window.pageYOffset >= stop ){
+    console.log(window.pageYOffset +' >= '+ release);
+    console.log('release' + footer.offsetTop +' + '+ eskills.offsetHeight +' +10 ');
+    if(window.pageYOffset >= release)
+      j('.skillabs').removeClass('stick').addClass('stickb');
+    else
+      j('.skillabs').removeClass('stickb').addClass('stick');
+  }else
+    j('.skillabs').removeClass('stick').removeClass('stickb');
 
   j('.event').each(function(el,i){
     if(typeof el !== 'function'){
       var index =  parseInt(el.id.replace('ev_',''));
       var element = events[index];
-      var toggle = false;
       if(el.offsetTop <= window.innerHeight + window.scrollY - 100){
         if(! el.classList.contains('toggle')) toggle = true;
         j(el).show(500);
@@ -171,21 +178,17 @@ window.onscroll = function(e){
       } else {
         j(el).hide(500);
       }
-      if(element !== undefined) for(var sk in element.skills){
-        var tmp = j('#sk_'+sk).e();
-        var bar = j(tmp).get('.scorebar').e();
-        if(toggle){
-          if(j(tmp).hasClass('hide')) j(tmp).show(300);
-          if(!bar.style.width) bar.style.width = '10%';
-          bar.style.width = (0.0 + parseFloat(bar.style.width) + (element.skills[sk])*1.3)+'%';
-          console.log(sk + ' dim= '+ parseFloat(bar.style.width));
-          if(parseFloat(bar.style.width) >= 40){
-            j(bar).get('.skname').show(200);
+      if(element !== undefined)
+        for(var sk in element.skills){
+          var tmp = j('#sk_'+sk).e();
+          var score = j(tmp).get('.score').e();
+          if(toggle){
+            if(j(tmp).hasClass('hide')) j(tmp).show(300);
+            skills[sk] += element.skills[sk];
+            toggle=false;
+          } else {
+            //if(skills[sk] === 0) j(tmp).hide(100);
           }
-          skills[sk] += element.skills[sk];
-        } else {
-          if(skills[sk] === 0) j(tmp).hide(100);
-        }
 
       }
     }
@@ -202,40 +205,3 @@ var animateSkill = function(skill,pre,actual){
 
   });
 };
-
-
-if (window.addEventListener) {window.addEventListener('DOMMouseScroll', wheel, false);
-window.onmousewheel = document.onmousewheel = wheel;}
-
-function wheel(event) {
-    var delta = 0;
-    if (event.wheelDelta) delta = (event.wheelDelta)/120 ;
-    else if (event.detail) delta = -(event.detail)/3;
-
-    handle(delta);
-    if (event.preventDefault) event.preventDefault();
-    event.returnValue = false;
-}
-
-function handle(sentido) {
-    var inicial = document.body.scrollTop;
-    var time = 500;
-    var distance = 200;
-  animate({
-    delay: 0,
-    duration: time,
-    delta: function(p) {return p;},
-    step: function(delta) {
-window.scrollTo(0, inicial-distance*delta*sentido);
-    }});}
-
-function animate(opts) {
-  var start = new Date();
-  var id = setInterval(function() {
-    var timePassed = new Date() - start;
-    var progress = (timePassed / opts.duration);
-    if (progress > 1) {progress = 1;}
-    var delta = opts.delta(progress);
-    opts.step(delta);
-    if (progress == 1) {clearInterval(id);}}, opts.delay || 10);
-}
