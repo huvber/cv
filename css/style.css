@@ -4,12 +4,11 @@
 @media print {
   .no-print, .no-print * {
     display: none !important; }
-
   .only-print, .only-print * {
     display: inline !important; }
-
   html, body {
     background-color: #fff; } }
+
 .mc1 {
   color: #e7ecef; }
 
@@ -53,6 +52,7 @@ html, body {
 @media all and (max-width: 1024px) {
   html, body {
     font-size: 8px; } }
+
 h1 {
   font-size: 2em; }
 
@@ -73,28 +73,35 @@ a:hover {
   color: #6096ba; }
 
 header .first {
-  background-image: url("../img/headerback.jpg");
+  background-image: url('../img/headerback.jpg');
   background-color: #e7ecef;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: auto 100%;
   width: 100%;
-  min-height: 450px;
+  height: 50vh;
   transition: 0.5s ease-in-out;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
   header .first:hover {
-    background-image: url("../img/headerback2.jpg"); }
+    background-image: url('../img/headerback2.jpg'); }
     header .first:hover .idinfo {
       background-color: rgba(39, 76, 119, 0.9); }
+  @media all and (max-width: 1024px) {
+    header .first {
+      background-image: url('../img/headerback_phone.png'); }
+      header .first:hover {
+        background-image: url('../img/headerback_phone2.png'); }
+        header .first:hover .idinfo {
+          background-color: rgba(39, 76, 119, 0.9); } }
 header .idinfo {
-  margin-top: 2em;
   color: #fff;
   transition: 0.2s ease-in-out;
-  border-radius: 10px; }
+  border-radius: 5px;
+  position: absolute;
+  bottom: 2em; }
 header .intro {
-  margin-top: 2em;
   font-style: italic;
-  text-align: justify;
-  margin-bottom: 2em; }
+  text-align: justify; }
 
 .date {
   text-align: right; }
@@ -142,13 +149,10 @@ header .intro {
       transition: 1s linear;
       padding: 1em; }
 
-.begin,
-.end {
+.begin, .end {
   border-radius: 50%; }
 
 footer {
   padding: 3em;
   height: 400px;
   color: #e7ecef; }
-
-/*# sourceMappingURL=style.css.map */

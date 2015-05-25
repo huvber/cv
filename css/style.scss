@@ -56,29 +56,39 @@ header{
     background-image:url('../img/headerback.jpg');
     background-color:$cbianco;
     background-repeat:no-repeat;
-    background-size:100%;
+    background-size:auto 100%;
     width:100%;
-    min-height:450px;
+    //min-height:450px;
+    height:50vh;
     transition: 0.5s ease-in-out;
     overflow:hidden;
+    position:relative;
     &:hover{
       background-image:url('../img/headerback2.jpg');
       .idinfo{
         background-color:rgba($cblus,0.9);
       }
     }
+    @media all and (max-width:1024px){
+      background-image:url('../img/headerback_phone.png');
+      &:hover{
+        background-image:url('../img/headerback_phone2.png');
+        .idinfo{
+          background-color:rgba($cblus,0.9);
+        }
+      }
+    }
   }
   .idinfo{
-    margin-top:2em;
     color:#fff;
     transition: 0.2s ease-in-out;
-    border-radius:10px;
+    border-radius:5px;
+    position:absolute;
+    bottom:2em;
   }
   .intro{
-    margin-top:2em;
     font-style:italic;
     text-align:justify;
-    margin-bottom:2em;
   }
 }
 .date{
