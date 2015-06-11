@@ -117,10 +117,9 @@ header{
 }
 
 .skill{
-  border:1px solid #ccc;
-  img.ro{
-    width:25%;
-    margin:0;
+  height:6em;
+  img{
+    height:4em;
   }
 }
 .event{
@@ -150,6 +149,9 @@ header{
 .begin,
 .end{
   border-radius:50%;
+}
+.sparkle{
+  background-color:$cblum;
 }
 footer{
   padding:3em;

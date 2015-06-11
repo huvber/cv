@@ -2,11 +2,15 @@
  * This is claim to be a library would try to work like JQuery. It has
  * implemented only the methods I needed for the CV
  */
-Element.prototype.isArray = function(){ return false;};
-NodeList.prototype.isArray = Array.prototype.isArray = HTMLCollection.prototype.isArray = function(){return true;};
+var isArray = function(obj){
+  var type = Function.prototype.call.bind( Object.prototype.toString );
+  if(type(obj) === '[object HTMLCollection]') return true;
+  if(type(obj) === '[object NodeList]') return true;
+  return Array.isArray(obj);
+};
 var je = function(){ this.el = document; };
 var doit = function(that,handler){
-  if(that.el.isArray()){
+  if(isArray(that.el)){
     for(var i in that.el){
       if(that.el[i] !== undefined && typeof that.el[i] !== 'function')
         handler(that.el[i],i);
@@ -33,6 +37,7 @@ je.prototype.e = function(){ return this.el; };
 je.prototype.get = function(selector){
   if(selector instanceof HTMLElement){ this.el = selector; return this; }
   if(typeof selector === 'function'){ this.el = undefined; return this; }
+  console.log(selector);
   switch(selector.charAt(0)){
     case '.':
       this.el =  [].slice.call(this.el.getElementsByClassName(selector.replace('.','')));
@@ -43,7 +48,7 @@ je.prototype.get = function(selector){
     default:
       this.el =  [].slice.call(this.el.getElementsByTagName(selector));
   }
-  if(this.el && this.el.isArray() && this.el.length == 1){
+  if(this.el && isArray(this.el) && this.el.length == 1){
     this.el = this.el[0];
   }
   return this;
@@ -85,7 +90,7 @@ je.prototype.setCss = function(obje){
   });
 };
 je.prototype.getCss = function(prop){
-  if(this.el.isArray()) return undefined;
+  if(isArray(this.el)) return undefined;
   return this.el.style[prop];
 };
 je.prototype.parse = function(object){
@@ -142,6 +147,18 @@ je.prototype.show = function(time){
       j(el).addClass('show');
       setTimeout(function(){
         j(el).removeClass('show');
+      },time);
+    }
+  });
+};
+je.prototype.animateClass = function(css,time){
+  if(time===undefined) time=1;
+  return doit(this,function(el){
+    if(typeof el !== 'function'){
+      el.style.transitionDuration = time + 'ms';
+      j(el).addClass(css);
+      setTimeout(function(){
+        j(el).removeClass(css);
       },time);
     }
   });

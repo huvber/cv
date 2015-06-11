@@ -70,6 +70,7 @@ for(var i in ks){
   }
 }
 j('.skills').e().appendChild(skille.e());
+j('.skill').hide();
 skille.remove();
 
 //traversing the years to generate the html elements
@@ -113,7 +114,6 @@ for(i in years){
       } else {
         element = ev;
         element.cl='unique';
-        console.log(ev.type);
         element.type = element.type !== undefined ? ev.type.join(' ') : '';
       }
       if(element.description === undefined) element.description = '';
@@ -153,13 +153,17 @@ j('.cicon').bind('onclick',function(e){
   });
   j('#de_' + index).addClass('open');
 });
-
+j('.event').bind('onmouseover',function(e){
+  var index =  parseInt(this.id.replace('ev_',''));
+  var element = events[index];
+  if(element !== undefined) for(var sk in element.skills){
+    j('#sk_'+sk).animateClass('sparkle',500);
+  }
+});
 window.onscroll = function(e){
   e.preventDefault();
   var release = footer.offsetTop - eskills.offsetHeight - 4;
   if( window.pageYOffset >= stop ){
-    console.log(window.pageYOffset +' >= '+ release);
-    console.log('release' + footer.offsetTop +' + '+ eskills.offsetHeight +' +10 ');
     if(window.pageYOffset >= release)
       j('.skillabs').removeClass('stick').addClass('stickb');
     else
@@ -172,31 +176,28 @@ window.onscroll = function(e){
       var index =  parseInt(el.id.replace('ev_',''));
       var element = events[index];
       if(el.offsetTop <= window.innerHeight + window.scrollY - 100){
-        if(! el.classList.contains('toggle')) toggle = true;
+        if(! el.classList.contains('toggle')){
+          if(element !== undefined) for(var sk in element.skills){
+            var tmp = j('#sk_'+sk).e();
+            if(! j('#sk_'+sk).hasClass('toogle')){
+              j('#sk_'+sk).show(500);
+              j('#sk_'+sk).addClass('toogle');
+            }
+            j('#sk_'+sk).animateClass('sparkle',300);
+          }
+          toggle = true;
+        }
         j(el).show(500);
         j(el).addClass('toggle');
       } else {
         j(el).hide(500);
       }
-      if(element !== undefined)
-        for(var sk in element.skills){
-          var tmp = j('#sk_'+sk).e();
-          var score = j(tmp).get('.score').e();
-          if(toggle){
-            if(j(tmp).hasClass('hide')) j(tmp).show(300);
-            skills[sk] += element.skills[sk];
-            toggle=false;
-          } else {
-            //if(skills[sk] === 0) j(tmp).hide(100);
-          }
 
-      }
     }
   });
 };
 
 var animateSkill = function(skill,pre,actual){
-  console.log('skill - '+ pre +' - '+ actual);
   if(pre === 0) pre = 1;
   j('sk_'+sk).setCss({
     transform : 'scale('+ (pre+actual)/pre + ','+ (pre+actual)/pre + ');',

@@ -124,10 +124,9 @@ header .intro {
     bottom: 400px; } }
 
 .skill {
-  border: 1px solid #ccc; }
-  .skill img.ro {
-    width: 25%;
-    margin: 0; }
+  height: 6em; }
+  .skill img {
+    height: 4em; }
 
 .event {
   min-height: 3em;
@@ -151,6 +150,9 @@ header .intro {
 
 .begin, .end {
   border-radius: 50%; }
+
+.sparkle {
+  background-color: #6096ba; }
 
 footer {
   padding: 3em;
