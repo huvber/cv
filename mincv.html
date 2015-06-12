@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>My CV</title>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,700'
+      rel='stylesheet' type='text/css'>
+    <link type="text/css" rel="stylesheet" href="css/ministyle.css" />
+    <link type="text/css" rel="stylesheet" href="css/mygrid.css" />
+    <link type="text/css" rel="stylesheet" href="css/animation.css" />
+  </head>
+  <body>
+    <header class="main gr">
+      <div class="picture gc-4">
+        <img class="only-print" src="img/minicvhead_back.png" />
+      </div>
+      <div class="intro gc-4">{{intro}}</div>
+      <div class="info gc-4">
+        <h4>{{name}} {{surname}}</h4>
+        <p>{{birthday}}</p>
+        <p>{{address}}</p>
+        <p>{{phone}}</p>
+        <p>{{email}}</p>
+        <p>{{github}}</p>
+        <p>{{linkedin}}</p>
+        <p>{{drivel}} - {{car}}</p>
+      </div>
+    </header>
+    <main>
+      <div class="firsblock gr">
+        <div class="education gc-6">
+          <h2>EDUCATION</h2>
+        </div>
+        <div class="rightc gc-6">
+          <div class="abroadexp">
+            <h2>ABROAD EXPERIENCES</h2>
+          </div>
+          <div class="languages"></div>
+        </div>
+      </div>
+      <div class="secondblock">
+        <div class="skills"></div>
+        <div class="jobs"></div>
+      </div>
+    </main>
+    <footer>
+      <div class="hobbies"></div>
+    </footer>
+
+    <!-- TEMPLATES of ELEMENTS -->
+    <div class="ed-entry">
+      <div class="gr">
+        <div class="date gc-3">{{date}}</div>
+        <div class="title gc-9">{{title}} <span>{{grade}}</span></div>
+      </div>
+      <div class="where gr">{{where}}</div>
+      <div class="sub gr">{{subtitle}}</div>
+    </div>
+    <div class="ab-entry">
+      <div class="gr">
+        <div class="date gc-3">{{date}}</div>
+        <div class="title gc-9">{{title}}</div>
+      </div>
+      <div class="where gr">{{where}}</div>
+      <div class="sub gr">{{subtitle}}</div>
+    </div>
+
+
+    <script src="js/minij.js"></script>
+    <script src="js/minidata.js"></script>
+    <script src="js/miniscript.js"></script>
+
+
+  </body>
+</html>

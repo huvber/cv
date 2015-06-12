@@ -1,5 +1,5 @@
 j('#mainInfo').parse(main);
-
+j('footer').parse(main);
 //function to create a date object from text date
 var getDate = function(str){
   if(str == 'TODAY')
@@ -43,12 +43,12 @@ for(var i in events){
   d = getDate(e.date[0]);
 
   //sum the skills per each element
-  for(sk in e.skills){
+  for(var sk in e.skills){
     if(skills[sk]===undefined)
       skills[sk] = 0;
     skills[sk] += e.skills[sk];
   }
-
+  e.indice = i;
   years[parseInt(d.getFullYear())].push(e);
   if(e.date.length === 2){
     var d2 = getDate(e.date[1]);
@@ -58,6 +58,20 @@ for(var i in events){
     }
   }
 }
+var skille = j('.skill');
+var ks = Object.keys(skills).sort(function(a,b){return skills[b]-skills[a]; });
+for(var i in ks){
+  if(typeof ks[i] !== 'function'){
+    var sk = ks[i];
+    var temp = skille.e().cloneNode(true);
+    skille.parse({name: sk, value: skills[sk]});
+    j('.skills').e().appendChild(skille.e());
+    skille = j(temp);
+  }
+}
+j('.skills').e().appendChild(skille.e());
+j('.skill').hide();
+skille.remove();
 
 //traversing the years to generate the html elements
 for(i in years){
@@ -80,42 +94,115 @@ for(i in years){
         if(d.getFullYear()+'' === i){
           element.title = 'BEGIN of ' + ev.title;
           element.date = ev.date[0];
+          element.subtitle = ev.subtitle;
           element.description = ev.description;
           element.icon = ev.icon;
           element.cl = 'begin';
+          element.type = element.type && element.type.isArray() ? ev.type.join(' '):'';
+          element.indice = -1;
         } else {
           element.title = 'END of ' + ev.title;
+          element.subtitle = ev.subtitle;
           element.date = ev.date[1];
           element.description = '';
           element.icon = ev.icon;
           element.cl='end';
+          element.type = element.type && element.type.isArray() ? ev.type.join(' '):'';
+          element.indice = ev.indice;
         }
 
-        } else {
-          element = ev;
-          element.cl='unique';
-        }
-        te.parse(element);
-        pe.appendChild(te.e());
+      } else {
+        element = ev;
+        element.cl='unique';
+        element.type = element.type !== undefined ? ev.type.join(' ') : '';
       }
+      if(element.description === undefined) element.description = '';
+      te.parse(element);
+      /*if(element.description === undefined || element.description ===''){
+        var ld = te.get('.longdesc').e();
+        console.log(ld);
+        delete ld;
+      }*/
+
+      pe.appendChild(te.e());
     }
-    yeare.e().id='y'+i;
-    if(i > born.getFullYear())
-      p.appendChild(yeare.e());
-    yeare = j(temp);
   }
-  htmle.remove();
-  console.log(skills);
-  j('.event').hide(100);
-  window.onscroll = function(e){
-    e.preventDefault();
-    j('.event').each(function(el,i){
-      if(typeof el !== 'function'){
-        if(el.offsetTop <= window.innerHeight + window.scrollY - 100){
-          j(el).show(500);
-        } else {
-          j(el).hide(500);
+  yeare.e().id='y'+i;
+  if(i > born.getFullYear())
+    p.appendChild(yeare.e());
+  yeare = j(temp);
+}
+htmle.remove();
+
+j('.event').hide(100);
+
+for(var sk in skills){
+  skills[sk] = 0;
+}
+var eskills  = j('.skillabs').e();
+var stop      = eskills.offsetTop;
+var footer     = j('.footer').e();
+
+
+
+
+j('.cicon').bind('onclick',function(e){
+  var index =  parseInt(this.id.replace('ico_',''));
+  j('.longdesc').each(function(el,i){
+    j(el).removeClass('open');
+  });
+  j('#de_' + index).addClass('open');
+});
+j('.event').bind('onmouseover',function(e){
+  var index =  parseInt(this.id.replace('ev_',''));
+  var element = events[index];
+  if(element !== undefined) for(var sk in element.skills){
+    j('#sk_'+sk).animateClass('sparkle',500);
+  }
+});
+window.onscroll = function(e){
+  e.preventDefault();
+  var release = footer.offsetTop - eskills.offsetHeight - 4;
+  if( window.pageYOffset >= stop ){
+    if(window.pageYOffset >= release)
+      j('.skillabs').removeClass('stick').addClass('stickb');
+    else
+      j('.skillabs').removeClass('stickb').addClass('stick');
+  }else
+    j('.skillabs').removeClass('stick').removeClass('stickb');
+
+  j('.event').each(function(el,i){
+    if(typeof el !== 'function'){
+      var index =  parseInt(el.id.replace('ev_',''));
+      var element = events[index];
+      if(el.offsetTop <= window.innerHeight + window.scrollY - 100){
+        if(! el.classList.contains('toggle')){
+          if(element !== undefined) for(var sk in element.skills){
+            var tmp = j('#sk_'+sk).e();
+            if(! j('#sk_'+sk).hasClass('toogle')){
+              j('#sk_'+sk).show(500);
+              j('#sk_'+sk).addClass('toogle');
+            }
+            j('#sk_'+sk).animateClass('sparkle',300);
+          }
+          toggle = true;
         }
+        j(el).show(500);
+        j(el).addClass('toggle');
+      } else {
+        j(el).hide(500);
       }
-    });
-  }
+
+    }
+  });
+};
+
+var animateSkill = function(skill,pre,actual){
+  if(pre === 0) pre = 1;
+  j('sk_'+sk).setCss({
+    transform : 'scale('+ (pre+actual)/pre + ','+ (pre+actual)/pre + ');',
+    transitionTimingFunction: 'ease',
+    transitionDuration : 400
+
+  });
+};

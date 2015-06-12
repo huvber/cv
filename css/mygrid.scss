@@ -1,0 +1,58 @@
+// out: ./mygrid.css
+$cols: 12;
+
+// breakpoints
+$breakpoint-small: "only screen and (min-width: 20em)";
+$breakpoint-medium: "only screen and (min-width: 30em)";
+
+*,*:after,*:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.gcont{ width:100%; }
+.gcent{
+  display:table;
+  margin:0 auto;
+}
+.gr{
+  display:flex;
+  width:100%;
+  div,section{ display:block; }
+  &:before,&:after{
+    content:"";
+    clear:both;
+    display:table;
+    width:0;
+  }
+}
+[class*='gc-']{
+  float:left;
+  min-height:1px;
+  min-width:100% / $cols;
+  padding:0.5em;
+}
+@for $i from 1 to $cols + 1{
+  .gc-#{$i}{
+    width:100%/$cols*$i;
+    @media all and (max-width:800px){
+      width:100%;
+    }
+  }
+}
+.circle{
+  border-radius:50;
+}
+img{
+  &.rv{
+    height:90%;
+    width:auto;
+  }
+  &.ro{
+    width:90%;
+    height:auto;
+  }
+}
+@each $dir in (left, center, right){
+  .t#{$dir}{ text-align:$dir;  }
+}

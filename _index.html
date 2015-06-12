@@ -13,9 +13,10 @@
   <body class="gcont">
     <header id="mainInfo">
       <div class="gr first">
-        <div class="gc-10 gcent">
+        <div class="gc-11 gcent">
           <div class="gr">
-            <div class="gc-4 idinfo">
+            <div class="gmc-2"></div>
+            <div class="gmc-6 idinfo">
               <h1>{{name}} {{surname}}</h1>
               <h4>{{phone}}</h4>
               <h4><a class="mc1" href='mailto:{{mail}}'>{{mail}}</a></h4>
@@ -25,53 +26,54 @@
         </div>
       </div>
       <div class="intro mc5 gr">
-        <div class="gc-6 gcent">
+        <div class="gc-8 gcent">
           {{intro}}
         </div>
       </div>
     </header>
     <main>
       <div class="gr">
-        <section class="gc-6 history">
-          <h3 class="tright">CHRONICLE</h3>
-          <div class="year no-print">
+        <section class="gc-7 history">
+          <div class="gr year no-print">
             <div class="gr">
-              <div class="gc-2 tright">
-                <h4>{{date}}</h4>
-              </div>
-              <div class="gc-10 events">
-              </div>
+              <div class="gc-6 tright"><span>{{date}}</span></div>
+            </div>
+            <div class="events gr">
             </div>
           </div>
         </section>
-        <div class="gr event" id="ev_{{indice}}">
-          <div class="gc-2 date tleft">{{date}}</div>
-          <div id="ico_{{indice}}" class="gc-2 cicon {{cl}}">
-            <img class="ro" src="img/icons/{{icon}}.svg" />
-          </div>
-          <div class="gc-8 desc">
-            <h4>{{title}} <br /></h4>
-            <p>{{subtitle}} <span class="open">...</span></p>
-            <div id="de_{{indice}}" class="gr longdesc mbc4 mc2">
-              {{description}}
+        <div class="event" id="ev_{{indice}}">
+          <div class="gr">
+            <div class="gc-5 date tright">
+              <p>{{date}}</p>
             </div>
+            <div id="ico_{{indice}}" class="gc-2 cicon {{cl}}">
+              <img class="ro" src="img/icons/{{icon}}.svg" />
+            </div>
+            <div class="gc-5 desc">
+              <h4>{{title}}</h4>
+              <p>{{subtitle}}</p>
+            </div>
+          </div>
+          <div id="de_{{indice}}" class="gr longdesc mbc4 mc2">
+            <div class="gc-7"></div>
+            <div class="gc-5">{{description}}</div>
           </div>
         </div>
         <section class="gc-5 skillabs">
           <h3>SKILLS</h3>
           <div class="skills gr">
-            <div id="sk_{{name}}" class="skill gc-2">
-              <div  title="{{name}}" class="{{name}}">
-                <img src="img/icons/{{name}}.svg" />
+            <div id="sk_{{name}}" class="skill gc-5 {{name}}">
+              <div class="scorebar " title="{{name}}">
+                <img src="img/icons/{{name}}.svg" class="rv left" />
+                <span class="skname">{{name}}</name>
               </div>
             </div>
           </div>
         </section>
       </div>
     </main>
-    <footer class="footer mbc2">
-    <div class="godbye">{{ending}}</div>
-    </footer>
+    <footer></footer>
     <script type="text/javascript" src="js/minij.js"></script>
     <script type="text/javascript" src="js/data.js"></script>
     <script type="text/javascript" src="js/script.js"></script>

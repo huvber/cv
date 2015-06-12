@@ -1,0 +1,77 @@
+.only-print, .only-print * {
+  display: none; }
+
+@media print {
+  .no-print, .no-print * {
+    display: none !important; }
+  .only-print, .only-print * {
+    display: block !important; } }
+
+html, body {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  color: #4e4f4d; }
+  @media print {
+    html, body {
+      font-size: 8px; } }
+  @media all and (max-width: 1280px) {
+    html, body {
+      font-size: 10px; } }
+
+body {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto; }
+  @media print {
+    body {
+      width: 100%; } }
+
+.main .intro {
+  font-size: 1.2em;
+  text-align: justify;
+  color: #ffaa00; }
+.main .info {
+  font-size: 1.4em;
+  text-align: right;
+  padding-right: 5%;
+  line-height: 2em; }
+  @media print {
+    .main .info {
+      padding-right: 0; } }
+
+.picture {
+  background-image: url('../img/minicvhead.png');
+  background-repeat: no-repeat;
+  background-size: 80% auto;
+  background-position: center;
+  transition: 0.5s ease-in-out; }
+  @media print {
+    .picture {
+      background-image: none; }
+      .picture img {
+        width: 100%; } }
+  .picture:hover {
+    background-image: url('../img/minicvhead_back.png'); }
+
+main {
+  margin-top: 4em; }
+  main h2 {
+    color: #ffaa00;
+    font-weight: bold; }
+
+.ed-entry, .ab-entry {
+  font-size: 0.85em; }
+  .ed-entry .date, .ab-entry .date {
+    text-align: right; }
+  .ed-entry .title, .ab-entry .title {
+    padding-bottom: 0;
+    border-bottom: 1px solid #ffaa00; }
+    .ed-entry .title span, .ab-entry .title span {
+      float: right; }
+  .ed-entry .where, .ab-entry .where {
+    text-align: right; }
+  .ed-entry .sub, .ab-entry .sub {
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 0.9em;
+    padding-left: 16.66667%; }

@@ -1,21 +1,12 @@
-* { box-sizing: border-box; }
-html,body{ margin:0; }
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 
-.gcont{
-  width:100%;
-}
-.gcent{
-  display: table;
-  margin: 0 auto;
-}
-.gr{ display:flex; width:100%;}
-.gr * {
-  display:block;
-}
-.gr:before,
-.gr:after {
-  content:"";
-  clear:both;
+.gcont {
+  width: 100%; }
+
+.gcent {
   display: table;
   width:0px;
 }
