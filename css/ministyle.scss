@@ -20,7 +20,11 @@ html, body {
     font-size:10px;
   }
 }
+html{
+  background-color:$dark;
+}
 body{
+  background-color:#fff;
   width:70%;
   margin-left:auto;
   margin-right:auto;
@@ -35,9 +39,8 @@ body{
     color:$orange;
   }
   .info{
-    font-size:1.4em;
+    font-size:1.2em;
     text-align:right;
-    padding-right:5%;
     @media print{
       padding-right:0;
     }
@@ -53,9 +56,12 @@ body{
     }
   }
   background-repeat:no-repeat;
-  background-size:80% auto;
+  background-size:100% auto;
   background-position:center;
   transition: 0.5s ease-in-out;
+  width: 100%;
+  height: 0;
+  padding-bottom: 100%;
   &:hover{
     background-image:url('../img/minicvhead_back.png');
   }
@@ -63,10 +69,10 @@ body{
 main{
   margin-top:4em;
   h2{ color: $orange; font-weight:bold; }
+
 }
-.ed-entry, .ab-entry{
-  font-size:0.85em;
-  .date { text-align:right; }
+.ed-entry, .ab-entry, .jb-entry{
+  .date { text-align:left; }
   .title{
     padding-bottom:0;
     border-bottom:1px solid $orange;
@@ -75,4 +81,12 @@ main{
 
   .where{ text-align:right; }
   .sub{ font-weight:bold; font-style:italic; margin-bottom:0.9em; padding-left:(100%/12*2)}
+  .link{ text-align:right;}
+}
+.leftcol{
+  background-color:$orange;
+  color:#333;
+  .info{
+    text-align:left;
+  }
 }

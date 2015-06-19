@@ -5,6 +5,7 @@ j('.main').parse(data.main);
 var t = {
   education : j('.education').e(),
   abroad    : j('.abroadexp').e(),
+  jobs      : j('.jobs').e(),
   abEvent   : j('.ab-entry').e(),
   edEvent   : j('.ed-entry').e(),
   jbEvent   : j('.jb-entry').e()
@@ -17,10 +18,20 @@ for(var e in data.education.reverse()){
   j(newEd).parse(data.education[e]);
   t.education.appendChild(newEd);
 }
-j(t.edEvent.remove());
+t.edEvent.remove();
+
 for(var a in data.abroad.reverse()){
   var newAb = t.abEvent.cloneNode(true);
+
   j(newAb).parse(data.abroad[a]);
   t.abroad.appendChild(newAb);
 }
-j(t.abEvent.remove());
+t.abEvent.remove();
+
+for(var a in data.jobs.reverse()){
+  var newJb = t.jbEvent.cloneNode(true);
+
+  j(newJb).parse(data.jobs[a]);
+  t.jobs.appendChild(newJb);
+}
+t.jbEvent.remove();

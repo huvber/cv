@@ -23,7 +23,7 @@ var data = {
   },
   education: [
     {
-      date: ['14/06/2006'],
+      date: '14/06/2006',
       title: 'Diploma',
       grade: '77/100',
       where: 'ITIS A. Avogadro',
@@ -75,7 +75,7 @@ var data = {
   ],
   abroad: [
     {
-      date: ['15-08-2011','12-06-2012'],
+      date: '15-08-2011 - 12-06-2012',
       title: 'LLP/Erasmus',
       where: 'Norges TeknisNaturvitenskapelige Universitet (NTNU)',
       subtitle:'10 Months Courses and Master Thesis',
@@ -83,7 +83,7 @@ var data = {
       skills:{ network:10, java:10, html:5, linux:10 }
     },
     {
-      date: ['08-07-2004','23-07-2004'],
+      date: '08-07-2004 - 23-07-2004',
       title:'English Summer Course',
       where:'UDC Dublin, Ireland',
       subtitle:'15days of English course and activities',
@@ -112,23 +112,25 @@ var data = {
   },
   jobs:[
     {
-      date: ['01-03-2006','01-07-2006'],
+      date: '01-03-2006 - 01-07-2006',
       title: '3D Designer and Web Developer',
       where: 'ITIS A. Avogadro',
       subtitle:'Intercative 3D tour of the School<br /> ITIS A.Avogadro',
       icon:'project',
+      link:'',
       type:['job','project'],
       skills:{ html:1,css:1, 'blender':5 } },
     {
-      date: ['02-02-2007','02-09-2008'],
+      date: '02-02-2007 - 02-09-2008',
       title:'VisualStudio Developer',
       where:'Alba Onlus',
       subtitle:'\'TEACHING-LIS\' PLATFORM <br />Creation of a DVD teaching platform for the Italian Sign Language<br /> ALBA ONLUS Torino',
       icon:'project',
+      link:'',
       type:['job','project'],
       skills:{ visualbasic:10, cpp:3 } },
     {
-      date: ['15-10-2008','31-01-2013'],
+      date: '15-10-2008 - 31-01-2013',
       title:'Frontend & Backend Developer',
       where:'PubliChieri srl',
       subtitle:'Newspaper\'s website, CMS from Scratch, NewsPaper Layout creator and Manager',
@@ -137,7 +139,7 @@ var data = {
       type:['job','project','web'],
       skills:{ php:20, sql:10, javascript:20, html:15, jquery:20, css:10} },
     {
-      date: ['10-03-2009','31-07-2009'],
+      date: '10-03-2009 - 31-07-2009',
       title:'C++ Developer - Internship',
       where: 'SEAC02 srl',
       subtitle:'VRML parser for realtime 3d software',
@@ -146,7 +148,7 @@ var data = {
       type:['internship','job','project'],
       skills:{ cpp:10, xml:5, opengl:10} },
     {
-      date: ['15-10-2008','31-01-2013'],
+      date: '15-10-2008 - 31-01-2013',
       title:'Web Developer - Web Master',
       where:'Associazione Musiqueros',
       subtitle:'Association\'s website' ,
@@ -156,7 +158,7 @@ var data = {
       skills:{ php:10, json:5, javascript:10, html:5, jquery:10, bootstrap:20, css:10}
     },
     {
-      date: ['01-06-2013','TODAY'],
+      date: '01-06-2013 - TODAY',
       title: 'System Admin - Web Developer',
       where:'Artedas Italia srl',
       subtitle: 'Company\'s website, Customers Projects, Iternal Projects',
@@ -165,7 +167,7 @@ var data = {
       type:['job'],
       skills: { html:5, css:5, javascript:10, jquery:5, php:5, sql:5, linux:10 } },
     {
-      date: ['12-06-2015'],
+      date: '12-06-2015',
       title:'Web Developer',
       where:'Associazione L\'Entità',
       subtitle:'Website and Template Customization' ,
@@ -175,7 +177,7 @@ var data = {
       skills:{ php:10, javascript:5, html:5, css:10, wordpress:5},
     },
     {
-      date: ['08-06-2015'],
+      date: '08-06-2015',
       title:'WebDeveloper',
       where:'Partycillina Event',
       subtitle:'Website and Template Customization' ,
