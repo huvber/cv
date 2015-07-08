@@ -69,22 +69,16 @@ for(var l in ot){
   var lev = el.levels;
   var temp = { language: el.language.toUpperCase(),
                list: lev.comprehension.listening,
-               ln : lev2num(lev.comprehension.listening),
                read: lev.comprehension.reading,
-               rn : lev2num(lev.comprehension.reading),
                int: lev.speaking.interaction,
-               in : lev2num(lev.speaking.interaction),
                prod: lev.speaking.production,
-               pn : lev2num(lev.speaking.production),
                write: lev.writing,
-               wn : lev2num(lev.writing),
-               max : 5
              };
   var newE = lentry.cloneNode(true);
   j(newE).parse(temp);
   lothers.appendChild(newE);
 }
-
+j(lentry).remove();
 j('.sk-entry').bind('onmouseover',function(e){
   var skill = j(this).get('.name').e().innerHTML;
   j('.'+skill).addClass('active');

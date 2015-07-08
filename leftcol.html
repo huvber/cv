@@ -95,15 +95,26 @@
       <progress value="{{value}}" />
     </div>
     <div class="lo-entry">
-      <div class="lang tright">{{language}}</div>
+      <div class="lang tcenter">{{language}}</div>
       <div class="levels">
-        <p>COMPREHENSION</p>
-        <p>Listening: <progress value="{{ln}}" max="{{max}}" alt="{{list}}" /></p>
-        <p>Reading: <progress value="{{rn}}" max="{{max}}" alt="{{read}}" /></p>
-        <p>SPEAKING</p>
-        <p>Interaction: <progress value="{{in}}" max="{{max}}" alt="{{int}}" /></p>
-        <p>Production: <progress value="{{pn}}" max="{{max}}" alt="{{prod}}" /></p>
-        <p>WRITING: <progress value="{{wn}}" max="{{max}}" alt="{{write}}" /></p>
+        <div class="gr">
+          <div class="gc-6">COMPREHENSION:</div>
+          <div class="gc-3"title="Listening">L:
+          <span class="llevel {{list}}">{{list}}</span></div>
+          <div class="gc-3" title="Reading">R:
+          <span class="llevel {{read}}">{{read}}</span></div>
+        </div>
+        <div class="gr">
+          <div class="gc-6">SPEAKING:</div>
+          <div class="gc-3" title="Interaction">I:
+          <span class="llevel {{int}}">{{int}}</span></div>
+          <span class="gc-3" title="Production">P:
+          <span class="llevel {{prod}}">{{prod}}</span></div>
+        </div>
+        <div class="gr">
+          <div class="gc-6">WRITING:</div>
+          <div class="gc-3 llevel {{write}}">{{write}}</div>
+        </div>
       </div>
     </div>
 

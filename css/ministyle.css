@@ -142,3 +142,6 @@ progress {
     background: #365BB0; }
     progress::-moz-progress-bar:hover {
       background: #082568; }
+
+.lo-entry progress {
+  float: left; }
