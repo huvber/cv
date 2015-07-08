@@ -11,10 +11,12 @@
     <link type="text/css" rel="stylesheet" href="css/animation.css" />
   </head>
   <body>
-    <div class="gr">
+    <div class="gr container">
       <div class="leftcol gc-3">
         <div class="main">
-          <div class="picture">
+          <div class="pic-container">
+            <div class="picture no-print">
+            </div>
             <img class="only-print" src="img/minicvhead_back.png" />
           </div>
           <div class="info">
@@ -22,14 +24,25 @@
             <p>{{birthday}}</p>
             <p>{{address}}</p>
             <p>{{phone}}</p>
-            <p>{{email}}</p>
-            <p>{{github}}</p>
-            <p>{{linkedin}}</p>
+            <p><a href="mailto:{{email}}" target="_blank">{{email}}</a></p>
+            <p><a href="http://{{github}}" target="_blank">{{github}}</a></p>
+            <p><a href="http://{{linkedin}}" target="_blank">{{linkedin}}</a></p>
             <p>{{drivel}} - {{car}}</p>
           </div>
         </div>
-        <div class="skills"></div>
-        <div class="languages"></div>
+        <div class="languages">
+          <h2>LANGUAGES</h2>
+          <div class="mt gr">
+            <div class="gc-1">MT:</div>
+            <div class="gc-9 tright">{{mother}}</div>
+          </div>
+          <div class="others">
+          </div>
+        </div>
+        <div class="skills">
+          <h2>SKILLS</h2>
+        </div>
+
         <div class="hobbies"></div>
       </div>
       <div class="rightcol gc-9">
@@ -56,6 +69,7 @@
       </div>
       <div class="where gr">{{where}}</div>
       <div class="sub gr">{{subtitle}}</div>
+      <div class="eskills"></div>
     </div>
     <div class="ab-entry">
       <div class="gr">
@@ -64,6 +78,7 @@
       </div>
       <div class="where gr">{{where}}</div>
       <div class="sub gr">{{subtitle}}</div>
+      <div class="eskills"></div>
     </div>
     <div class="jb-entry">
       <div class="gr">
@@ -73,6 +88,23 @@
       <div class="where gr">{{where}}</div>
       <div class="sub gr">{{subtitle}}</div>
       <div class="link gr"><a href="{{link}}" target="_blank">{{link}}</a></div>
+      <div class="eskills"></div>
+    </div>
+    <div class="sk-entry">
+      <div class="name">{{name}}</div>
+      <progress value="{{value}}" />
+    </div>
+    <div class="lo-entry">
+      <div class="lang tright">{{language}}</div>
+      <div class="levels">
+        <p>COMPREHENSION</p>
+        <p>Listening: <progress value="{{ln}}" max="{{max}}" alt="{{list}}" /></p>
+        <p>Reading: <progress value="{{rn}}" max="{{max}}" alt="{{read}}" /></p>
+        <p>SPEAKING</p>
+        <p>Interaction: <progress value="{{in}}" max="{{max}}" alt="{{int}}" /></p>
+        <p>Production: <progress value="{{pn}}" max="{{max}}" alt="{{prod}}" /></p>
+        <p>WRITING: <progress value="{{wn}}" max="{{max}}" alt="{{write}}" /></p>
+      </div>
     </div>
 
     <script src="js/minij.js"></script>

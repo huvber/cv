@@ -1,28 +1,30 @@
 // out: ./ministyle.css
 $dark : #4e4f4d;
-$orange : #ffaa00;
+$orange : #FF9A39;
+$blue: #082568;
+$lblue: #365BB0;
+a {
+  color: $lblue;
+  text-decoration:none;
+  &:hover{
+    color:$blue;
+  }
+}
 
 .only-print, .only-print *{
   display:none;
 }
-@media print
-{
+@media print {
   .no-print, .no-print *{ display: none !important; }
   .only-print, .only-print *{ display: block!important; }
-
 }
 html, body {
   font-family: 'Oswald', sans-serif;
   font-size: 14px;
+  @media print { font-size:7px; height:100%; .container{ height:100%;}}
   color: $dark;
-  @media print { font-size:8px; }
-  @media all and (max-width: 1280px){
-    font-size:10px;
-  }
 }
-html{
-  background-color:$dark;
-}
+html{ background-color:$dark; }
 body{
   background-color:#fff;
   width:70%;
@@ -33,46 +35,58 @@ body{
   }
 }
 .main{
-  .intro {
-    font-size:1.2em;
-    text-align:justify;
-    color:$orange;
-  }
-  .info{
-    font-size:1.2em;
-    text-align:right;
-    @media print{
-      padding-right:0;
-    }
-    line-height:2em;
-  }
-}
-.picture{
-  background-image:url('../img/minicvhead.png');
-  @media print {
-    background-image:none;
+  .pic-container{
     img{
       width:100%;
     }
   }
-  background-repeat:no-repeat;
-  background-size:100% auto;
-  background-position:center;
-  transition: 0.5s ease-in-out;
-  width: 100%;
-  height: 0;
-  padding-bottom: 100%;
-  &:hover{
-    background-image:url('../img/minicvhead_back.png');
+  .picture{
+    content:'&nbsp;';
+    width:100%;
+    padding-bottom:100%;
+
+    background-image:url('../img/minicvhead.png');
+
+    background-repeat:no-repeat;
+    background-size:100% auto;
+    background-position:center;
+    transition: 0.5s ease-in-out;
+    &:hover{
+      background-image:url('../img/minicvhead_back.png');
+    }
+  }
+  .intro {
+    padding-left:0.5em;
+    padding-right:0.5em;
+    text-align:justify;
+    color:$orange;
+    @media print{
+      padding-top:-100%;
+    }
+  }
+  .info{
+    text-align:right;
+    padding-right:0.5em;
+    font-size:1.2em;
+    @media print{
+      padding-right:0;
+    }
+  }
+  &:after{
+    content:"";
+    clear:both;
+    display:flex;
+    width:0;
   }
 }
+
 main{
   margin-top:4em;
   h2{ color: $orange; font-weight:bold; }
 
 }
 .ed-entry, .ab-entry, .jb-entry{
-  .date { text-align:left; }
+  .date { text-align:left; overflow:hidden; }
   .title{
     padding-bottom:0;
     border-bottom:1px solid $orange;
@@ -82,6 +96,33 @@ main{
   .where{ text-align:right; }
   .sub{ font-weight:bold; font-style:italic; margin-bottom:0.9em; padding-left:(100%/12*2)}
   .link{ text-align:right;}
+  .eskills{
+    padding-left:(100%/12*2);
+  }
+  .lskill{
+    font-size:0.8em;
+    border:1px solid $lblue;
+    @media print {
+      border:1px solid #ddd;
+    }
+    border-radius:3px;
+    margin-left:0.2em;
+    margin-right:0.2em;
+    padding-left:0.2em;
+    padding-right:0.2em;
+    &.active{
+      background-color:$orange;
+    }
+  }
+}
+.sk-entry{
+  cursor:pointer;
+  &:hover progress::-webkit-progress-value{
+    background: $blue;
+  }
+  &:hover progress::-moz-progress-bar{
+    background: $blue;
+  }
 }
 .leftcol{
   background-color:$orange;
@@ -89,4 +130,32 @@ main{
   .info{
     text-align:left;
   }
+  .skills,.languages{
+    margin-top:1em;
+  }
+  @media print{
+    height:100%;
+  }
+
+}
+progress{
+  background-color:$orange;
+  width:100%;
+  color:#ddd;
+  border:none;
+  &::-webkit-progress-bar { background: $orange; }
+  &::-webkit-progress-value {
+    background: $lblue;
+    &:hover{
+      background: $blue;
+    }
+  }
+  &::-moz-progress-bar {
+    background: $lblue;
+    &:hover{
+      background: $blue;
+    }
+  }
+
+
 }

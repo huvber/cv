@@ -7,16 +7,15 @@
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,700'
       rel='stylesheet' type='text/css'>
     <link type="text/css" rel="stylesheet" href="css/ministyle.css" />
-    <link type="text/css" rel="stylesheet" href="css/mygrid.css" />
     <link type="text/css" rel="stylesheet" href="css/animation.css" />
   </head>
   <body>
-    <header class="main gr">
-      <div class="picture gc-4">
+    <header class="main">
+      <div class="picture">
         <img class="only-print" src="img/minicvhead_back.png" />
       </div>
-      <div class="intro gc-4">{{intro}}</div>
-      <div class="info gc-4">
+      <div class="intro">{{intro}}</div>
+      <div class="info">
         <h4>{{name}} {{surname}}</h4>
         <p>{{birthday}}</p>
         <p>{{address}}</p>
@@ -28,20 +27,26 @@
       </div>
     </header>
     <main>
-      <div class="firsblock gr">
-        <div class="education gc-6">
+      <div class="firsblock">
+        <div class="education">
           <h2>EDUCATION</h2>
         </div>
-        <div class="rightc gc-6">
+        <div class="rightc">
           <div class="abroadexp">
             <h2>ABROAD EXPERIENCES</h2>
           </div>
-          <div class="languages"></div>
+          <div class="languages">
+            <h2>LANGUAGES</h2>
+          </div>
         </div>
       </div>
-      <div class="secondblock">
-        <div class="skills"></div>
-        <div class="jobs"></div>
+      <div class="secondblock gr">
+        <div class="skills">
+          <h2>SKILLS</h2>
+        </div>
+        <div class="jobs">
+          <h2>JOB EXPERIENCES</h2>
+        </div>
       </div>
     </main>
     <footer>
@@ -51,21 +56,29 @@
     <!-- TEMPLATES of ELEMENTS -->
     <div class="ed-entry">
       <div class="gr">
-        <div class="date gc-3">{{date}}</div>
-        <div class="title gc-9">{{title}} <span>{{grade}}</span></div>
+        <div class="date">{{date}}</div>
+        <div class="title">{{title}} <span>{{grade}}</span></div>
       </div>
-      <div class="where gr">{{where}}</div>
-      <div class="sub gr">{{subtitle}}</div>
+      <div class="where">{{where}}</div>
+      <div class="sub">{{subtitle}}</div>
     </div>
     <div class="ab-entry">
-      <div class="gr">
-        <div class="date gc-3">{{date}}</div>
-        <div class="title gc-9">{{title}}</div>
+      <div>
+        <div class="date">{{date}}</div>
+        <div class="title">{{title}}</div>
       </div>
       <div class="where gr">{{where}}</div>
       <div class="sub gr">{{subtitle}}</div>
     </div>
-
+    <div class="jb-entry">
+      <div>
+        <div class="date">{{date}}</div>
+        <div class="title">{{title}}</div>
+      </div>
+      <div class="where">{{where}}</div>
+      <div class="sub">{{subtitle}}</div>
+      <div class="link"><a href="{{link}}" target="_blank">{{link}}</a></div>
+    </div>
 
     <script src="js/minij.js"></script>
     <script src="js/minidata.js"></script>

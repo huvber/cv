@@ -1,3 +1,9 @@
+a {
+  color: #365BB0;
+  text-decoration: none; }
+  a:hover {
+    color: #082568; }
+
 .only-print, .only-print * {
   display: none; }
 
@@ -13,10 +19,10 @@ html, body {
   color: #4e4f4d; }
   @media print {
     html, body {
-      font-size: 8px; } }
-  @media all and (max-width: 1280px) {
-    html, body {
-      font-size: 10px; } }
+      font-size: 7px;
+      height: 100%; }
+      html .container, body .container {
+        height: 100%; } }
 
 html {
   background-color: #4e4f4d; }
@@ -30,46 +36,52 @@ body {
     body {
       width: 100%; } }
 
-.main .intro {
-  font-size: 1.2em;
-  text-align: justify;
-  color: #ffaa00; }
-.main .info {
-  font-size: 1.2em;
-  text-align: right;
-  line-height: 2em; }
-  @media print {
-    .main .info {
-      padding-right: 0; } }
-
-.picture {
+.main .pic-container img {
+  width: 100%; }
+.main .picture {
+  content: '&nbsp;';
+  width: 100%;
+  padding-bottom: 100%;
   background-image: url('../img/minicvhead.png');
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position: center;
-  transition: 0.5s ease-in-out;
-  width: 100%;
-  height: 0;
-  padding-bottom: 100%; }
-  @media print {
-    .picture {
-      background-image: none; }
-      .picture img {
-        width: 100%; } }
-  .picture:hover {
+  transition: 0.5s ease-in-out; }
+  .main .picture:hover {
     background-image: url('../img/minicvhead_back.png'); }
+.main .intro {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  text-align: justify;
+  color: #FF9A39; }
+  @media print {
+    .main .intro {
+      padding-top: -100%; } }
+.main .info {
+  text-align: right;
+  padding-right: 0.5em;
+  font-size: 1.2em; }
+  @media print {
+    .main .info {
+      padding-right: 0; } }
+.main:after {
+  content: "";
+  clear: both;
+  display: flex;
+  width: 0; }
 
 main {
   margin-top: 4em; }
   main h2 {
-    color: #ffaa00;
+    color: #FF9A39;
     font-weight: bold; }
 
 .ed-entry .date, .ab-entry .date, .jb-entry .date {
-  text-align: left; }
+  text-align: left;
+  overflow: hidden; }
 .ed-entry .title, .ab-entry .title, .jb-entry .title {
   padding-bottom: 0;
-  border-bottom: 1px solid #ffaa00; }
+  border-bottom: 1px solid #FF9A39; }
   .ed-entry .title span, .ab-entry .title span, .jb-entry .title span {
     float: right; }
 .ed-entry .where, .ab-entry .where, .jb-entry .where {
@@ -81,9 +93,52 @@ main {
   padding-left: 16.66667%; }
 .ed-entry .link, .ab-entry .link, .jb-entry .link {
   text-align: right; }
+.ed-entry .eskills, .ab-entry .eskills, .jb-entry .eskills {
+  padding-left: 16.66667%; }
+.ed-entry .lskill, .ab-entry .lskill, .jb-entry .lskill {
+  font-size: 0.8em;
+  border: 1px solid #365BB0;
+  border-radius: 3px;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+  padding-left: 0.2em;
+  padding-right: 0.2em; }
+  @media print {
+    .ed-entry .lskill, .ab-entry .lskill, .jb-entry .lskill {
+      border: 1px solid #ddd; } }
+  .ed-entry .lskill.active, .ab-entry .lskill.active, .jb-entry .lskill.active {
+    background-color: #FF9A39; }
+
+.sk-entry {
+  cursor: pointer; }
+  .sk-entry:hover progress::-webkit-progress-value {
+    background: #082568; }
+  .sk-entry:hover progress::-moz-progress-bar {
+    background: #082568; }
 
 .leftcol {
-  background-color: #ffaa00;
+  background-color: #FF9A39;
   color: #333; }
   .leftcol .info {
     text-align: left; }
+  .leftcol .skills, .leftcol .languages {
+    margin-top: 1em; }
+  @media print {
+    .leftcol {
+      height: 100%; } }
+
+progress {
+  background-color: #FF9A39;
+  width: 100%;
+  color: #ddd;
+  border: none; }
+  progress::-webkit-progress-bar {
+    background: #FF9A39; }
+  progress::-webkit-progress-value {
+    background: #365BB0; }
+    progress::-webkit-progress-value:hover {
+      background: #082568; }
+  progress::-moz-progress-bar {
+    background: #365BB0; }
+    progress::-moz-progress-bar:hover {
+      background: #082568; }

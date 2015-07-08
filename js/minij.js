@@ -122,6 +122,11 @@ je.prototype.each = function(handler){
     handler(el,i);
   });
 };
+je.prototype.at = function(attribute,value){
+  return doit(this, function(el,i){
+    el[attribute] = value;
+  });
+};
 je.prototype.remove = function(){
   this.el.parentElement.removeChild(this.el);
   this.el = null;
@@ -138,6 +143,7 @@ je.prototype.hide = function(time){
     }
   });
 };
+
 je.prototype.show = function(time){
   if(time===undefined) time=1;
   return doit(this,function(el){

@@ -57,7 +57,7 @@ var data = {
       grade:'-',
       where: 'Norges TeknisNaturvitenskapelige Universitet (NTNU)',
       subtitle:'Location-based games and the use of GIS Information.' +
-                  'Design a DSL for (re)locating a pervasive game<br />' +
+                  'Design a DSL for (re)locating a pervasive game. ' +
                   'Sup. <a href="https://www.ntnu.edu/employees/hal" target="_blank">'+
                   'Hallvard Trætteberg</a>',
       icon:'thesis',
@@ -91,8 +91,8 @@ var data = {
     }
   ],
   languages:{
-    mothert: 'Italian',
-    other:[
+    mother: 'Italian',
+    others:[
       {
         language:'English',
         certificates:[
@@ -167,6 +167,15 @@ var data = {
       type:['job'],
       skills: { html:5, css:5, javascript:10, jquery:5, php:5, sql:5, linux:10 } },
     {
+      date: '08-06-2015',
+      title:'WebDeveloper',
+      where:'Partycillina Event',
+      subtitle:'Website and Template Customization' ,
+      link:'http://www.partycillina.it',
+      icon:'website',
+      type:['job','project','web'],
+      skills:{ php:10, javascript:5, html:5, css:10, wordpress:5} },
+    {
       date: '12-06-2015',
       title:'Web Developer',
       where:'Associazione L\'Entità',
@@ -176,15 +185,6 @@ var data = {
       type:['job','project','web'],
       skills:{ php:10, javascript:5, html:5, css:10, wordpress:5},
     },
-    {
-      date: '08-06-2015',
-      title:'WebDeveloper',
-      where:'Partycillina Event',
-      subtitle:'Website and Template Customization' ,
-      link:'http://www.partycillina.it',
-      icon:'website',
-      type:['job','project','web'],
-      skills:{ php:10, javascript:5, html:5, css:10, wordpress:5},
-    },
+
   ]
 };

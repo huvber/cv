@@ -22,7 +22,7 @@ $breakpoint-medium: "only screen and (min-width: 30em)";
   &:before,&:after{
     content:"";
     clear:both;
-    display:table;
+    display:flex;
     width:0;
   }
 }
@@ -35,8 +35,13 @@ $breakpoint-medium: "only screen and (min-width: 30em)";
 @for $i from 1 to $cols + 1{
   .gc-#{$i}{
     width:100%/$cols*$i;
-    @media all and (max-width:800px){
-      width:100%;
+
+  }
+}
+@for $i from 1 to $cols + 1{
+  .gc-p#{$i}{
+    @media print {
+      width:100%/$cols*$i !important;
     }
   }
 }
