@@ -109,7 +109,7 @@ var events = [
   {
     date: ['02-02-2007','02-09-2008'],
     title:'\'TEACHING-LIS\' PLATFORM',
-    subtitle:'Creation of a DVD teaching platform for the Italian Sign Language<br /> ALBA ONLUS Torino',
+    subtitle:'Creation of a DVD teaching platform for the Italian Sign Language',
     icon:'project',
     type:['job','project'],
     skills:{ visualbasic:10, cpp:3 } },

@@ -1,13 +1,14 @@
 // out: ./ministyle.css
 $dark : #4e4f4d;
+$light: #D8DBD6;
 $orange : #FF9A39;
-$blue: #082568;
-$lblue: #365BB0;
+$dorange: #7F4C1C;
+$lorange: #CC792D;
 a {
-  color: $lblue;
+  color: $dorange;
   text-decoration:none;
   &:hover{
-    color:$blue;
+    color:$lorange;
   }
 }
 
@@ -21,10 +22,10 @@ a {
 html, body {
   font-family: 'Oswald', sans-serif;
   font-size: 14px;
-  @media print { font-size:7px; height:100%; .container{ height:100%;}}
+  @media print { font-size:7px; height:100%; .container{ height:100%;} }
   color: $dark;
 }
-html{ background-color:$dark; }
+html{ background-color:$dark; @media print{ background:#fff;}}
 body{
   background-color:#fff;
   width:70%;
@@ -33,6 +34,10 @@ body{
   @media print {
     width:100%;
   }
+}
+h2{
+  color:$dorange;
+  padding-top:0.2em;
 }
 .main{
   .pic-container{
@@ -86,22 +91,24 @@ main{
 
 }
 .ed-entry, .ab-entry, .jb-entry{
+  margin-top:0.3em;
   .date { text-align:left; overflow:hidden; }
   .title{
     padding-bottom:0;
     border-bottom:1px solid $orange;
+    font-weight:bold;
     span{ float:right; }
   }
 
   .where{ text-align:right; }
-  .sub{ font-weight:bold; font-style:italic; margin-bottom:0.9em; padding-left:(100%/12*2)}
+  .sub{ font-style:italic; margin-bottom:0.9em; padding-left:(100%/12*2)}
   .link{ text-align:right;}
   .eskills{
     padding-left:(100%/12*2);
   }
   .lskill{
     font-size:0.8em;
-    border:1px solid $lblue;
+    border:1px solid $dorange;
     @media print {
       border:1px solid #ddd;
     }
@@ -112,16 +119,17 @@ main{
     padding-right:0.2em;
     &.active{
       background-color:$orange;
+
     }
   }
 }
 .sk-entry{
   cursor:pointer;
   &:hover progress::-webkit-progress-value{
-    background: $blue;
+    background: $dark;
   }
   &:hover progress::-moz-progress-bar{
-    background: $blue;
+    background: $dark;
   }
 }
 .leftcol{
@@ -135,27 +143,70 @@ main{
   }
   @media print{
     height:100%;
+    background:$light;
   }
 
+}
+.rightcol{
+  margin-left:4em;
+
+  @media print{
+    margin-left:6em;
+    min-height:100%;
+  }
+}
+.intro{
+  font-size:0.9em;
+  color:$lorange;
+  font-style:italic;
+  text-align:justify;
 }
 progress{
   background-color:$orange;
   width:100%;
   color:#ddd;
-  border:none;
-  &::-webkit-progress-bar { background: $orange; }
+  border:1px solid $orange;
+  @media print{
+    border:none;
+  }
+  &::-webkit-progress-bar {
+    background: $orange;
+    @media print{ background: $light; }
+  }
   &::-webkit-progress-value {
-    background: $lblue;
+    background: #fff;
+    @media print{
+      background:$orange;
+    }
     &:hover{
-      background: $blue;
+      background: $dark;
     }
   }
   &::-moz-progress-bar {
-    background: $lblue;
+    background: $light;
+    @media print {
+      background:$orange;
+    }
     &:hover{
-      background: $blue;
+      background: $dark;
     }
   }
+}
+.llevel{
+  border-radius:50%;
+  border:1px solid $dark;
+  padding-left:0.3em;
+  padding-right:0.3em;
+  padding-top:0.1em;
+  padding-bottom:0.1em;
+  text-align:center;
+  width:2em;
+  &.A1 { background-color:#B22116; }
+  &.A2 { background-color:#FF5E52; }
+  &.B1 { background-color:$dorange; }
+  &.B2 { background-color:#FFDD4A; }
+  &.C1 { background-color:#04B24D; }
+  &.C2 { background-color:#39FF8B; }
 }
 .lo-entry progress{
   float:left;

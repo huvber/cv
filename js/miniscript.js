@@ -17,6 +17,7 @@ var popolate = function(father,model,elements,skills){
 };
 //complete the header informations
 j('.main').parse(data.main);
+j('.intro').parse({intro: data.main.intro});
 
 //extrac template elements
 var t = {

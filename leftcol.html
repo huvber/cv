@@ -6,6 +6,8 @@
     <title>My CV</title>
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,700'
       rel='stylesheet' type='text/css'>
+      <link rel="stylesheet"
+      href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link type="text/css" rel="stylesheet" href="css/ministyle.css" />
     <link type="text/css" rel="stylesheet" href="css/mygrid.css" />
     <link type="text/css" rel="stylesheet" href="css/animation.css" />
@@ -46,6 +48,7 @@
         <div class="hobbies"></div>
       </div>
       <div class="rightcol gc-9">
+        <div class="intro">{{intro}}</div>
         <div class="jobs">
           <h2>WORK HISTORY</h2>
         </div>
@@ -67,17 +70,21 @@
         <div class="date gc-2">{{date}}</div>
         <div class="title gc-10">{{title}} <span>{{grade}}</span></div>
       </div>
-      <div class="where gr">{{where}}</div>
-      <div class="sub gr">{{subtitle}}</div>
+      <div class="gr">
+        <div class="sub gc-6">{{subtitle}}</div>
+        <div class="where gc-6">{{where}}</div>
+      </div>
       <div class="eskills"></div>
     </div>
     <div class="ab-entry">
       <div class="gr">
         <div class="date gc-2">{{date}}</div>
-        <div class="title gc-10">{{title}}</div>
+        <div class="title gc-5">{{title}}</div>
       </div>
-      <div class="where gr">{{where}}</div>
-      <div class="sub gr">{{subtitle}}</div>
+      <div class="gr">
+        <div class="sub gc-6">{{subtitle}}</div>
+        <div class="where gc-6">{{where}}</div>
+      </div>
       <div class="eskills"></div>
     </div>
     <div class="jb-entry">
@@ -85,10 +92,16 @@
         <div class="date gc-2">{{date}}</div>
         <div class="title gc-10">{{title}}</div>
       </div>
-      <div class="where gr">{{where}}</div>
-      <div class="sub gr">{{subtitle}}</div>
-      <div class="link gr"><a href="{{link}}" target="_blank">{{link}}</a></div>
-      <div class="eskills"></div>
+      <div class="gr">
+        <div class="sub gc-6">{{subtitle}}</div>
+        <div class="where gc-6">{{where}}</div>
+      </div>
+      <div class="gr">
+        <div class="eskills gc-6"></div>
+        <div class="link gc-6">
+          <a href="{{link}}" target="_blank">{{link}}</a>
+        </div>
+      </div>
     </div>
     <div class="sk-entry">
       <div class="name">{{name}}</div>
@@ -99,21 +112,21 @@
       <div class="levels">
         <div class="gr">
           <div class="gc-6">COMPREHENSION:</div>
-          <div class="gc-3"title="Listening">L:
+          <div class="gc-3"title="Listening"><i class="fa fa-headphones"></i>:
           <span class="llevel {{list}}">{{list}}</span></div>
-          <div class="gc-3" title="Reading">R:
+          <div class="gc-3" title="Reading"><i class="fa fa-book"></i>:
           <span class="llevel {{read}}">{{read}}</span></div>
         </div>
         <div class="gr">
           <div class="gc-6">SPEAKING:</div>
-          <div class="gc-3" title="Interaction">I:
+          <div class="gc-3" title="Interaction"><i class="fa fa-users"></i>:
           <span class="llevel {{int}}">{{int}}</span></div>
-          <span class="gc-3" title="Production">P:
+          <span class="gc-3" title="Production"><i class="fa fa-volume-up"></i>:
           <span class="llevel {{prod}}">{{prod}}</span></div>
         </div>
         <div class="gr">
-          <div class="gc-6">WRITING:</div>
-          <div class="gc-3 llevel {{write}}">{{write}}</div>
+          <div class="gc-7">WRITING:</div>
+          <div class="gc-4" title="Writing"><i class="fa fa-pencil"></i>:<span class="llevel {{write}}">{{write}}</span></div>
         </div>
       </div>
     </div>

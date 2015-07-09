@@ -124,7 +124,7 @@ var data = {
       date: '02-02-2007 - 02-09-2008',
       title:'VisualStudio Developer',
       where:'Alba Onlus',
-      subtitle:'\'TEACHING-LIS\' PLATFORM <br />Creation of a DVD teaching platform for the Italian Sign Language<br /> ALBA ONLUS Torino',
+      subtitle:'Creation of a DVD teaching platform for the Italian Sign Language',
       icon:'project',
       link:'',
       type:['job','project'],
