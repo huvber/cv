@@ -24,6 +24,9 @@ html, body {
       html .container, body .container {
         height: 100%; } }
 
+.container {
+  box-shadow: 0 0 2em 0.5em #333; }
+
 html {
   background-color: #4e4f4d; }
   @media print {
@@ -57,6 +60,7 @@ h2 {
   .main .picture:hover {
     background-image: url('../img/minicvhead_back.png'); }
 .main .intro {
+  font-size: 1.2em;
   padding-left: 0.5em;
   padding-right: 0.5em;
   text-align: justify;
@@ -86,7 +90,7 @@ main {
 .ed-entry, .ab-entry, .jb-entry {
   margin-top: 0.3em; }
   .ed-entry .date, .ab-entry .date, .jb-entry .date {
-    text-align: left;
+    text-align: right;
     overflow: hidden; }
   .ed-entry .title, .ab-entry .title, .jb-entry .title {
     padding-bottom: 0;
@@ -97,13 +101,9 @@ main {
   .ed-entry .where, .ab-entry .where, .jb-entry .where {
     text-align: right; }
   .ed-entry .sub, .ab-entry .sub, .jb-entry .sub {
-    font-style: italic;
-    margin-bottom: 0.9em;
-    padding-left: 16.66667%; }
+    font-style: italic; }
   .ed-entry .link, .ab-entry .link, .jb-entry .link {
     text-align: right; }
-  .ed-entry .eskills, .ab-entry .eskills, .jb-entry .eskills {
-    padding-left: 16.66667%; }
   .ed-entry .lskill, .ab-entry .lskill, .jb-entry .lskill {
     font-size: 0.8em;
     border: 1px solid #7F4C1C;
@@ -120,10 +120,8 @@ main {
 
 .sk-entry {
   cursor: pointer; }
-  .sk-entry:hover progress::-webkit-progress-value {
-    background: #4e4f4d; }
-  .sk-entry:hover progress::-moz-progress-bar {
-    background: #4e4f4d; }
+  .sk-entry:hover .progress {
+    color: #CC792D; }
 
 .leftcol {
   background-color: #FF9A39;
@@ -135,49 +133,76 @@ main {
   @media print {
     .leftcol {
       height: 100%;
-      background: #D8DBD6; } }
+      background: #F5EEE0; } }
 
 .rightcol {
-  margin-left: 4em; }
+  margin-left: 4em;
+  position: relative; }
   @media print {
     .rightcol {
       margin-left: 6em;
       min-height: 100%; } }
 
 .intro {
-  font-size: 0.9em;
+  font-size: 1em;
+  padding-bottom: 0.5em;
   color: #CC792D;
   font-style: italic;
   text-align: justify; }
 
-progress {
-  background-color: #FF9A39;
-  width: 100%;
-  color: #ddd;
-  border: 1px solid #FF9A39; }
+.progress {
+  color: #7F4C1C; }
+  .progress i {
+    padding-left: 1px; }
+  .progress:hover {
+    color: #CC792D; }
   @media print {
-    progress {
-      border: none; } }
-  progress::-webkit-progress-bar {
-    background: #FF9A39; }
-    @media print {
-      progress::-webkit-progress-bar {
-        background: #D8DBD6; } }
-  progress::-webkit-progress-value {
-    background: #fff; }
-    @media print {
-      progress::-webkit-progress-value {
-        background: #FF9A39; } }
-    progress::-webkit-progress-value:hover {
-      background: #4e4f4d; }
-  progress::-moz-progress-bar {
-    background: #D8DBD6; }
-    @media print {
-      progress::-moz-progress-bar {
-        background: #FF9A39; } }
-    progress::-moz-progress-bar:hover {
-      background: #4e4f4d; }
+    .progress {
+      color: #CC792D; } }
 
+.abroadexp {
+  margin-bottom: 3em; }
+  @media print {
+    .abroadexp {
+      margin-bottom: 0; } }
+
+.privacy {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: auto; }
+
+/*progress{
+  background-color:$orange;
+  width:100%;
+  color:#ddd;
+  border:1px solid $orange;
+  @media print{
+    border:none;
+  }
+  &::-webkit-progress-bar {
+    background: $orange;
+    @media print{ background: $light; }
+  }
+  &::-webkit-progress-value {
+    background: #fff;
+    @media print{
+      background:$orange;
+    }
+    &:hover{
+      background: $dark;
+    }
+  }
+  &::-moz-progress-bar {
+    background: $light;
+    @media print {
+      background:$orange;
+    }
+    &:hover{
+      background: $dark;
+    }
+  }
+}*/
 .llevel {
   border-radius: 50%;
   border: 1px solid #4e4f4d;
@@ -187,17 +212,17 @@ progress {
   padding-bottom: 0.1em;
   text-align: center;
   width: 2em; }
-  .llevel.A1 {
+  .llevel.A1, .llevel.a1 {
     background-color: #B22116; }
-  .llevel.A2 {
+  .llevel.A2, .llevel.a2 {
     background-color: #FF5E52; }
-  .llevel.B1 {
+  .llevel.B1, .llevel.b1 {
     background-color: #7F4C1C; }
-  .llevel.B2 {
+  .llevel.B2, .llevel.b2 {
     background-color: #FFDD4A; }
-  .llevel.C1 {
+  .llevel.C1, .llevel.c1 {
     background-color: #04B24D; }
-  .llevel.C2 {
+  .llevel.C2, .llevel.c2 {
     background-color: #39FF8B; }
 
 .lo-entry progress {

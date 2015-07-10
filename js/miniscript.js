@@ -8,7 +8,7 @@ var popolate = function(father,model,elements,skills){
       var tskills = j(newE).get('.eskills').e();
       var entry_skills = elements[e].skills;
       for(var s in entry_skills){
-        skills[s.toUpperCase()] = skills[s.toUpperCase()] ? skills[s.toUpperCase()] + entry_skills[s] : entry_skills[s];
+        //skills[s.toUpperCase()] = skills[s.toUpperCase()] ? skills[s.toUpperCase()] + entry_skills[s] : entry_skills[s];
         tskills.innerHTML = tskills.innerHTML + '<span class="lskill '+ s.toUpperCase() + '" >'+s.toUpperCase() +'</span>';
       }
     }
@@ -32,22 +32,31 @@ var t = {
 };
 
 
-var skills = {};
+var skills = data.skills;
 popolate(t.education,t.edEvent,data.education.reverse(),skills);
 popolate(t.jobs,t.jbEvent,data.jobs.reverse(),skills);
 popolate(t.abroad,t.abEvent,data.abroad.reverse(),skills);
 
 //skill population
-var max = 0;
-var keysSorted = Object.keys(skills).sort(function(a,b){return skills[b]-skills[a]; });
-for (var i in keysSorted){
-  var s = keysSorted[i];
-  if(skills[s] > max) max = skills[s];
+//var max = 0;
+//var keysSorted = Object.keys(skills).sort(function(a,b){return skills[b]-skills[a]; });
+for (var s in skills){
+  //var s = keysSorted[i];
+  //if(skills[s] > max) max = skills[s];
   var newSk = t.skEvent.cloneNode(true);
-  j(newSk).parse({ name: s, value: skills[s]});
+  j(newSk).parse(
+    { name: s.toUpperCase(),
+    value: skills[s]});
+  var p = j(newSk).get('.progress').e();
+  for(var y =0; y < skills[s]; y++)
+    p.innerHTML +='<i class="fa fa-circle"></i>';
+  for(y; y<6; y++)
+    p.innerHTML+='<i class="fa fa-circle-o"></i>';
   t.skills.appendChild(newSk);
 }
-j('progress').at('max',max);
+
+j('.interests').parse(data.interests);
+//j('progress').at('max',max);
 t.skEvent.remove();
 
 //language population

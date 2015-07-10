@@ -158,15 +158,6 @@ var data = {
       skills:{ php:10, json:5, javascript:10, html:5, jquery:10, bootstrap:20, css:10}
     },
     {
-      date: '01-06-2013 - TODAY',
-      title: 'System Admin - Web Developer',
-      where:'Artedas Italia srl',
-      subtitle: 'Company\'s website, Customers Projects, Iternal Projects',
-      link:'http://www.artedas.it',
-      icon:'job',
-      type:['job'],
-      skills: { html:5, css:5, javascript:10, jquery:5, php:5, sql:5, linux:10 } },
-    {
       date: '08-06-2015',
       title:'WebDeveloper',
       where:'Partycillina Event',
@@ -185,6 +176,28 @@ var data = {
       type:['job','project','web'],
       skills:{ php:10, javascript:5, html:5, css:10, wordpress:5},
     },
+    {
+      date: '01-06-2013 - TODAY',
+      title: 'System Admin - Web Developer',
+      where:'Artedas Italia srl',
+      subtitle: 'Company\'s website, Customers Projects, Internal Projects',
+      link:'http://www.artedas.it',
+      icon:'job',
+      type:['job'],
+      skills: { html:5, css:5, javascript:10, jquery:5, php:5, sql:5, linux:10, nodejs:10, meteor:10 } },
 
-  ]
+
+  ],
+  skills: {
+    php: 6, javascript: 6, html: 6, css: 6, linux: 6,
+    sql: 5, java: 5, jquery: 6, cpp: 5, bootstrap:5, opengl: 4,
+    wordpress:4, json:5, nodejs: 5, meteor: 5, yii:4, MongoDB:4,
+    angularjs:3, foundation:5
+  },
+  interests:{
+    music:      ['songwriting music','indipendent music','pop-rock'],
+    cinema:     ['italian old movies','classics'],
+    literature: ['classic','british','italian'],
+    sport:      ['basket','swim','bycicle','canoa']
+  }
 };
