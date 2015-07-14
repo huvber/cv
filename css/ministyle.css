@@ -5,7 +5,7 @@ a {
     color: #CC792D; }
 
 .only-print, .only-print * {
-  display: none; }
+  display: none !important; }
 
 @media print {
   .no-print, .no-print * {
@@ -19,13 +19,12 @@ html, body {
   color: #4e4f4d; }
   @media print {
     html, body {
-      font-size: 7px;
-      height: 100%; }
-      html .container, body .container {
-        height: 100%; } }
+      font-size: 9px;
+      height: 100%; } }
 
-.container {
-  box-shadow: 0 0 2em 0.5em #333; }
+@media not print {
+  .container {
+    box-shadow: 0 0 2em 0.5em #333; } }
 
 html {
   background-color: #4e4f4d; }
@@ -67,6 +66,7 @@ h2 {
   color: #FF9A39; }
   @media print {
     .main .intro {
+      font-size: 0.8em;
       padding-top: -100%; } }
 .main .info {
   text-align: right;
@@ -87,24 +87,24 @@ main {
     color: #FF9A39;
     font-weight: bold; }
 
-.ed-entry, .ab-entry, .jb-entry {
+.ed-entry, .ab-entry, .jb-entry, .pr-entry {
   margin-top: 0.3em; }
-  .ed-entry .date, .ab-entry .date, .jb-entry .date {
+  .ed-entry .date, .ab-entry .date, .jb-entry .date, .pr-entry .date {
     text-align: right;
     overflow: hidden; }
-  .ed-entry .title, .ab-entry .title, .jb-entry .title {
+  .ed-entry .title, .ab-entry .title, .jb-entry .title, .pr-entry .title {
     padding-bottom: 0;
     border-bottom: 1px solid #FF9A39;
     font-weight: bold; }
-    .ed-entry .title span, .ab-entry .title span, .jb-entry .title span {
+    .ed-entry .title span, .ab-entry .title span, .jb-entry .title span, .pr-entry .title span {
       float: right; }
-  .ed-entry .where, .ab-entry .where, .jb-entry .where {
+  .ed-entry .where, .ab-entry .where, .jb-entry .where, .pr-entry .where {
     text-align: right; }
-  .ed-entry .sub, .ab-entry .sub, .jb-entry .sub {
+  .ed-entry .sub, .ab-entry .sub, .jb-entry .sub, .pr-entry .sub {
     font-style: italic; }
-  .ed-entry .link, .ab-entry .link, .jb-entry .link {
+  .ed-entry .link, .ab-entry .link, .jb-entry .link, .pr-entry .link {
     text-align: right; }
-  .ed-entry .lskill, .ab-entry .lskill, .jb-entry .lskill {
+  .ed-entry .lskill, .ab-entry .lskill, .jb-entry .lskill, .pr-entry .lskill {
     font-size: 0.8em;
     border: 1px solid #7F4C1C;
     border-radius: 3px;
@@ -113,9 +113,9 @@ main {
     padding-left: 0.2em;
     padding-right: 0.2em; }
     @media print {
-      .ed-entry .lskill, .ab-entry .lskill, .jb-entry .lskill {
+      .ed-entry .lskill, .ab-entry .lskill, .jb-entry .lskill, .pr-entry .lskill {
         border: 1px solid #ddd; } }
-    .ed-entry .lskill.active, .ab-entry .lskill.active, .jb-entry .lskill.active {
+    .ed-entry .lskill.active, .ab-entry .lskill.active, .jb-entry .lskill.active, .pr-entry .lskill.active {
       background-color: #FF9A39; }
 
 .sk-entry {
@@ -132,8 +132,9 @@ main {
     margin-top: 1em; }
   @media print {
     .leftcol {
-      height: 100%;
-      background: #F5EEE0; } }
+      height: 558mm;
+      background: #F5EEE0;
+      font-size: 8px; } }
 
 .rightcol {
   margin-left: 4em;
@@ -227,3 +228,8 @@ main {
 
 .lo-entry progress {
   float: left; }
+
+@page {
+  @bottom-right {
+    content: counter(page) " of " counter(pages); }
+ }

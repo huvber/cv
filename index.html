@@ -13,84 +13,88 @@
     <link type="text/css" rel="stylesheet" href="css/animation.css" />
   </head>
   <body>
-    <div class="gr container">
-      <div class="leftcol gc-3">
-        <div class="main">
-          <div class="pic-container">
-            <div class="picture no-print">
+    <div class="container">
+      <div class="gr fpage">
+        <div id="pageFooter"> </div>
+        <div class="leftcol gc-3">
+          <div class="main">
+            <div class="pic-container">
+              <div class="picture no-print">
+              </div>
+              <img class="only-print" src="img/minicvhead_back.png" />
             </div>
-            <img class="only-print" src="img/minicvhead_back.png" />
+            <div class="info">
+              <h4>{{name}} {{surname}}</h4>
+              <p>{{birthday}}</p>
+              <p>{{address}}</p>
+              <p>{{phone}}</p>
+              <p><a href="mailto:{{email}}" target="_blank">{{email}}</a></p>
+              <p><a href="http://{{github}}" target="_blank">{{github}}</a></p>
+              <p><a href="http://{{linkedin}}" target="_blank">{{linkedin}}</a></p>
+              <p>{{drivel}} - {{car}}</p>
+            </div>
           </div>
-          <div class="info">
-            <h4>{{name}} {{surname}}</h4>
-            <p>{{birthday}}</p>
-            <p>{{address}}</p>
-            <p>{{phone}}</p>
-            <p><a href="mailto:{{email}}" target="_blank">{{email}}</a></p>
-            <p><a href="http://{{github}}" target="_blank">{{github}}</a></p>
-            <p><a href="http://{{linkedin}}" target="_blank">{{linkedin}}</a></p>
-            <p>{{drivel}} - {{car}}</p>
+          <div class="languages">
+            <h2>LANGUAGES</h2>
+            <div class="mt gr">
+              <div class="gc-1">MT:</div>
+              <div class="gc-9 tright">{{mother}}</div>
+            </div>
+            <div class="others">
+            </div>
+          </div>
+          <div class="skills">
+            <h2>SKILLS</h2>
+          </div>
+          <div class="interests">
+            <h2>INTERESTS &amp; HOBBIES</h2>
+            <div class="gr">
+              <div class="gc-2">
+                <i class="fa fa-music"></i> :
+              </div>
+              <div class="gc-10">{{music}}</div>
+            </div>
+            <div class="gr">
+              <div class="gc-2">
+                <i class="fa fa-film"></i> :
+              </div>
+              <div class="gc-10">{{cinema}}</div>
+            </div>
+            <div class="gr">
+              <div class="gc-2">
+                <i class="fa fa-book"></i> :
+              </div>
+              <div class="gc-10">{{literature}}</div>
+            </div>
+            <div class="gr">
+              <div class="gc-2">
+                <i class="fa fa-dribbble"></i> :
+              </div>
+              <div class="gc-10">{{sport}}</div>
+            </div>
+          </div>
+          <div class="hobbies"></div>
+        </div>
+        <div class="rightcol gc-9">
+          <div class="intro">{{intro}}</div>
+          <div class="jobs">
+            <h2>WORK HISTORY</h2>
+          </div>
+          <div class="education">
+            <h2>EDUCATION</h2>
+          </div>
+          <div class="abroadexp">
+            <h2>ABROAD EXPERIENCES</h2>
+          </div>
+          <div class="projects">
+            <h2>PRIVATE PROJECTS</h2>
+          </div>
+          <div class="privacy only-print">
+            Autorizzo il trattamento dei dati personali contenuti nel mio curriculum vitae in base art. 13 del D. Lgs. 196/2003.
           </div>
         </div>
-        <div class="languages">
-          <h2>LANGUAGES</h2>
-          <div class="mt gr">
-            <div class="gc-1">MT:</div>
-            <div class="gc-9 tright">{{mother}}</div>
-          </div>
-          <div class="others">
-          </div>
-        </div>
-        <div class="skills">
-          <h2>SKILLS</h2>
-        </div>
-        <div class="interests">
-          <h2>INTERESTS &amp; HOBBIES</h2>
-          <div class="gr">
-            <div class="gc-2">
-              <i class="fa fa-music"></i> :
-            </div>
-            <div class="gc-10">{{music}}</div>
-          </div>
-          <div class="gr">
-            <div class="gc-2">
-              <i class="fa fa-film"></i> :
-            </div>
-            <div class="gc-10">{{cinema}}</div>
-          </div>
-          <div class="gr">
-            <div class="gc-2">
-              <i class="fa fa-book"></i> :
-            </div>
-            <div class="gc-10">{{literature}}</div>
-          </div>
-          <div class="gr">
-            <div class="gc-2">
-              <i class="fa fa-dribbble"></i> :
-            </div>
-            <div class="gc-10">{{sport}}</div>
-          </div>
-
-
-
-        </div>
-        <div class="hobbies"></div>
       </div>
-      <div class="rightcol gc-9">
-        <div class="intro">{{intro}}</div>
-        <div class="jobs">
-          <h2>WORK HISTORY</h2>
-        </div>
-        <div class="education">
-          <h2>EDUCATION</h2>
-        </div>
-        <div class="abroadexp">
-          <h2>ABROAD EXPERIENCES</h2>
-        </div>
-        <div class="privacy">
-          Autorizzo il trattamento dei dati personali contenuti nel mio curriculum vitae in base art. 13 del D. Lgs. 196/2003.
-        </div>
-      </div>
+    </div>
     <div style="clear:both"></div>
     </div>
 
@@ -124,6 +128,22 @@
       <div class="gc-10">
         <div class="title gr">{{title}}</div>
         <div class="gr">
+          <div class="sub gc-6">{{subtitle}}</div>
+          <div class="where gc-6">{{where}}</div>
+        </div>
+        <div class="gr">
+          <div class="eskills gc-6"></div>
+          <div class="link gc-6">
+            <a href="{{link}}" target="_blank">{{link}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pr-entry gr">
+      <div class="date gc-2">{{date}}</div>
+      <div class="gc-10">
+        <div class="title gr">{{title}}</div>
+        <div class="gr">
           <div class="sub">{{subtitle}}</div>
           <div class="where">{{where}}</div>
         </div>
@@ -146,7 +166,7 @@
       <div class="levels">
         <div class="gr">
           <div class="gc-6">COMPREHENSION:</div>
-          <div class="gc-3"title="Listening"><i class="fa fa-headphones"></i> : 
+          <div class="gc-3"title="Listening"><i class="fa fa-headphones"></i> :
           <span class="llevel {{list}}">{{list}}</span></div>
           <div class="gc-3" title="Reading"><i class="fa fa-book"></i> :
           <span class="llevel {{read}}">{{read}}</span></div>

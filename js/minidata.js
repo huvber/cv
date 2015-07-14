@@ -188,6 +188,19 @@ var data = {
 
 
   ],
+  projects : [
+    {
+      date: '14-07-2015',
+      title: 'Dynamic Resume (this CV)',
+      where:'Home',
+      subtitle: 'HTML and Printing Resume using pure javascript, html, css(sass) (no library)',
+      link:'huvber.github.io/cv',
+      icon:'cv',
+      type:['project'],
+      skills: { html:5, css:5, javascript:10} 
+    }
+  ],
+
   skills: {
     php: 6, javascript: 6, html: 6, css: 6, linux: 6,
     sql: 5, java: 5, jquery: 6, cpp: 5, bootstrap:5, opengl: 4,

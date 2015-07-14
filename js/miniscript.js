@@ -25,6 +25,8 @@ var t = {
   abroad    : j('.abroadexp').e(),
   jobs      : j('.jobs').e(),
   skills    : j('.skills').e(),
+  projects  : j('.projects').e(),
+  prEvent   : j('.pr-entry').e(),
   abEvent   : j('.ab-entry').e(),
   edEvent   : j('.ed-entry').e(),
   jbEvent   : j('.jb-entry').e(),
@@ -36,6 +38,7 @@ var skills = data.skills;
 popolate(t.education,t.edEvent,data.education.reverse(),skills);
 popolate(t.jobs,t.jbEvent,data.jobs.reverse(),skills);
 popolate(t.abroad,t.abEvent,data.abroad.reverse(),skills);
+popolate(t.projects,t.prEvent,data.projects.reverse(),skills);
 
 //skill population
 //var max = 0;
