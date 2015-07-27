@@ -2,7 +2,7 @@ var data = {
   main:  {
     name:       'Andrea',
     surname:    'Mannarà',
-    birthday:   '27/03/1987 - Chieri (TO)',
+    birthday:   '27/03/1987 -- Chieri (TO)',
     address:    'Via Modena 53, 10153 Torino (TO)',
     phone:      '(+39)3489263742',
     email:      'andrea.mannara87@gmail.com',
@@ -23,7 +23,7 @@ var data = {
   },
   education: [
     {
-      date: '14/06/2006',
+      date: ['14/06/2006'],
       title: 'Diploma',
       grade: '77/100',
       where: 'ITIS A. Avogadro',
@@ -32,7 +32,7 @@ var data = {
       skills:{html:3,css:3, php:10, cpp:10, javascript:3,sql:3 }
     },
     {
-      date: '06/09/2006 - 20/09/2010',
+      date: ['06/09/2006','20/09/2010'],
       title: 'Bachelor Degree',
       grade: '90/110',
       where: 'Politecnico di Torino',
@@ -42,7 +42,7 @@ var data = {
               networks:12,html:3,php:5}
     },
     {
-      date: '29/09/2010 - 26/03/2013',
+      date: ['29/09/2010','26/03/2013'],
       title: 'Master Degree',
       grade: '94/110',
       where: 'Politecnico di Torino',
@@ -52,7 +52,7 @@ var data = {
               blender:5, python:5, java:10, xml:10, html:5}
     },
     {
-      date: '01/01/2012 - 10/06/2012',
+      date: ['01/01/2012','10/06/2012'],
       title:'Master Thesis',
       grade:'-',
       where: 'Norges TeknisNaturvitenskapelige Universitet (NTNU)',
@@ -64,7 +64,7 @@ var data = {
       skills:{ java:10, eclipse:10, xml:10, uml:10}
     },
     {
-      date:'07/09/2013 - 18/06/2015',
+      date:['07/09/2013' , '18/06/2015'],
       title:'PostGraduate Course',
       subtitle:'ICT and Advance Developement',
       grade: '110/110',
@@ -75,15 +75,15 @@ var data = {
   ],
   abroad: [
     {
-      date: '15-08-2011 - 12-06-2012',
+      date: ['15-08-2011','12-06-2012'],
       title: 'LLP/Erasmus',
       where: 'Norges TeknisNaturvitenskapelige Universitet (NTNU)',
       subtitle:'10 Months Courses and Master Thesis',
-      icon: 'erasusm',
+      icon: 'erasmus',
       skills:{ network:10, java:10, html:5, linux:10 }
     },
     {
-      date: '08-07-2004 - 23-07-2004',
+      date: ['08-07-2004','23-07-2004'],
       title:'English Summer Course',
       where:'UDC Dublin, Ireland',
       subtitle:'15days of English course and activities',
@@ -112,7 +112,7 @@ var data = {
   },
   jobs:[
     {
-      date: '01-03-2006 - 01-07-2006',
+      date: ['01-03-2006','01-07-2006'],
       title: '3D Designer and Web Developer',
       where: 'ITIS A. Avogadro',
       subtitle:'Intercative 3D tour of the School<br /> ITIS A.Avogadro',
@@ -121,7 +121,7 @@ var data = {
       type:['job','project'],
       skills:{ html:1,css:1, 'blender':5 } },
     {
-      date: '02-02-2007 - 02-09-2008',
+      date: ['02-02-2007','02-09-2008'],
       title:'VisualStudio Developer',
       where:'Alba Onlus',
       subtitle:'Creation of a DVD teaching platform for the Italian Sign Language',
@@ -130,7 +130,7 @@ var data = {
       type:['job','project'],
       skills:{ visualbasic:10, cpp:3 } },
     {
-      date: '15-10-2008 - 31-01-2013',
+      date: ['15-10-2008','31-01-2013'],
       title:'Frontend & Backend Developer',
       where:'PubliChieri srl',
       subtitle:'Newspaper\'s website, CMS from Scratch, NewsPaper Layout creator and Manager',
@@ -139,8 +139,8 @@ var data = {
       type:['job','project','web'],
       skills:{ php:20, sql:10, javascript:20, html:15, jquery:20, css:10} },
     {
-      date: '10-03-2009 - 31-07-2009',
-      title:'C++ Developer - Internship',
+      date: ['10-03-2009','31-07-2009'],
+      title:'C++ Developer -- Internship',
       where: 'SEAC02 srl',
       subtitle:'VRML parser for realtime 3d software',
       link:'http://linceovr.seac02.it',
@@ -148,39 +148,42 @@ var data = {
       type:['internship','job','project'],
       skills:{ cpp:10, xml:5, opengl:10} },
     {
-      date: '15-10-2008 - 31-01-2013',
-      title:'Web Developer - Web Master',
+      date: ['15-10-2008','31-01-2013'],
+      title:'Web Developer -- Web Master',
       where:'Associazione Musiqueros',
-      subtitle:'Association\'s website' ,
+      subtitle:'Association\'s website with pure PHP and Bootstrap' ,
       link:'http://www.musiqueros.it',
       icon:'website',
       type:['job','project','web'],
       skills:{ php:10, json:5, javascript:10, html:5, jquery:10, bootstrap:20, css:10}
     },
     {
-      date: '08-06-2015',
+      date: ['08-06-2015'],
       title:'WebDeveloper',
       where:'Partycillina Event',
-      subtitle:'Website and Template Customization' ,
+      subtitle:'Website and Template Customization using Wordpress' ,
       link:'http://www.partycillina.it',
       icon:'website',
       type:['job','project','web'],
       skills:{ php:10, javascript:5, html:5, css:10, wordpress:5} },
     {
-      date: '12-06-2015',
+      date: ['12-06-2015'],
       title:'Web Developer',
       where:'Associazione L\'Entità',
-      subtitle:'Website and Template Customization' ,
+      subtitle:'Website and Template Customization using Wordpress' ,
       link:'http://www.lentita.it',
       icon:'website',
       type:['job','project','web'],
       skills:{ php:10, javascript:5, html:5, css:10, wordpress:5},
     },
     {
-      date: '01-06-2013 - TODAY',
-      title: 'System Admin - Web Developer',
+      date: ['01-06-2013','TODAY'],
+      title: 'System Admin -- Web Developer',
       where:'Artedas Italia srl',
-      subtitle: 'Company\'s website, Customers Projects, Internal Projects',
+      subtitle: 'FullStack Developer for the Company\'s website with php '+
+                '(codigniter), html, css, javascript (foundation); FullStack'+
+                'Developer for Customers Projects (php, javascript, nodejs,...);'+
+                'Internal Projects; System Administrator (centOS 7, 6.5)',
       link:'http://www.artedas.it',
       icon:'job',
       type:['job'],
@@ -190,14 +193,14 @@ var data = {
   ],
   projects : [
     {
-      date: '14-07-2015',
+      date: ['14-07-2015'],
       title: 'Dynamic Resume (this CV)',
       where:'Home',
       subtitle: 'HTML and Printing Resume using pure javascript, html, css(sass) (no library)',
       link:'huvber.github.io/cv',
       icon:'cv',
       type:['project'],
-      skills: { html:5, css:5, javascript:10} 
+      skills: { html:5, css:5, javascript:10}
     }
   ],
 

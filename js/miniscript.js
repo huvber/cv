@@ -2,7 +2,9 @@ var popolate = function(father,model,elements,skills){
   var sElem = j('.sk-entry').e();
   for(var e in elements){
     var newE = model.cloneNode(true);
+    elements[e].date = elements[e].date.join('<br />');
     j(newE).parse(elements[e]);
+
     father.appendChild(newE);
     if(elements[e].skills){
       var tskills = j(newE).get('.eskills').e();
