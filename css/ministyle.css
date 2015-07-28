@@ -21,6 +21,9 @@ html, body {
     html, body {
       font-size: 10px;
       height: 100%; } }
+  @media only screen and (max-device-width: 480px) {
+    html, body {
+      font-size: 8px; } }
 
 @media not print {
   .container {
@@ -38,6 +41,9 @@ body {
   margin-left: auto;
   margin-right: auto; }
   @media print {
+    body {
+      width: 100%; } }
+  @media only screen and (max-device-width: 480px) {
     body {
       width: 100%; } }
 
@@ -142,6 +148,10 @@ main {
       height: 558mm;
       background: #F5EEE0;
       font-size: 8px; } }
+  @media only screen and (max-device-width: 480px) {
+    .leftcol {
+      float: none !important;
+      width: 100% !important; } }
 
 .rightcol {
   margin-left: 4em;
@@ -150,6 +160,10 @@ main {
     .rightcol {
       margin-left: 6em;
       min-height: 100%; } }
+  @media only screen and (max-device-width: 480px) {
+    .rightcol {
+      float: none !important;
+      width: 100% !important; } }
 
 .intro {
   font-size: 1em;
