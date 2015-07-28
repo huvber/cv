@@ -194,7 +194,7 @@ var data = {
   projects : [
     {
       date: ['14-07-2015'],
-      title: 'Dynamic Resume (this CV)',
+      title: 'Dynamic Curriculum Vitae (this CV)',
       where:'Home',
       subtitle: 'HTML and Printing Resume using pure javascript, html, css(sass) (no library)',
       link:'huvber.github.io/cv',

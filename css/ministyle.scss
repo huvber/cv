@@ -252,3 +252,12 @@ main{
     content: counter(page) " of " counter(pages);
    }
 }
+footer{
+  padding:4em;
+  background-color:$light;
+  color:$lorange;
+  text-align:justify;
+  .upper{
+    text-transform: uppercase;
+  }
+}

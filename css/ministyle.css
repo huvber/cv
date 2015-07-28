@@ -240,3 +240,11 @@ main {
   @bottom-right {
     content: counter(page) " of " counter(pages); }
  }
+
+footer {
+  padding: 4em;
+  background-color: #F5EEE0;
+  color: #CC792D;
+  text-align: justify; }
+  footer .upper {
+    text-transform: uppercase; }
