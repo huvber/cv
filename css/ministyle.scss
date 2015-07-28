@@ -256,7 +256,9 @@ footer{
   padding:4em;
   background-color:$light;
   color:$lorange;
-  text-align:justify;
+  font-size:1.2em;
+  h2{ text-align:right}
+
   .upper{
     text-transform: uppercase;
   }
