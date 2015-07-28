@@ -12,7 +12,7 @@ var data = {
     car:        'with car',
     intro: 'When I was a child I wanted to become a magician in the first place,'+
            ' then an inventor. This because I thought that creating something new'+
-           ' was the most exciting thing. At the age of 9 I received by my uncle '+
+           ' was the most exciting thing. At the age of 9 I received from my uncle '+
            'an old compaq 486 PC and I started to write programs in BASIC because'+
            ' it was one of the few things that computer was capable of. I discovered'+
            ' that developing was the nearest thing to be a magician since you can'+
@@ -180,8 +180,8 @@ var data = {
       date: ['01-06-2013','TODAY'],
       title: 'System Admin -- Web Developer',
       where:'Artedas Italia srl',
-      subtitle: 'FullStack Developer for the Company\'s website with php '+
-                '(codigniter), html, css, javascript (foundation); FullStack'+
+      subtitle: 'Full-Stack Developer for the Company\'s website with php '+
+                '(codigniter), html, css, javascript (foundation); Full-Stack'+
                 'Developer for Customers Projects (php, javascript, nodejs,...);'+
                 'Internal Projects; System Administrator (centOS 7, 6.5)',
       link:'http://www.artedas.it',
