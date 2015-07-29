@@ -1,63 +1,55 @@
-// out: ./mygrid.css
+// out: ./newgrid.css
 $cols: 12;
+$grid-max-width: 65em;
 
+%clearfix {
+    *zoom: 1;
+    &:before,
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
 // breakpoints
-$breakpoint-small: "only screen and (min-width: 20em)";
-$breakpoint-medium: "only screen and (min-width: 30em)";
+$breakpoint-small:  "only screen and (min-width: 480px)";
+$breakpoint-medium: "only screen and (min-width: 768px)";
 
-*,*:after,*:before {
-  margin: 0;
-  padding: 0;
+*,*:after,*:before{
+  margin:0;
+  padding:0;
   box-sizing: border-box;
 }
-.gcont{ width:100%; }
-.gcent{
-  display:table;
-  margin:0 auto;
+img{
+  width:auto;
+  max-width: 100%;
+  height: auto !important;
 }
-.gr{
-  display:flex;
+.container{
   width:100%;
-  div,section{ display:block; }
-  &:before,&:after{
-    content:"";
-    clear:both;
-    display:flex;
-    width:0;
-  }
+  margin: 0 auto;
+}
+.container,
+.gr{
+  @extend %clearfix;
+
 }
 [class*='gc-']{
   float:left;
+  width:100%;
   min-height:1px;
-  min-width:100% / $cols;
-  padding:0.5em;
 }
-@for $i from 1 to $cols + 1{
-  .gc-#{$i}{
-    width:100%/$cols*$i;
-
+@media #{$breakpoint-medium} {
+  .gcont{
+    width:95%;
+    max-width:$grid-max-width;
   }
-}
-@for $i from 1 to $cols + 1{
-  .gc-p#{$i}{
-    @media print {
-      width:100%/$cols*$i !important;
+  @for $i from 1 to $cols + 1{
+    .gc-#{$i}{
+      width:100%/$cols*$i;
+
     }
   }
-}
-.circle{
-  border-radius:50;
-}
-img{
-  &.rv{
-    height:90%;
-    width:auto;
-  }
-  &.ro{
-    width:90%;
-    height:auto;
-  }
-}
-@each $dir in (left, center, right){
-  .t#{$dir}{ text-align:$dir;  }
 }
