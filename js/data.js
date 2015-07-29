@@ -75,19 +75,19 @@ var data = {
   ],
   abroad: [
     {
+      date: ['08-07-2004','23-07-2004'],
+      title:'English Summer Course',
+      where:'UDC Dublin, Ireland',
+      subtitle:'15days of English course and activities',
+      icon:'course',
+    },
+    {
       date: ['15-08-2011','12-06-2012'],
       title: 'LLP/Erasmus',
       where: 'Norges TeknisNaturvitenskapelige Universitet (NTNU)',
       subtitle:'10 Months Courses and Master Thesis',
       icon: 'erasmus',
       skills:{ network:10, java:10, html:5, linux:10 }
-    },
-    {
-      date: ['08-07-2004','23-07-2004'],
-      title:'English Summer Course',
-      where:'UDC Dublin, Ireland',
-      subtitle:'15days of English course and activities',
-      icon:'course',
     }
   ],
   languages:{
@@ -214,6 +214,6 @@ var data = {
     music:      ['songwriting music','indipendent music','pop-rock'],
     cinema:     ['italian old movies','classics'],
     literature: ['classic','british','italian'],
-    sport:      ['basket','swim','bycicle','canoa']
+    sport:      ['basket','swim','bicycle','canoa']
   }
 };
