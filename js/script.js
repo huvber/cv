@@ -94,6 +94,13 @@ for(var l in ot){
   lothers.appendChild(newE);
 }
 j(lentry).remove();
+j('.icon').hide();
+j('.entry').bind('onmouseover',function(e){
+  var icon = j(this).get('.icon').show(300);
+});
+j('.entry').bind('onmouseout',function(e){
+  var icon = j(this).get('.icon').hide(300);
+});
 j('.sk-entry').bind('onmouseover',function(e){
   var skill = j(this).get('.name').e().innerHTML;
   j('.'+skill).addClass('active');
