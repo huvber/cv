@@ -209,7 +209,7 @@ var data = {
       where:'Home',
       subtitle: 'HTML and Printing Resume using pure javascript, html, css(sass) (no library)',
       link:'huvber.github.io/cv',
-      icon:'cv',
+      icon:'project',
       type:['project'],
       skills: { html:5, css:5, javascript:10}
     }
