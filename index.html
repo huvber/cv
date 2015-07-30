@@ -9,13 +9,14 @@
       rel='stylesheet' type='text/css'>
       <link rel="stylesheet"
       href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link type="text/css" rel="stylesheet" href="css/style.css" />
-    <link type="text/css" rel="stylesheet" href="css/mygrid.css" />
-    <link type="text/css" rel="stylesheet" href="css/animation.css" />
+    <link type="text/css" rel="stylesheet" media="all" href="css/mygrid.css" />
+    <link type="text/css" rel="stylesheet" media="screen" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" media="print" href="css/print.css" />
+    <link type="text/css" rel="stylesheet" media="all" href="css/animation.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="gr fpage">
+    <div class="container allprint">
+      <div class="gr">
         <div class="leftcol gc-3">
           <div class="main">
             <div class="pic-container">
@@ -37,8 +38,8 @@
           <div class="languages p">
             <h2>LANGUAGES</h2>
             <div class="mt gr">
-              <div class="gc-1">MT:</div>
-              <div class="gc-9 tright">{{mother}}</div>
+              <div class="sgc-1">MT:</div>
+              <div class="sgc-9 tright">{{mother}}</div>
             </div>
             <div class="others p">
             </div>
@@ -49,28 +50,28 @@
           <div class="interests p">
             <h2>INTERESTS &amp; HOBBIES</h2>
             <div class="gr">
-              <div class="gc-2">
+              <div class="sgc-2">
                 <i class="fa fa-music"></i> :
               </div>
-              <div class="gc-10">{{music}}</div>
+              <div class="sgc-10">{{music}}</div>
             </div>
             <div class="gr">
-              <div class="gc-2">
+              <div class="sgc-2">
                 <i class="fa fa-film"></i> :
               </div>
-              <div class="gc-10">{{cinema}}</div>
+              <div class="sgc-10">{{cinema}}</div>
             </div>
             <div class="gr">
-              <div class="gc-2">
+              <div class="sgc-2">
                 <i class="fa fa-book"></i> :
               </div>
-              <div class="gc-10">{{literature}}</div>
+              <div class="sgc-10">{{literature}}</div>
             </div>
             <div class="gr">
-              <div class="gc-2">
+              <div class="sgc-2">
                 <i class="fa fa-dribbble"></i> :
               </div>
-              <div class="gc-10">{{sport}}</div>
+              <div class="sgc-10">{{sport}}</div>
             </div>
           </div>
           <div class="hobbies p"></div>
@@ -89,10 +90,10 @@
           <div class="projects">
             <h2>PRIVATE PROJECTS</h2>
           </div>
-          <div class="privacy only-print">
-            Autorizzo il trattamento dei dati personali contenuti nel mio curriculum vitae in base art. 13 del D. Lgs. 196/2003.
-          </div>
         </div>
+      </div>
+      <div class="privacy only-print">
+        Autorizzo il trattamento dei dati personali contenuti nel mio curriculum vitae in base art. 13 del D. Lgs. 196/2003.
       </div>
       <footer class="gr no-print">
         <div class="gc-3">&nbsp;</div>
@@ -117,8 +118,8 @@
 
     <!-- TEMPLATES of ELEMENTS -->
     <div class="ed-entry gr">
-      <div class="date gc-2">{{date}}</div>
-      <div class="gc-10">
+      <div class="date sgc-2">{{date}}</div>
+      <div class="sgc-10">
         <div class="title gr">{{title}} <span>{{grade}}</span></div>
         <div class="gr">
           <div class="sub gc-6">{{subtitle}}</div>
@@ -128,8 +129,8 @@
       </div>
     </div>
     <div class="ab-entry gr">
-      <div class="date gc-2">{{date}}</div>
-      <div class="gc-10">
+      <div class="date sgc-2">{{date}}</div>
+      <div class="sgc-10">
         <div class="title gr">{{title}}</div>
         <div class="gr">
           <div class="sub gc-6">{{subtitle}}</div>
@@ -139,8 +140,8 @@
       </div>
     </div>
     <div class="jb-entry gr">
-      <div class="date gc-2">{{date}}</div>
-      <div class="gc-10">
+      <div class="date sgc-2">{{date}}</div>
+      <div class="sgc-10">
         <div class="title gr">{{title}}</div>
         <div class="gr">
           <div class="sub gc-6">{{subtitle}}</div>
@@ -155,12 +156,12 @@
       </div>
     </div>
     <div class="pr-entry gr">
-      <div class="date gc-2">{{date}}</div>
-      <div class="gc-10">
+      <div class="date sgc-2">{{date}}</div>
+      <div class="sgc-10">
         <div class="title gr">{{title}}</div>
         <div class="gr">
-          <div class="sub">{{subtitle}}</div>
-          <div class="where">{{where}}</div>
+          <div class="sub gc-6">{{subtitle}}</div>
+          <div class="where gc-6">{{where}}</div>
         </div>
         <div class="gr">
           <div class="eskills gc-6"></div>
@@ -171,8 +172,8 @@
       </div>
     </div>
     <div class="sk-entry gr">
-      <div class="name gc-6">{{name}}</div>
-      <div class="progress gc-6 tright">
+      <div class="name sgc-6">{{name}}</div>
+      <div class="progress sgc-6 tright">
 
       </div>
     </div>
@@ -180,22 +181,22 @@
       <div class="lang tcenter">{{language}}</div>
       <div class="levels">
         <div class="gr">
-          <div class="gc-6">COMPREHENSION:</div>
-          <div class="gc-3"title="Listening"><i class="fa fa-headphones"></i> :
+          <div class="sgc-6">COMPREHENSION:</div>
+          <div class="sgc-3"title="Listening"><i class="fa fa-headphones"></i> :
           <span class="llevel {{list}}">{{list}}</span></div>
-          <div class="gc-3" title="Reading"><i class="fa fa-book"></i> :
+          <div class="sgc-3" title="Reading"><i class="fa fa-book"></i> :
           <span class="llevel {{read}}">{{read}}</span></div>
         </div>
         <div class="gr">
-          <div class="gc-6">SPEAKING:</div>
-          <div class="gc-3 lscore" title="Interaction"><i class="fa fa-users"></i> :
+          <div class="sgc-6">SPEAKING:</div>
+          <div class="sgc-3 lscore" title="Interaction"><i class="fa fa-users"></i> :
           <span class="llevel {{int}}">{{int}}</span></div>
-          <span class="gc-3" title="Production"><i class="fa fa-volume-up"></i> :
+          <span class="sgc-3" title="Production"><i class="fa fa-volume-up"></i> :
           <span class="llevel {{prod}}">{{prod}}</span>
         </div>
         <div class="gr">
-          <div class="gc-7">WRITING:</div>
-          <div class="gc-4" title="Writing"><i class="fa fa-pencil"></i> : <span class="llevel {{write}}">{{write}}</span></div>
+          <div class="sgc-7">WRITING:</div>
+          <div class="sgc-4" title="Writing"><i class="fa fa-pencil"></i> : <span class="llevel {{write}}">{{write}}</span></div>
         </div>
       </div>
     </div>

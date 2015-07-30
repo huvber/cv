@@ -1,9 +1,8 @@
-// out: ./newgrid.css
+// out: ./mygrid.css
 $cols: 12;
 $grid-max-width: 65em;
 
 %clearfix {
-    *zoom: 1;
     &:before,
     &:after {
         content: " ";
@@ -31,25 +30,51 @@ img{
   width:100%;
   margin: 0 auto;
 }
+.gcont{
+  width:100%;
+}
 .container,
 .gr{
   @extend %clearfix;
-
 }
+
 [class*='gc-']{
   float:left;
   width:100%;
   min-height:1px;
 }
-@media #{$breakpoint-medium} {
+[class*='sgc-']{
+  float:left;
+  min-height:1px;
+}
+@media #{$breakpoint-medium}{
   .gcont{
-    width:95%;
     max-width:$grid-max-width;
+  }
+
+}
+@media #{$breakpoint-medium}, print {
+  .gr{
+    display:flex;
   }
   @for $i from 1 to $cols + 1{
     .gc-#{$i}{
       width:100%/$cols*$i;
 
     }
+  }
+}
+@media print{
+  .gr { width:100%;}
+  .gcont { max-width:100%; }
+  .container{
+    width:100%;
+    margin:0;
+  }
+}
+@for $i from 1 to $cols + 1{
+  .sgc-#{$i}{
+    width:100%/$cols*$i;
+
   }
 }

@@ -1,0 +1,87 @@
+// out: ./print.css
+$dark : #4e4f4d;
+$light: #F5EEE0;
+$orange : #FF9A39;
+$dorange: #7F4C1C;
+$lorange: #CC792D;
+
+.no-print, .no-print *{ display:none !important; }
+html, body {
+  font-family:'Oswald', sans-serif;
+  color: $dark;
+  font-size:8pt;
+}
+a {
+  color: $dorange;
+  text-decoration:none;
+}
+h2 {color:$dorange; padding-top:0.2em; }
+.leftcol{
+  background:$light;
+  font-size:0.9em;
+  .p{ padding-left:1em; }
+  .info{ text-align:left; }
+  .skills,.languages{
+    margin-top:1em;
+  }
+  min-height:550mm;
+}
+.rightcol{
+  margin-left:6em;
+  margin-right:0.5em;
+
+}
+.main{
+  .pic-container img{
+    width:100%;
+  }
+  .info{
+    text-align:right;
+    font-size:1.2em;
+    padding-right:0.1em;
+  }
+}
+.intro{
+  padding:0.5em;
+  text-align:justify;
+  color:$lorange;
+}
+.ed-entry, .ab-entry, .jb-entry, .pr-entry{
+  margin:1.5em 0;
+  page-break-inside: avoid;
+  .date { text-align:right; overflow:hidden; padding-right:1em;}
+  .title{
+    padding-bottom:0;
+    border-bottom:1px solid $orange;
+    font-weight:bold;
+    span{ float:right; }
+  }
+  .where{ text-align:right; }
+  .sub{ font-style:italic; padding:0.5em 0;}
+  .link{ text-align:right;}
+  .lskill{
+    font-size:0.8em;
+    border:1px solid #ddd;
+    border-radius:3px;
+    margin:0 0.2em;
+    padding:0 0.2em;
+  }
+}
+.progress {
+  color: $lorange;
+  i{ padding-left:1px;}
+}
+.privacy{
+  text-align:right;
+  padding-right:5em;
+}
+.education{
+  page-break-before:always;
+  padding-top:3em;
+}
+.abroadexp{
+  margin-bottom:0;
+}
+.levels{
+  font-size:0.8em;
+}
