@@ -177,7 +177,7 @@ var data = {
       skills:{ php:10, javascript:5, html:5, css:10, wordpress:5},
     },
     {
-      date: ['01-06-2013','TODAY'],
+      date: ['01-06-2013','07-09-2015'],
       title: 'System Admin -- Web Developer',
       where:'Artedas Italia srl',
       subtitle: 'Full-Stack Developer for the Company\'s website with php '+
@@ -188,6 +188,17 @@ var data = {
       icon:'job',
       type:['job'],
       skills: { html:5, css:5, javascript:10, jquery:5, php:5, sql:5, linux:10, nodejs:10, meteor:10 } },
+    {
+      date: ['11-09-2015','TODAY'],
+      title: 'Fullstack Senior Developer',
+      where:'Grocerest srl',
+      subtitle: 'NodeJS backend developer with coffeescript '+
+                'ElasticSearch developer '+
+                'REST API developer. AngularJS, ReactJS, Docker',
+      link:'http://www.grocerest.com',
+      icon:'job',
+      type:['job'],
+      skills: { html:4, css:4, javascript:10, nodejs:10, coffeescript:10, json:4, linux:5, docker:10 } }
 
 
   ],
