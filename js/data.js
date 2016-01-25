@@ -112,15 +112,6 @@ var data = {
   },
   jobs:[
     {
-      date: ['01-03-2006','01-07-2006'],
-      title: '3D Designer and Web Developer',
-      where: 'ITIS A. Avogadro',
-      subtitle:'Intercative 3D tour of the School<br /> ITIS A.Avogadro',
-      icon:'project',
-      link:'',
-      type:['job','project'],
-      skills:{ html:1,css:1, 'blender':5 } },
-    {
       date: ['02-02-2007','02-09-2008'],
       title:'VisualStudio Developer',
       where:'Alba Onlus',
