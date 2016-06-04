@@ -189,7 +189,7 @@ var data = {
       link:'http://www.grocerest.com',
       icon:'job',
       type:['job'],
-      skills: { html:4, css:4, javascript:10, nodejs:10, coffeescript:10, json:4, linux:5, docker:10 } }
+      skills: { html:4, css:4, javascript:10, nodejs:10, coffeescript:10, json:4, linux:5, docker:10, android:7 } }
 
 
   ],
