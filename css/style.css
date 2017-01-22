@@ -90,7 +90,10 @@ main {
   main h2 {
     color: #FF9A39;
     font-weight: bold; }
-
+.eskill {
+  display:flex;
+  flex-wrap:wrap;
+}
 .ed-entry, .ab-entry, .jb-entry, .pr-entry {
   margin: 1.5em 0; }
   @media print {
