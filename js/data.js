@@ -112,15 +112,6 @@ var data = {
   },
   jobs:[
     {
-      date: ['02-02-2007','02-09-2008'],
-      title:'VisualStudio Developer',
-      where:'Alba Onlus',
-      subtitle:'Creation of a DVD teaching platform for the Italian Sign Language',
-      icon:'project',
-      link:'',
-      type:['job','project'],
-      skills:{ visualbasic:10, cpp:3 } },
-    {
       date: ['15-10-2008','31-01-2013'],
       title:'Frontend & Backend Developer',
       where:'PubliChieri srl',
@@ -138,16 +129,6 @@ var data = {
       icon:'job',
       type:['internship','job','project'],
       skills:{ cpp:10, xml:5, opengl:10} },
-    {
-      date: ['15-10-2008','31-01-2013'],
-      title:'Web Developer -- Web Master',
-      where:'Associazione Musiqueros',
-      subtitle:'Association\'s website with pure PHP and Bootstrap' ,
-      link:'http://www.musiqueros.it',
-      icon:'website',
-      type:['job','project','web'],
-      skills:{ php:10, json:5, javascript:10, html:5, jquery:10, bootstrap:20, css:10}
-    },
     {
       date: ['08-06-2015'],
       title:'WebDeveloper',
@@ -189,7 +170,7 @@ var data = {
       link:'http://www.grocerest.com',
       icon:'job',
       type:['job'],
-      skills: { html:4, css:4, javascript:10, nodejs:10, coffeescript:10, json:4, linux:5, docker:10, android:7 } }
+      skills: { html:4, css:4, javascript:10, nodejs:10, coffeescript:10, json:10, linux:10, docker:10, android:7, react:10,  express:10, webpack:5 } }
 
 
   ],
@@ -210,7 +191,7 @@ var data = {
     php: 6, javascript: 6, html: 6, css: 6, linux: 6,
     sql: 5, java: 5, jquery: 6, cpp: 5, bootstrap:5, opengl: 4,
     wordpress:4, json:5, nodejs: 5, meteor: 5, yii:4, MongoDB:4,
-    angularjs:3, foundation:5
+    angularjs:3, foundation:5, react:6
   },
   interests:{
     music:      ['songwriting music','indipendent music','pop-rock'],
