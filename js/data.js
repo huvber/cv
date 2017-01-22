@@ -170,7 +170,7 @@ var data = {
       link:'http://www.grocerest.com',
       icon:'job',
       type:['job'],
-      skills: {javascript:10, nodejs:10, coffeescript:10, json:10, linux:10, docker:10, android:7, react:10,  express:10, webpack:5 } }
+      skills: { nodejs:10, coffeescript:10, json:10, linux:10, docker:10, android:7, react:10,  express:10, webpack:5 } }
 
 
   ],
