@@ -1,0 +1,28 @@
+$cols: 12;
+$breakpoint: 65em;
+
+$media:  "only screen and (min-width: #{$breakpoint})";
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.flex {
+  display:block;
+  @media #{$media} {
+    display:flex;
+  }
+  &.xs { display: flex }
+}
+@for $i from 1 to $cols + 1 {
+  .col-#{$i} {
+    @media #{$media} {
+      width:100%/$cols*$i;
+    }
+  }
+}
