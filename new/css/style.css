@@ -54,6 +54,22 @@ header .picture img {
   display: block;
 }
 
+.callout {
+  position: fixed;
+  background-image: url("../img/callout.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 200px;
+  height: 90px;
+  right: 80px;
+  top: 5px;
+  padding-top: 1.2rem;
+  padding-left: 1rem;
+  opacity: 0;
+  transition: 400ms opacity ease-out;
+}
+
 main {
   margin: .5rem 0;
 }
