@@ -1,8 +1,7 @@
 $cols: 12;
 $breakpoint: 65em;
 
-$media:  "only screen and (min-width: #{$breakpoint})";
-
+$media:  "screen and (min-width: #{$breakpoint})";
 * {
   margin:0;
   padding:0;
@@ -14,14 +13,21 @@ img {
 }
 .flex {
   display:block;
-  @media #{$media} {
+  @media #{$media}{
+    display:flex;
+  }
+  @media print{
     display:flex;
   }
   &.xs { display: flex }
 }
 @for $i from 1 to $cols + 1 {
   .col-#{$i} {
+    width:100%;
     @media #{$media} {
+      width:100%/$cols*$i;
+    }
+    @media print {
       width:100%/$cols*$i;
     }
   }

@@ -209,8 +209,8 @@ var data = {
     'cpp',
     'python'
   ],
-  music:      ['songwriting music','indipendent music','pop-rock'],
-  cinema:     ['italian old movies','classics', 'sci-fi'],
-  literature: ['classic','british','italian'],
+  music:      ['songwriting','indipendent','pop-rock','italian'],
+  cinema:     ['italian-old','classics', 'scifi','tvseries','rick&morty'],
+  literature: ['classic','british','italian','norwegian'],
   sport:      ['basket','swim','bicycle','canoa']
 }

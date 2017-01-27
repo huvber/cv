@@ -10,15 +10,18 @@ body {
   background-color: #fff;
   border: 1px solid #bbb;
   box-sizing: border-box;
-  margin-bottom: 2rem;
   width: 100%;
 }
 
 @media only screen and (min-width: 65em) {
   body {
     margin: 0 auto;
-    width: 65%;
+    width: 70%;
   }
+}
+
+h1, h2, h3.section, a {
+  color: #d84224;
 }
 
 a {
@@ -29,9 +32,15 @@ li {
   list-style: none;
 }
 
+br.page-break {
+  display: none;
+}
+
 @media only screen and (min-width: 65em) {
   header {
+    margin-top: 3rem;
     flex-direction: row-reverse;
+    padding: 0 1.5rem;
   }
 }
 
@@ -41,61 +50,128 @@ header .intro {
 }
 
 header .intro h1 {
-  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  line-height: 2.3rem;
   margin: 0;
   margin-bottom: 0.2rem;
   text-align: right;
 }
 
-header .picture img {
-  height: auto;
-  width: 140px;
-  margin: 0 auto;
-  display: block;
+@media only screen and (min-width: 65em) {
+  header .picture {
+    position: relative;
+  }
+  header .picture:hover .callout {
+    opacity: 0;
+  }
+  header .picture:hover .callout.show {
+    opacity: 0;
+  }
+  header .picture:hover .pixel {
+    opacity: 0;
+  }
+  header .picture:hover .real {
+    opacity: 1;
+  }
 }
 
-.callout {
-  position: fixed;
-  background-image: url("../img/callout.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 200px;
-  height: 90px;
-  right: 80px;
-  top: 5px;
-  padding-top: 1.2rem;
-  padding-left: 1rem;
-  opacity: 0;
-  transition: 400ms opacity ease-out;
+header .picture .callout {
+  display: none;
+}
+
+@media only screen and (min-width: 65em) {
+  header .picture .callout {
+    display: block;
+    position: absolute;
+    background-image: url("../img/callout.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 200px;
+    height: 90px;
+    left: 50%;
+    top: 5px;
+    padding-top: 1.2rem;
+    padding-left: 1rem;
+    opacity: 0;
+    transition: 400ms opacity ease-out;
+    z-index: 3;
+  }
+  header .picture .callout.show {
+    opacity: 1;
+  }
+}
+
+header .picture img {
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+}
+
+header .picture img.pixel {
+  display: none;
+}
+
+@media only screen and (min-width: 65em) {
+  header .picture img {
+    position: absolute;
+    height: auto;
+    width: 140px;
+    left: 2rem;
+    top: 0.5rem;
+    display: block;
+    transition: 1000ms opacity ease;
+  }
+  header .picture img.pixel {
+    display: block;
+    z-index: 1;
+    opacity: 1;
+  }
+  header .picture img.real {
+    z-index: 0;
+    opacity: 0;
+  }
 }
 
 main {
-  margin: .5rem 0;
+  margin: .5rem 2rem;
 }
 
 main aside {
   padding: .5rem 1rem;
 }
 
-@media only screen and (min-width: 65em) {
-  main aside .main-info {
-    text-align: right;
-  }
+main aside .main-info {
+  text-align: right;
 }
 
 main aside h2 {
-  margin: 0.5rem 0;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 @media only screen and (min-width: 65em) {
   main aside {
     min-height: 400px;
-    border-right: 1px solid #ccc;
   }
 }
 
+main aside a {
+  font-size: 0.9rem;
+}
+
 main .skills {
+  display: none;
+}
+
+@media only screen and (min-width: 65em) {
+  main .skills {
+    display: block;
+  }
+}
+
+main .skills ul {
   margin-top: 0.5rem;
 }
 
@@ -105,6 +181,16 @@ main .skills li {
   margin: 0.25rem;
   border: 1px solid #aaa;
   border-radius: 5px;
+}
+
+main .interest {
+  display: none;
+}
+
+@media only screen and (min-width: 65em) {
+  main .interest {
+    display: block;
+  }
 }
 
 main .interest li {
@@ -118,7 +204,14 @@ main .interest li i {
 
 main section.history {
   padding: 1rem;
+  padding-bottom: 6rem;
   flex: 1;
+}
+
+@media only screen and (min-width: 65em) {
+  main section.history {
+    border-left: 1px solid #ccc;
+  }
 }
 
 main section.history article {
@@ -139,4 +232,16 @@ main section.history article .entry {
 
 main section.history article .entry p {
   text-align: justify;
+}
+
+main section.history article .skills {
+  margin-top: 1rem;
+}
+
+footer {
+  border-top: 1px solid #ddd;
+  padding: 2rem 5rem;
+  margin: 0;
+  background-color: #555;
+  color: #fff;
 }
