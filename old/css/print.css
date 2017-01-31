@@ -1,0 +1,88 @@
+.no-print, .no-print * {
+  display: none !important; }
+
+html, body {
+  font-family: 'Oswald', sans-serif;
+  color: #4e4f4d;
+  font-size: 8pt; }
+
+a {
+  color: #7F4C1C;
+  text-decoration: none; }
+
+h2 {
+  color: #7F4C1C;
+  padding-top: 0.2em; }
+
+.leftcol {
+  background: #F5EEE0;
+  font-size: 0.9em;
+  min-height: 550mm; }
+  .leftcol .p {
+    padding-left: 1em; }
+  .leftcol .info {
+    text-align: left; }
+  .leftcol .skills, .leftcol .languages {
+    margin-top: 1em; }
+
+.rightcol {
+  margin-left: 6em;
+  margin-right: 0.5em; }
+
+.main .pic-container img {
+  width: 100%; }
+.main .info {
+  text-align: right;
+  font-size: 1.2em;
+  padding-right: 0.1em; }
+
+.intro {
+  padding: 0.5em;
+  text-align: justify;
+  color: #CC792D; }
+
+.ed-entry, .ab-entry, .jb-entry, .pr-entry {
+  margin: 1.5em 0;
+  page-break-inside: avoid; }
+  .ed-entry .date, .ab-entry .date, .jb-entry .date, .pr-entry .date {
+    text-align: right;
+    overflow: hidden;
+    padding-right: 1em; }
+  .ed-entry .title, .ab-entry .title, .jb-entry .title, .pr-entry .title {
+    padding-bottom: 0;
+    border-bottom: 1px solid #FF9A39;
+    font-weight: bold; }
+    .ed-entry .title span, .ab-entry .title span, .jb-entry .title span, .pr-entry .title span {
+      float: right; }
+  .ed-entry .where, .ab-entry .where, .jb-entry .where, .pr-entry .where {
+    text-align: right; }
+  .ed-entry .sub, .ab-entry .sub, .jb-entry .sub, .pr-entry .sub {
+    font-style: italic;
+    padding: 0.5em 0; }
+  .ed-entry .link, .ab-entry .link, .jb-entry .link, .pr-entry .link {
+    text-align: right; }
+  .ed-entry .lskill, .ab-entry .lskill, .jb-entry .lskill, .pr-entry .lskill {
+    font-size: 0.8em;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin: 0 0.2em;
+    padding: 0 0.2em; }
+
+.progress {
+  color: #CC792D; }
+  .progress i {
+    padding-left: 1px; }
+
+.privacy {
+  text-align: right;
+  padding-right: 5em; }
+
+.education {
+  page-break-before: always;
+  padding-top: 3em; }
+
+.abroadexp {
+  margin-bottom: 0; }
+
+.levels {
+  font-size: 0.8em; }

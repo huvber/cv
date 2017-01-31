@@ -1,0 +1,222 @@
+<!DOCTYPE html xmlns:fb="http://ogp.me/ns/fb#">
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>My Curriculum Vitae </title>
+    <meta property="og:image" content="http://huvber.github.io/cv/img/minicvhead.png" />
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,700'
+      rel='stylesheet' type='text/css'>
+      <link rel="stylesheet"
+      href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" media="all" href="css/mygrid.css" />
+    <link type="text/css" rel="stylesheet" media="screen" href="css/style.css" />
+    <link type="text/css" rel="stylesheet" media="print" href="css/print.css" />
+    <link type="text/css" rel="stylesheet" media="all" href="css/animation.css" />
+  </head>
+  <body>
+    <div class="container allprint">
+      <div class="gr">
+        <div class="leftcol gc-3">
+          <div class="main">
+            <div class="pic-container">
+              <div class="picture no-print">
+              </div>
+              <img class="only-print" src="img/cvhead_back.png" />
+            </div>
+            <div class="info p">
+              <h4>{{name}} {{surname}}</h4>
+              <p>{{birthday}}</p>
+              <p>{{address}}</p>
+              <p>{{phone}}</p>
+              <p><a href="mailto:{{email}}" target="_blank">{{email}}</a></p>
+              <p><a href="http://{{github}}" target="_blank">{{github}}</a></p>
+              <p><a href="http://{{linkedin}}" target="_blank">{{linkedin}}</a></p>
+              <p>{{drivel}} - {{car}}</p>
+            </div>
+          </div>
+          <div class="languages p">
+            <h2>LANGUAGES</h2>
+            <div class="mt gr">
+              <div class="sgc-1">MT:</div>
+              <div class="sgc-9 tright">{{mother}}</div>
+            </div>
+            <div class="others p">
+            </div>
+          </div>
+          <div class="skills p">
+            <h2>SKILLS</h2>
+          </div>
+          <div class="interests p">
+            <h2>INTERESTS &amp; HOBBIES</h2>
+            <div class="gr">
+              <div class="sgc-2">
+                <i class="fa fa-music"></i> :
+              </div>
+              <div class="sgc-10">{{music}}</div>
+            </div>
+            <div class="gr">
+              <div class="sgc-2">
+                <i class="fa fa-film"></i> :
+              </div>
+              <div class="sgc-10">{{cinema}}</div>
+            </div>
+            <div class="gr">
+              <div class="sgc-2">
+                <i class="fa fa-book"></i> :
+              </div>
+              <div class="sgc-10">{{literature}}</div>
+            </div>
+            <div class="gr">
+              <div class="sgc-2">
+                <i class="fa fa-dribbble"></i> :
+              </div>
+              <div class="sgc-10">{{sport}}</div>
+            </div>
+          </div>
+          <div class="hobbies p"></div>
+        </div>
+        <div class="rightcol gc-9">
+          <div class="intro">{{intro}}</div>
+          <div class="jobs">
+            <h2>WORK HISTORY</h2>
+          </div>
+          <div class="education">
+            <h2>EDUCATION</h2>
+          </div>
+          <div class="abroadexp">
+            <h2>ABROAD EXPERIENCES</h2>
+          </div>
+          <div class="projects">
+            <h2>PRIVATE PROJECTS</h2>
+          </div>
+        </div>
+      </div>
+      <div class="privacy only-print">
+        Autorizzo il trattamento dei dati personali contenuti nel mio curriculum vitae in base art. 13 del D. Lgs. 196/2003.
+      </div>
+      <footer class="gr no-print">
+        <div class="gc-3">&nbsp;</div>
+        <div class="gc-9">
+        <h2>DYNAMIC CURRICULUM VITAE</h2>
+          <p>This printable interactive curriculum vitae was made to be dynamic
+            and you can create your own <a href="http://www.github.com/huvber/cv" target="_blank">forking it on GitHub</a>
+          </p>
+          <p>If you browse the code you can notice that <span class="upper">this was entire made <strong>from scratch</strong> without using
+            any libraries</span> except for <a href="https://www.google.com/fonts" target="_blank">Oswald Google Font</a> and
+            for <a href="http://fortawesome.github.io/Font-Awesome/" target="_blank">Font Awsome</a>.
+          </p>
+          <p>I'm planning to write a little guide for it and maybe add different layouts in future.</p>
+          <p>I hope you enjoy it.</p>
+        </div>
+      </footer>
+    </div>
+    <div style="clear:both"></div>
+    </div>
+
+
+
+    <!-- TEMPLATES of ELEMENTS -->
+    <div class="ed-entry entry gr">
+      <div class="sgc-2 date">
+        <div>{{date}}</div>
+        <div class="icon no-print"><img src="img/icons/{{icon}}.svg" alt="{{icon}}" /></div>
+      </div>
+      <div class="sgc-10">
+        <div class="title gr">{{title}} <span>{{grade}}</span></div>
+        <div class="gr">
+          <div class="sub gc-6">{{subtitle}}</div>
+          <div class="where gc-6">{{where}}</div>
+        </div>
+        <div class="eskills gr"></div>
+      </div>
+    </div>
+    <div class="ab-entry entry gr">
+      <div class="sgc-2 date">
+        <div>{{date}}</div>
+        <div class="icon no-print"><img src="img/icons/{{icon}}.svg" alt="{{icon}}" /></div>
+      </div>
+      <div class="sgc-10">
+        <div class="title gr">{{title}}</div>
+        <div class="gr">
+          <div class="sub gc-6">{{subtitle}}</div>
+          <div class="where gc-6">{{where}}</div>
+        </div>
+        <div class="eskills"></div>
+      </div>
+    </div>
+    <div class="jb-entry entry gr">
+      <div class="sgc-2 date">
+        <div>{{date}}</div>
+        <div class="icon no-print"><img src="img/icons/{{icon}}.svg" alt="{{icon}}" /></div>
+      </div>
+      <div class="sgc-10">
+        <div class="title gr">{{title}}</div>
+        <div class="gr">
+          <div class="sub gc-6">{{subtitle}}</div>
+          <div class="where gc-6">{{where}}</div>
+        </div>
+        <div class="gr">
+          <div class="eskills gc-6"></div>
+          <div class="link gc-6">
+            <a href="{{link}}" target="_blank">{{link}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pr-entry entry gr">
+      <div class="sgc-2 date">
+        <div>{{date}}</div>
+        <div class="icon no-print"><img src="img/icons/{{icon}}.svg" alt="{{icon}}" /></div>
+      </div>
+      <div class="sgc-10">
+        <div class="title gr">{{title}}</div>
+        <div class="gr">
+          <div class="sub gc-6">{{subtitle}}</div>
+          <div class="where gc-6">{{where}}</div>
+        </div>
+        <div class="gr">
+          <div class="eskills gc-6"></div>
+          <div class="link gc-6">
+            <a href="{{link}}" target="_blank">{{link}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="sk-entry gr">
+      <div class="name sgc-6">{{name}}</div>
+      <div class="progress sgc-6 tright">
+
+      </div>
+    </div>
+    <div class="lo-entry">
+      <div class="lang tcenter">{{language}}</div>
+      <div class="levels">
+        <div class="gr">
+          <div class="sgc-6">COMPREHENSION:</div>
+          <div class="sgc-3"title="Listening"><i class="fa fa-headphones"></i> :
+          <span class="llevel {{list}}">{{list}}</span></div>
+          <div class="sgc-3" title="Reading"><i class="fa fa-book"></i> :
+          <span class="llevel {{read}}">{{read}}</span></div>
+        </div>
+        <div class="gr">
+          <div class="sgc-6">SPEAKING:</div>
+          <div class="sgc-3 lscore" title="Interaction"><i class="fa fa-users"></i> :
+          <span class="llevel {{int}}">{{int}}</span></div>
+          <span class="sgc-3" title="Production"><i class="fa fa-volume-up"></i> :
+          <span class="llevel {{prod}}">{{prod}}</span>
+        </div>
+        <div class="gr">
+          <div class="sgc-7">WRITING:</div>
+          <div class="sgc-4" title="Writing"><i class="fa fa-pencil"></i> : <span class="llevel {{write}}">{{write}}</span></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/minij.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
+
+  </body>
+</html>
