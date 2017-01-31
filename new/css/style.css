@@ -21,7 +21,14 @@ body {
 }
 
 h1, h2, h3.section, a {
-  color: #d84224;
+  color: #FFB438;
+}
+
+h2.profession {
+  color: #bbb;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  text-align: right;
 }
 
 a {

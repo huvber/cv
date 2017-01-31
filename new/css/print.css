@@ -3,6 +3,7 @@
     display: none;
   }
   html {
+    background-color: #fff;
     font-size: 12px;
     font-family: 'Alegreya Sans', sans-serif;
     color: #555;
@@ -10,7 +11,7 @@
     border: none;
   }
   body {
-    background-color: #fff;
+    background-color: #fff !important;
     box-sizing: border-box;
     width: 100%;
     border: none;
@@ -98,6 +99,7 @@
     padding-bottom: 1rem;
     flex: 1;
     border-left: none;
+    background-color: #fff;
   }
   main section.history h3 {
     margin-top: 1rem;

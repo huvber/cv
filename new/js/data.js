@@ -1,6 +1,7 @@
 var data = {
   firstname: 'Andrea',
   lastname: 'Mannarà',
+  profession: 'Full-Stack / Frontend Developer',
   intro: `
       When I was a child I wanted to become a magician in the first place, then an inventor. This because I thought that creating something new was the most exciting thing. At the age of 9 I received from my uncle an old compaq 486 PC and I started to write programs in BASIC because it was one of the few things that computer was capable of. I discovered that developing was the nearest thing to be a magician since you can create everything from nothing. Basically that\'s why I became a developer. Later on I focused in web developing and frontend developing because everybody knows that the most outstanding magic is the one with the best visual and perceptive effects.
       `,
@@ -188,29 +189,42 @@ var data = {
   ],
 
   all_skills: [
-    'javacript',
+    'coffeescript',
+    'javascript',
     'nodejs',
-    'html/css',
-    'elasticsearch',
+    'less',
+    'express',
     'react',
-    'jenkins',
-    'docker',
+    'redux',
     'aws',
-    'php',
-    'java',
-    'android',
-    'linux',
-    'wordpress',
-    'boostrap',
-    'foundation',
-    'sql',
     'mongodb',
+    'docker',
+    'jenkins',
+    'android',
+    'php',
+    'html',
+    'css',
+    'wordpress',
+    'jquery',
+    'sql',
+    'linux',
     'meteor',
+    'json',
+    'bootstrap',
     'cpp',
-    'python'
+    'xml',
+    'opengl',
+    'java',
+    'networks',
+    'blender',
+    'python',
+    'eclipse',
+    'uml'
   ],
   music:      ['songwriting','indipendent','pop-rock','italian'],
   cinema:     ['italian-old','classics', 'scifi','tvseries','rick&morty'],
   literature: ['classic','british','italian','norwegian'],
   sport:      ['basket','swim','bicycle','canoa']
 }
+
+modules.export = data
