@@ -173,7 +173,25 @@ main{
       i { margin-right:1rem; }
     }
   }
-
+  .languages {
+    .mother {
+      display: flex;
+      width:100%;
+      justify-content: space-between;
+      margin-bottom:1rem;
+    }
+    .language{
+      margin-top:.5rem;
+      label { 
+        display: inline-block;
+        text-align: right;
+        width:100%; 
+      }
+      p {
+        margin-top:.3rem;
+      }
+    }
+  }
   section.history{
     padding:1rem;
     padding-bottom:6rem;

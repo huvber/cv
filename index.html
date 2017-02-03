@@ -9,7 +9,7 @@
           content="http://huvber.github.io/cv/img/minicvhead.png" />
     <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
     <link rel="stylesheet"
-          href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+          href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link type="text/css" rel="stylesheet" media="all" href="css/flex-grid.css" />
     <link type="text/css" rel="stylesheet" media="all" href="css/style.css" />
     <link type="text/css" rel="stylesheet" media="all" href="css/print.css" />
@@ -51,6 +51,21 @@
               <li>{{_val}}</li>
             {{/all_skills}}
           </ul>
+        </div>
+        <div class="languages">
+          <h2>LANGUAGES</h2>
+          <ul>
+            <li class="mother"><label>Mother tongue:</label> <span>{{motherLanguage}}<span></li>
+            {{#languages}}
+              <li class="language">
+                <label>{{language}}</label>
+                <p><i class="fa fa-university" title="certificates"></i> {{#certificates}}{{_val}} {{/certificates}}</p>
+                <p><i class="fa fa-assistive-listening-systems" title="comprehension"></i> {{comprehension}}</p>
+                <p><i class="fa fa-commenting-o" title="speaking"></i> {{speaking}}</p>
+                <p><i class="fa fa-pencil" title="writing"></i> writing: {{writing}}</p>
+              </li>
+            {{/languages}}
+          </li>
         </div>
         <div class="interest">
           <h2>INTEREST AND HOBBIES</h2>
@@ -106,7 +121,9 @@
               <em class="date col-3">{{date}}</em>
               <div class="entry col-9">
                 <h3>{{title}}</h3>
-                <h4><a href="{{link}}">{{where}}</a></h4> <p>{{subtitle}}</p>
+                <h4><a href="{{link}}">{{where}}</a></h4>
+                <p>{{subtitle}}</p>
+                <p>{{grade}}</p>
                 <ul class="skills">
                   {{#skills}}
                     <li>{{_val}}</li>

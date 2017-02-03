@@ -30,27 +30,16 @@ var data = {
       skills: ['network','java','html','linux']
     }
   ],
-
-  languages:{
-    mother: 'Italian',
-    others:[
-      {
-        language:'English',
-        certificates:[
-          {
-            date:'05/04/2008',
-            name: 'IELTS',
-            where:'Politecnico di Torino'
-          }
-        ],
-        levels:{
-          comprehension:{ listening: 'C2', reading:'C2' },
-          speaking: { interaction:'B2', production:'B2'},
-          writing: 'C1'
-        }
-      }
-    ]
-  },
+  motherLanguage: 'italian',
+  languages: [
+    {
+      language:'English',
+      certificates:['IELTS (2008)'],
+      comprehension:'listening: C2 / reading: C2',
+      speaking: 'interaction: B2 / production: B2',
+      writing: 'C1'
+    }
+  ],
   jobs:[
     {
       date: '11/09/2015 - TODAY',
@@ -125,31 +114,13 @@ var data = {
   ],
   education: [
     {
-      date:  '14/06/2006',
-      title: 'Diploma',
-      grade: '77/100',
-      where: 'ITIS A. Avogadro',
-      subtitle:'Technical and Industrial Expert in Computer Science',
-      icon:'diploma',
-      skills:['html','css','php','cpp','javascript','sql']
-    },
-    {
-      date:  '06/09/2006 - 20/09/2010',
-      title: 'Bachelor Degree',
-      grade: '90/110',
-      where: 'Politecnico di Torino',
-      subtitle:'Information Technology and Computer Engineering',
-      icon:'bachelor',
-      skills:['cpp','linux','java','sql','networks','html','php']
-    },
-    {
-      date:  '29/09/2010 - 26/03/2013',
-      title: 'Master Degree',
-      grade: '94/110',
-      where: 'Politecnico di Torino',
-      subtitle:'Information Technology and Computer Engineering',
+      date:'07/09/2013 - 18/06/2015',
+      title:'PostGraduate Course',
+      subtitle:'ICT and Advance Developement',
+      grade: '110/110',
+      where: 'Università di Torino',
       icon:'master',
-      skills: ['sql','networks','linux','opengl','blender','python','java','xml','html']
+      skills:['html','css','javascript','java','python','sql']
     },
     {
       date: '01/01/2012 - 10/06/2012',
@@ -165,17 +136,45 @@ var data = {
       skills:['java','eclipse','xml','uml']
     },
     {
-      date:'07/09/2013 - 18/06/2015',
-      title:'PostGraduate Course',
-      subtitle:'ICT and Advance Developement',
-      grade: '110/110',
-      where: 'Università di Torino',
+      date:  '29/09/2010 - 26/03/2013',
+      title: 'Master Degree',
+      grade: '94/110',
+      where: 'Politecnico di Torino',
+      subtitle:'Information Technology and Computer Engineering',
       icon:'master',
-      skills:['html','css','javascript','java','python','sql']
+      skills: ['sql','networks','linux','opengl','blender','python','java','xml','html']
     },
+    {
+      date:  '06/09/2006 - 20/09/2010',
+      title: 'Bachelor Degree',
+      grade: '90/110',
+      where: 'Politecnico di Torino',
+      subtitle:'Information Technology and Computer Engineering',
+      icon:'bachelor',
+      skills:['cpp','linux','java','sql','networks','html','php']
+    },
+    {
+      date:  '14/06/2006',
+      title: 'Diploma',
+      grade: '77/100',
+      where: 'ITIS A. Avogadro',
+      subtitle:'Technical and Industrial Expert in Computer Science',
+      icon:'diploma',
+      skills:['html','css','php','cpp','javascript','sql']
+    }
   ],
 
   projects : [
+    {
+      date:  '03/02/2016 - TODAY',
+      title: 'uSong - Lyrics finder Telegram Bot',
+      where:'Home',
+      subtitle: 'A telegram bot using MusixMatch API to looking for songs lyrics from messages',
+      link:'telegram.io/usongbot',
+      icon:'project',
+      type:['project'],
+      skills: ['nodejs', 'telgram API', 'now.sh']
+    },
     {
       date:  '14/07/2015 - TODAY',
       title: 'Dynamic Curriculum Vitae (this CV)',
@@ -226,5 +225,3 @@ var data = {
   literature: ['classic','british','italian','norwegian'],
   sport:      ['basket','swim','bicycle','canoa']
 }
-
-modules.export = data
