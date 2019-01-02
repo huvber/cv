@@ -1,0 +1,70 @@
+@import '@/styles/reset.scss';
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+
+
+$c-primary: #009ab0;
+$c-primary-light: #58cbe2;
+$c-primary-dark: #006b81;
+
+$c-secondary: #ffb300;
+$c-secondary-light: #ffe54c;
+$c-secondary-dark: #c68400;
+
+$c-dark: lighten(#000, 5%);
+$c-light: #fff;
+
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:400,700,800|Titillium+Web:400,400i,600');
+
+@mixin wrapper($preset: 'all') {
+  @if $preset == 'side' {
+    padding-left: 10px;
+    padding-right: 10px;
+    @media (min-width: $bp-tablet) {
+      padding-left: 25px;
+      padding-right: 25px;
+    }  
+  } @else {
+    padding: 10px;
+    @media (min-width: $bp-tablet) {
+      padding: 25px;
+    }
+  }
+}
+
+@mixin font($preset) {
+  font-family: 'Barlow Condensed', sans-serif;
+  @if $preset == 'normal' {
+    font-size: 14px;
+    line-height: 1.2;
+    @media (min-width: $bp-tablet) {
+      font-size: 16px;
+    }
+  } @else if $preset == 'title' {
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 1.25;
+    @media (min-width: $bp-tablet) {
+      font-size: 28px;
+    }
+  } @else if $preset == 'subtitle' {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.25;
+    @media (min-width: $bp-tablet) {
+      font-size: 22px;
+    }
+  } @else if $preset == 'tag' {
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 1;
+    @media (min-width: $bp-tablet) {
+      font-size: 12px;
+    }
+  }
+
+}
