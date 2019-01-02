@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.93ac17ce13734ab20bef2ddeec6a135a.js"
+  "/cv/precache-manifest.b9e180abc5bd0a34cdf2fc53eabb7f95.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "civi"});
